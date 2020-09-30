@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			/*body 设置 margin为0时 div 宽度为 父元素的 100%*/
+			/*body {
+				background-color: red;
+				margin: 0;
+			}
+			div {
+				margin: 0;
+				background-color: gray;
+			}*/
+			
+			#outer {
+				background-color: #eee;
+				min-height: 800px;
+			}
+			#inner1, #inner2, #inner3 {
+				width: 200px;
+				height: 200px;
+			}
+			#inner1 {
+				background-color: #ccc;
+			}
+			#inner2 {
+				background-color: #aaa;
+			}
+			#inner1 {
+				background-color: #999;
+			}
+		</style>
+	</head>
+		<!--<div>
+			这是一段文字
+			<p>这是 div 里的p元素</p>
+		</div>-->
+		
+		<div id="outer">
+			<div id="inner1">
+				这是inner1
+			</div>
+			<div id="inner2">
+				这是inner2
+			</div>
+			<div id="inner3">
+				这是inner3
+			</div>
+		</div>
+	<body>
+	</body>
+
+</html>
