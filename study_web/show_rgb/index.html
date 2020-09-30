@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.png" >
+    <title>色卡 显示</title>
+    <style type="text/css">
+        #divFather div{
+            
+            /* margin: 2px 2px 2px 2px; */
+            display: inline-block;          
+            /* 使 div 浮动布局 */
+            /* background-color: rgb(0, 0, 0); */
+        }
+        /* div div {
+            width: 100px;
+            height: 100px;
+            margin: 2px 2px 2px 2px; 
+            display: inline-block;
+        } */
+        div span {
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div style="background-color: #000000;"></div>
+    <div style="background-color: #101010;"></div>
+    <div style="background-color: #222222;"></div>
+    <div style="background-color: #333333;"></div>
+    <div style="background-color: #444444;"></div>
+    <div style="background-color: #555555;"></div>
+    <div style="background-color: #666666;"></div>
+    <div style="background-color: #777777;"></div>
+    <div style="background-color: #888888;"></div>
+    <div style="background-color: #999999;"></div> -->
+
+
+    <!-- <h1>yi</h1>
+    <hr> -->
+    
+    <div id="divFather">
+        <div>
+            <div style="background-color: #000000"><div></div>
+            <span> R: 00 G: 00 B: 00 </span>
+        </div>
+        <div>
+            <div style="background-color: #0068eb"><div></div>
+            <span> R: 00 G: 68 B: eb </span>
+        </div>
+        <div>
+            <div style="background-color: #0068eb"><div></div>
+            <span> R: 00 G: 68 B: eb </span>
+        </div>
+        <div>
+            <div style="background-color: #0068eb"><div></div>
+            <span> R: 00 G: 68 B: eb </span>
+        </div>
+        <div>
+            <div style="background-color: #0068eb"><div></div>
+            <span> R: 00 G: 68 B: eb </span>
+        </div>
+    </div>
+    
+    <!-- <div style="background-color: rgb(0, 104, 235);"><div>
+    <div style="background-color: #222222"><div> -->
+
+
+
+</body>
+<script type="text/javascript">
+    function divForRgb(r, g, b) {
+        var str = '<div style="background-color: rgb(' + r + ', ' + g + ', ' + b + ');"><div>';
+        
+        return str;
+    }
+    
+    function addDivEle(start, end) {
+        for (var i = start; i < end; i++) {
+            for (var j = start; j < end; j++) {
+                for (var k = start; k < end; k++) {
+                    // var rgb = 'rab(i, j, k)';
+                    // div.style.backgroundColor = rgb;
+                    // document.append(div);
+                    // console.log(divForRgb(i, j, k));
+
+                    // document.write(divForRgb(i, j, k));
+                    var r = i.toString(16);
+                    var g = j.toString(16);
+                    var b = k.toString(16);
+                    var divEle = document.createElement("div");
+                    divEle.style.display = "inline-block";
+                    divEle.style.backgroundColor = '#' + r + g + b;
+                    document.body.appendChild(divEle);
+                }
+            }
+        }
+    }
+
+    var start = 220;
+    var end = 230;
+    
+    // addDivEle(start, end);
+    // document.onload = addDivEle(start, end);
+
+    // 设置 div 标签的样式
+    // var divStyle = document.getElementsByTagName("div");
+    // divStyle.forEach(element => {
+    //     divStyle[element].style
+    // });
+    
+    
+    // document.appendChild();
+</script>
+
+</html>

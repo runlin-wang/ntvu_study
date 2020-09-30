@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css 属性继承</title>
+    <style>
+        div {
+            font-size: 30px;
+            /* 字体属性可以被继承 */
+            border: 1px solid red;
+            /* 边框属性不可以被继承 */
+        }
+        p {
+            border: inherit;
+            /* 强制继承 */
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这是 div 
+        <p> 这是 div 里的 &lt;p&gt; </p>
+        <p>yi</p>
+    </div>
+
+    <hr />
+
+    <p>这是一个 <a href="http://bloglin.top">我的博客</a> </p>
+</body>
+</html>
