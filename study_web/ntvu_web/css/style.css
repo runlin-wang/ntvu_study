@@ -1,0 +1,62 @@
+/* === 全局样式 === */
+.logo, .main-nav, .dm, .content, .footer {
+    width: 1200px;
+}
+
+
+/* === logo区样式 === */
+
+.logo {
+    height: 120px;
+}
+
+/* === 导航区样式 === */
+
+.main-nav {
+    height: 60px;
+}
+
+/* === 图片区样式 === */
+
+.dm {
+    height: 200px;
+}
+
+/* === 内容区样式 === */
+
+.content {
+    height: 400px;
+}
+
+/* === footer区样式 === */
+
+.footer {
+    width: 100%;
+    min-width: 1200px;
+    position: absolute;
+    height: 120px;
+    /* color: #FFF; */
+}
+
+.footer .addr-copy {
+    width: 800px;
+    margin-top: 30px;
+
+}
+
+.footer address,
+.footer small {
+    font-size: 0.9375cm;
+    font-style: normal;
+    line-height: 2;
+}
+
+
+
+
+
+
+
+
+
+
