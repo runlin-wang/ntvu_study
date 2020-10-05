@@ -1,13 +1,13 @@
 package com.ntvu.web2.servlet;
 
-import javax.servlet.RequestDispatcher;
+import com.ntvu.web2.service.LoginService;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 
 public class LoginControllerServlet extends HttpServlet {
 
@@ -23,8 +23,10 @@ public class LoginControllerServlet extends HttpServlet {
         String username = req.getParameter("username");
         String pass = req.getParameter("pass");
 
-
-        if("admin".equals(username) && "123456".equals(pass))
+        System.out.println(String.format("username = %s, password = %s, path = %s", username, pass, path));
+        System.out.println();
+//        if("admin".equals(username) && "123456".equals(pass))
+        if (new LoginService().login(username, pass))
         {
             //保存用户名
             HttpSession session = req.getSession();

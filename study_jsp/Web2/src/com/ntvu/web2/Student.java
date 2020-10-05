@@ -17,10 +17,13 @@ public class Student {
     private String address;
     private boolean sex;
 
-    public Student() {
+    public Student()
+    {
+
     }
 
-    public Student(String no,String name,String idCard,String telephone,String address) throws Exception {
+    public Student(String no,String name,String idCard,String telephone,String address) throws Exception
+    {
         this.no = no;
         this.name = name;
         this.idCard = idCard;
@@ -133,15 +136,17 @@ public class Student {
         return birthday;
     }
 
-    /**
-     * 男 返回 true
-     * 女 返回 false
-     * @return 身份证号码错误返回 false
-     */
-    public boolean getSex() {
-        if(this.idCard == null || this.idCard.trim().equals("")) {
+
+    public boolean getSex()
+    {
+        if(this.idCard == null || this.idCard.trim().equals(""))
+        {
             return false;
         }
-        return (int)idCard.charAt(17) % 2 == 1;
+
+        //取得当前年份-学生的年份
+        int itemp = Integer.parseInt(idCard.substring(16,17));//32060220000108123x
+        return itemp % 2 == 1;
     }
+
 }

@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Web2:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="18762dba-d628-43d4-87e7-a4583e7c6c08" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/../Demo1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/src/ntvu/lf/JavaWeb/StringPars.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/src/ntvu/lf/JavaWeb/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/src/ntvu/lf/JavaWeb/util/Tools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/src/test/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo1/study.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/.idea/artifacts/Demo2_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/Demo2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/out/artifacts/Demo2_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/out/artifacts/Demo2_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Demo2/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/.idea/artifacts/Web2_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/.idea/artifacts/Web2_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/Web2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/Web2.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/out/artifacts/Web2_war_exploded/WEB-INF/classes/META-INF/Web2.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/out/artifacts/Web2_war_exploded/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/out/artifacts/Web2_war_exploded/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/Student.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/LoginControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/StudentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/TestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/selvlet/WelcomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/service/LoginService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/src/com/ntvu/web2/service/LoginService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/main.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/page1.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/LoginControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/StudentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/TestServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/servlet/WelcomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/student.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/static/welcome.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2/web/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Web2/web/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Web2_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/javax_servlet_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_21.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Web2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/admin/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/css/util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/images/bg-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/artifacts/Web2_war_exploded/plugins/jquery/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/CollegeStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/service/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/service/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/service/StudentService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/service/StudentService2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/LoginControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/LogoutControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/StudentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/servlet/WelcomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ntvu/web2/util/Tools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/admin/main.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/css/util.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/HELP-US-OUT.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/css/font-awesome.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/FontAwesome.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/fonts/fontawesome-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/animated.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/bordered-pulled.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/core.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/fixed-width.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/font-awesome.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/icons.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/larger.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/list.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/path.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/rotated-flipped.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/screen-reader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/stacked.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/less/variables.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_animated.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_bordered-pulled.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_core.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_fixed-width.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_icons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_larger.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_list.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_mixins.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_path.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_rotated-flipped.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_screen-reader.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_stacked.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/font-awesome-4.7.0/scss/font-awesome.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/css/material-design-iconic-font.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/css/material-design-iconic-font.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/fonts/iconic/fonts/Material-Design-Iconic-Font.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/bg-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/plugins/bootstrap/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/plugins/jquery/jquery-3.2.1.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/artifacts/Web2_lf_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/Web2_lf.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/out/artifacts/Web2_lf_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/out/artifacts/Web2_lf_war_exploded/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/src/edu/ntvu/jsp/servlet/LoginControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/src/edu/ntvu/jsp/servlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/src/edu/ntvu/jsp/servlet/LogoutControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/src/edu/ntvu/jsp/servlet/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/src/edu/ntvu/jsp/servlet/WelcomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf/web/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/artifacts/Web2_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/libraries/javax_servlet_api_3_1_0.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/Web2lf.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/out/artifacts/Web2_war_exploded/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/out/artifacts/Web2_war_exploded/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/out/artifacts/Web2_war_exploded/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/CollegeStudent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/Student.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/servlet/LoginControllerServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/servlet/LoginServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/servlet/MainServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/servlet/StudentServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/servlet/WelcomeServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/com/ntvu/web2/util/Tools.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/src/test/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/web/images/code.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Web2_lf_/web/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/artifacts/test_war_exploded.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/test.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/web/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../test/web/index.jsp" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="Jsp File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>txtUsername</find>
+      <find>txtUserName</find>
+      <find>txtpassword</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>username</replace>
+      <replace>pass</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:\Maven_Lib\.m2\repository" />
+        <option name="userSettingsFile" value="D:\Maven_Lib\.m2\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1iS6mJfNq0jLzo6zPIGQMc0Loio" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="db2&#10;mysql" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="D:/tools/jdbc/mysql-connector-java-8.0.21/mysql-connector-java-8.0.21.jar!/" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.33619344" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.ntvu.web2.service" />
+      <recent name="com.ntvu.web2.servlet" />
+      <recent name="com.ntvu.web2" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\WorkSpace\Teach\Web2\web\images" />
+      <recent name="E:\WorkSpace\Teach\Web2\web\plugins" />
+      <recent name="E:\WorkSpace\Teach\Web2\web\css" />
+      <recent name="E:\WorkSpace\Teach\Web2\web\fonts" />
+      <recent name="E:\WorkSpace\Teach\Web2\web" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Tomcat Server.Web2">
+    <configuration name="StudentService2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.ntvu.web2.service.StudentService2" />
+      <module name="Web2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ntvu.web2.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="test.TestMain" />
+      <module name="Web2" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Web2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.15" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
+      <option name="UPDATING_POLICY" value="redeploy-artifacts" />
+      <deployment>
+        <artifact name="Web2:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="Unnamed_Web2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58739" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Web2:war exploded" />
+        </option>
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.15" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment />
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="_Web2" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58739" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Remote" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="LOCAL" value="false" />
+      <deployment />
+      <server-settings>
+        <data>
+          <option name="targets">
+            <list>
+              <WatchedTargetModelImpl>
+                <option name="name" value="CONTEXT_XML" />
+                <name>CONTEXT_XML</name>
+              </WatchedTargetModelImpl>
+              <StagingTargetModelImpl>
+                <option name="name" value="STAGING" />
+                <name>STAGING</name>
+              </StagingTargetModelImpl>
+            </list>
+          </option>
+          <option name="transportHostId" value="" />
+          <host-id />
+        </data>
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="TOMCAT_LOCALHOST_LOG_ID" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58740" />
+        <option name="LOCAL" value="false" />
+      </RunnerSettings>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.TestMain" />
+      <item itemvalue="Application.StudentService2" />
+      <item itemvalue="Tomcat Server.Web2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.StudentService2" />
+        <item itemvalue="Application.TestMain" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="18762dba-d628-43d4-87e7-a4583e7c6c08" name="Default" comment="" />
+      <created>1599829457780</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599829457780</updated>
+      <workItem from="1599829459757" duration="1340000" />
+      <workItem from="1599904722855" duration="639000" />
+      <workItem from="1600064064003" duration="8418000" />
+      <workItem from="1600425414429" duration="3957000" />
+      <workItem from="1600668281622" duration="9614000" />
+      <workItem from="1601272807635" duration="6887000" />
+      <workItem from="1601879643596" duration="91000" />
+      <workItem from="1601879867407" duration="2598000" />
+      <workItem from="1601888806004" duration="179000" />
+      <workItem from="1601896434658" duration="4799000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="542" y="289" key="#Tomcat_Server" timestamp="1601888986701">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="542" y="289" key="#Tomcat_Server/0.0.1536.824@0.0.1536.824" timestamp="1601888986701" />
+    <state x="193" y="155" width="1152" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1601903112312">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1601888989462" />
+    <state x="193" y="155" width="1152" height="809" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1601903112312" />
+    <state width="254" height="195" key="DatabaseViewActions_Filter" timestamp="1601904115559">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="254" height="195" key="DatabaseViewActions_Filter/0.0.1920.1040@0.0.1920.1040" timestamp="1601904115559" />
+    <state x="445" y="153" key="FileChooserDialogImpl" timestamp="1601888985414">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="445" y="153" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1601888985414" />
+    <state width="1293" height="361" key="GridCell.Tab.0.bottom" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.0.center" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.0.left" timestamp="1601904613500">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613500" />
+    <state width="1293" height="361" key="GridCell.Tab.0.right" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.1.bottom" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.1.center" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.1.left" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.1.right" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.2.bottom" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.2.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.2.center" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.2.center/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.2.left" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.2.left/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="1293" height="361" key="GridCell.Tab.2.right" timestamp="1601904613501">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1293" height="361" key="GridCell.Tab.2.right/0.0.1920.1040@0.0.1920.1040" timestamp="1601904613501" />
+    <state width="220" height="477" key="HiddenNamespacesPopup" timestamp="1601903260737">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="220" height="477" key="HiddenNamespacesPopup/0.0.1920.1040@0.0.1920.1040" timestamp="1601903260737" />
+    <state x="311" y="0" key="SettingsEditor" timestamp="1601904286700">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1601888920130" />
+    <state x="311" y="0" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601904286700" />
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601888952657">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="563" y="325" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.824@0.0.1536.824" timestamp="1601888952657" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/Student.java</url>
+          <line>100</line>
+          <properties class="com.ntvu.web2.Student" method="getBirthday">
+            <option name="EMULATED" value="true" />
+          </properties>
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/Student.java</url>
+          <line>80</line>
+          <properties class="com.ntvu.web2.Student" method="getAge">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/Student.java</url>
+          <line>17</line>
+          <properties field="sex" class="com.ntvu.web2.Student" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-field">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/service/StudentService2.java</url>
+          <line>8</line>
+          <properties field="htStudents" class="com.ntvu.web2.service.StudentService2" />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/servlet/MainServlet.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/service/StudentService2.java</url>
+          <line>60</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/ntvu/web2/servlet/LoginServlet.java</url>
+          <line>22</line>
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
