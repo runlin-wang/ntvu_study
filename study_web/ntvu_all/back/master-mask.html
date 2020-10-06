@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>母版页</title>
+		<link rel="stylesheet" href="../css/global.css" />
+	</head>
+
+	<body>
+		<div class="logo"></div>
+		<div class="nav"></div>
+		<div class="dm"></div>
+		<div id="main" class="main"></div>
+		<div id="footer" class="footer">
+			<div id="addr-copy" class="addr-copy">
+				<address>地址：中国江苏省南通市青年中路89号 邮编：226007 联系电话：0513-81050811 传真：81050812</address>
+				<small>&copy; 2013-2020 南通职业大学 苏ICP备17046147号-1 苏公网安备 32060202000322号</small>
+			</div>
+		</div>
+		<script>
+			var main = document.getElementById("main");
+			var mainStyle = getComputedStyle(main, null);
+			var addr_copy = document.getElementById("addr-copy");
+			addr_copy.style.marginLeft = mainStyle.marginLeft;
+		</script>
+	</body>
+
+</html>
