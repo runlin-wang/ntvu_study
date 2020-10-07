@@ -12,8 +12,8 @@
 	height: 114px;
 	border-top: 6px solid #1a3168;
 	background: url(../img/header.png) no-repeat center center;
-	background: url(../img/header.png) no-repeat center center;
-    url(../img/headbg.png) repeat-x;
+	/* background: url(../img/header.png) no-repeat center center; */
+    /* url(../img/headbg.png) repeat-x; */
 }
 
 .header-content{
