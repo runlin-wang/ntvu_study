@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="@dimen/edit_dimens"></corners>     // 设置 shape 圆角为 Dimens中定义的 edit_dimens
+    <solid android:color="@color/hint_textColor"/>              //设置shape 描边颜色wei Colors 中定义的 hint_textColor
+</shape>

@@ -1,0 +1,36 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+<!--    自定义-->
+    <style name="login_et">
+        <item name="android:layout_width">match_parent</item>
+        // 设置组件的宽度与父窗体对齐
+        <item name="android:layout_height">45dp</item>
+        // 设置组件的高度为 45dp
+        <item name="android:textColor">#ffffff</item>
+        // 设置文字颜色为白色
+        <item name="android:background">@drawable/edituser_selector</item>
+        // 设置背景为 edituser_selector
+        <item name="android:layout_marginLeft">30dp</item>
+        // 设置与左边元素的距离为 30dp
+        <item name="android:layout_marginRight">30dp</item>
+        // 设置与右边元素的距离为 30dp
+        <item name="android:maxLength">20</item>
+        // 设置最多可输入 20 个字符
+        <item name="android:textColorHint"></item>
+        // 设置提示颜色
+        <item name="android:layout_gravity">center_horizontal</item>
+        // 定义组件相对于父窗体居中对齐
+        <item name="android:drawablePadding">8dp</item>
+        // 设置 text 与 drawable （图片）的间隔为 8dp
+        <item name="android:singleLine">true</item>
+        // 设置为单行文本显示
+    </style>
+
+</resources>

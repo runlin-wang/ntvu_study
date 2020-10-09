@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="login_textsize">30sp</dimen>
+    <dimen name="edit_dimens">10dp</dimen>
+</resources>
+
+<!--//此尺寸用于设置“登入”的字体大小-->
+<!-- //此尺寸用于设置文本编辑框圆角的大小-->

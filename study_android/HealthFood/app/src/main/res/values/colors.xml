@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+<!--    自定义-->
+    <color name="edit_color">#40ffffff</color>      // 此颜色定义用于编辑框中文字的颜色
+    <color name="hint_textColor">#65ffffff</color>  // 此颜色定义用于编辑框中提示文字的颜色
+    <color name="font_color">#ffffff</color>        // 此颜色定义用于设置白色文字
+</resources>
