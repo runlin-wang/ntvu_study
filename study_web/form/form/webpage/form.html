@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function check() {
+//				alert(123);
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="index.jsp" method="post" name="form" id="form" onsubmit="return check()">
+			<fieldset id="">
+				<legend>用户登陆</legend>
+				<p>用户名：<input type="text" name="txtname" id="txtname"  /><label for="txtname"></label></p>
+				<p>密码：<input type="password" name="pwd" id="pwd" /><label for="pwd"></label></p>
+				<p>
+					<input type="radio" name="idn" id="depart" /><label for="depart">部门</label>
+					<input type="radio" name="idn" id="tea" /><label for="tea">教师</label>
+					<input type="radio" name="idn" id="stu" /><label for="stu">学生</label>
+					<input type="radio" name="idn" id="xx" /><label for="xx">访客</label>
+				</p>
+				<p>
+					<input type="submit" value="登陆" />
+					<input type="reset" value="重置" />
+				</p>
+			</fieldset>
+		</form>
+		<select>
+			<optgroup label="机动车">
+				<option value="car">汽车</option>
+				<option value="moto">摩托车</option>
+				<option value="train">火车</option>
+			</optgroup>
+			<optgroup label="非机动车">
+				<option value="非机动车"></option>				
+			</optgroup>
+			
+		</select>
+		
+		<p><a href="tel:+8617778595680">打电话</a></p>
+	</body>
+</html>
