@@ -20,7 +20,6 @@
 
 %>
 <body>
-<%--session.getAttribute("CurrentUserName").toString();--%>
     欢迎光临 <% session.getAttribute("CurrentUserName").toString();%>, <a href="/doLogout">注销</a>
 </body>
 </html>

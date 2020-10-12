@@ -44,7 +44,6 @@
         <url-pattern>/doLogin</url-pattern>
     </servlet-mapping>
 
-
     <servlet>
         <servlet-name>mainServlet</servlet-name>
         <servlet-class>com.ntvu.web2.servlet.MainServlet</servlet-class>
@@ -61,6 +60,15 @@
     <servlet-mapping>
         <servlet-name>logoutServlet</servlet-name>
         <url-pattern>/doLogout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>registerServlet</servlet-name>
+        <servlet-class>com.ntvu.web2.servlet.RegisterServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>registerServlet</servlet-name>
+        <url-pattern>/doRegister</url-pattern>
     </servlet-mapping>
 
 </web-app>
