@@ -1,5 +1,6 @@
 package com.ntvu.web2.service;
 
+import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.util.Tools;
 
 import java.sql.*;
@@ -23,6 +24,17 @@ public class LoginService {
     }
 
     /**
+     * 实现用户登录功能
+     * @param user
+     * @return
+     */
+    public boolean login(SystemUsers user) {
+        String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", user.getLoginName(), Tools.md5(user.getLoginPassword()));
+        ResultSet rs = querySql(sql);
+        return rs != null;
+    }
+
+    /**
      * 实现用户注册功能
      * @param loginName
      * @param loginPassword
@@ -36,6 +48,18 @@ public class LoginService {
     public boolean register(String loginName, String loginPassword, String loginSalt, String telephone, String email, boolean status, int role_id) {
         String sql = String.format("INSERT INTO system_users(login_name, login_password, login_salt, telephone, email, status, role_id) VALUES ('%s', '%s', '%s', '%s', '%s', %b, %d)",
                 loginName, Tools.md5(loginPassword), loginSalt, telephone, email, status, role_id);
+
+        return updateSql(sql) > 0;
+    }
+
+    /**
+     * 实现用户注册功能
+     * @param user
+     * @return
+     */
+    public boolean register(SystemUsers user) {
+        String sql = String.format("INSERT INTO system_users(login_name, login_password, login_salt, telephone, email, status, role_id) VALUES ('%s', '%s', '%s', '%s', '%s', %b, %d)",
+                user.getLoginName(), Tools.md5(user.getLoginPassword()), user.getLoginSalt(), user.getTelephone(), user.getEmail(), user.isStatus(), user.getRoleId());
 
         return updateSql(sql) > 0;
     }
