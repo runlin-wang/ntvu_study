@@ -4,14 +4,14 @@ package com.ntvu.web2.entity;
  * 数据库 system_users表 对应的java类
  */
 public class SystemUsers {
-    private int id;
+    private int id = 0;
     private String loginName;
     private String loginPassword;
-    private String loginSalt;
+    private String loginSalt = "";
     private String telephone;
     private String email;
-    private boolean status;
-    private int roleId;
+    private boolean status = true;
+    private int roleId = 2;
 
     /**
      * 用户对应的角色

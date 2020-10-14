@@ -21,5 +21,8 @@
 %>
 <body>
     欢迎光临 <% session.getAttribute("CurrentUserName").toString();%>, <a href="/doLogout">注销</a>
+
+    <hr/>
+    
 </body>
 </html>

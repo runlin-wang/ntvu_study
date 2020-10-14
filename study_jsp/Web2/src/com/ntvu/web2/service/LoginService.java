@@ -17,9 +17,10 @@ public class LoginService {
     public boolean login(String loginName, String password) {
 
         String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
-        ResultSet rs = querySql(sql);
-        return rs != null;
+//        SystemUsers user = querySql(sql).get(0);
+//        return rs != null;
 
+        return querySql(sql).isEmpty();
 //        return rs != null && rs.next();
     }
 
@@ -30,8 +31,9 @@ public class LoginService {
      */
     public boolean login(SystemUsers user) {
         String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", user.getLoginName(), Tools.md5(user.getLoginPassword()));
-        ResultSet rs = querySql(sql);
-        return rs != null;
+//        ResultSet rs = querySql(sql);
+//        return rs != null;
+        return querySql(sql).isEmpty();
     }
 
     /**
@@ -116,31 +118,98 @@ public class LoginService {
         return updateSql(sql) > 0;
     }
 
+    /**
+     * 通过 roleId 删除对应用户组的数据
+     * @param roleId
+     * @return
+     */
     public boolean deleteByRoleId(int roleId) {
-        return false;
+        String sql = "delete form system_users where role_id = " + roleId;
+        return updateSql(sql) > 0;
     }
 
-    public boolean findByLoginName(String loginName) {
-        return false;
+    /**
+     * 通过用户名获取对应的对象
+     * @param loginName 用户名
+     * @return SystemUsers 对象
+     */
+    public SystemUsers findByLoginName(String loginName) {
+        String sql = String.format("select login_name, telephone, email, role_id from system_users where login_name = '%s'", loginName);
+        List<SystemUsers> lst = querySql(sql);
+        return lst.isEmpty() ? null : lst.get(0);
     }
 
-    public List getList() {
-        return null;
+    /**
+     * 通过 用户id 获取对应的对象
+     * @param id
+     * @return SystemUsers
+     */
+    public SystemUsers findById(int id) {
+        String sql = String.format("select login_name, telephone, email, role_id from system_users where login_name = %d", id);
+        List<SystemUsers> lst = querySql(sql);
+        return lst.isEmpty() ? null : lst.get(0);
     }
 
-    public void getDetails(int id) {
-
+    /**
+     * 返回当前所有用户列表
+     * @return List<SystemUsers>
+     */
+    public List<SystemUsers> getList() {
+//        String sql = String.format("select login_name, telephone, email, role_id from system_users");
+        String sql = String.format("select * from system_users");
+        return querySql(sql);
     }
 
-    public boolean edit(String newUser) {
-        return false;
+    /**
+     * 通过 用户 id 号 查找对应用户详细信息
+     * @param id
+     * @return List<SystemUsers>
+     */
+    public SystemUsers getDetails(int id) {
+        return findById(id);
     }
 
+    /**
+     * 通过 用户id 修改用户信息
+     * @param user
+     * @return 成功返回 true 失败返回 false
+     */
+    public boolean edit(SystemUsers user) {
+        if(user == null || user.getLoginName() == null || user.getTelephone() == null || user.getEmail() == null)
+        {
+            return false;
+        }
+        String sql  = "update system_users set login_name=%s,telephone=%s,email=%s,status=%b,role_id=%d where id=%d";
+        sql = String.format(sql,user.getLoginName(),user.getTelephone(),user.getEmail(),user.isStatus(),user.getRoleId(),user.getId());
+        return updateSql(sql) > 0;
+    }
+
+    /**
+     * 通过 用户名 查询该用户状态是否可用
+     * @param loginName 用户名
+     * @return 可用为 true， 不可以为 false
+     */
     public boolean valid(String loginName) {
-        return false;
+        return findByLoginName(loginName).isStatus();
     }
 
-    public boolean resetPassword(String loginName) {
+    /**
+     * 通过 用户id 查询该用户状态是否可用
+     * @param id 用户 id
+     * @return 可用为 true， 不可以为 false
+     */
+    public boolean valid(int id) {
+        return findById(id).isStatus();
+    }
+
+    /**
+     * 修改对应用户的密码
+     * @param user 用户对象
+     * @param pwd 新密码
+     * @return 设置新密码
+     */
+    public boolean resetPassword(SystemUsers user, String pwd) {
+        String sql = String.format("update system_users set login_password = '%s' where login_name = '%s'", user.getLoginName(), pwd);
         return false;
     }
 
@@ -213,7 +282,41 @@ public class LoginService {
      * @param sql select 语句
      * @return ResultSet 结果集 ，sql异常返回 null
      */
-    private ResultSet querySql(String sql) {
+//    private ResultSet querySql(String sql) {
+//        ResultSet rs = null;
+//        Connection conn = null;
+//        Statement stmt = null;
+//        try {
+//            // 1. 引入 jdbc 的 jar 包
+//            // 2. 加载驱动类
+//            Class.forName("com.mysql.cj.jdbc.Driver");
+//
+//            // 3. 创建连接
+//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
+//
+//            // 4. 获取返回结果，判断是否成功
+//            stmt = conn.createStatement();
+//            rs = stmt.executeQuery(sql);
+//
+//            return rs;
+//        } catch (ClassNotFoundException | SQLException e) {
+//            e.printStackTrace();
+//        } finally {
+//            try {
+//                // 5. 关闭连接
+//                rs.close();
+//                stmt.close();
+//                conn.close();
+//            } catch (SQLException throwable) {
+//                throwable.printStackTrace();
+//            }
+//        }
+//
+//        return null;
+//    }
+
+    private List<SystemUsers> querySql(String sql) {
+        List<SystemUsers> lst = null;
         ResultSet rs = null;
         Connection conn = null;
         Statement stmt = null;
@@ -229,18 +332,26 @@ public class LoginService {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
-            return rs;
+            // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
+            while (rs.next()) {
+                SystemUsers user = new SystemUsers();
+                user.setId(rs.getInt("id"));
+                user.setLoginName(rs.getString("login_name"));
+                user.setLoginPassword(rs.getString("login_password"));
+                user.setTelephone(rs.getString("telephone"));
+                user.setEmail(rs.getString("email"));
+                user.setStatus(rs.getBoolean("status"));
+                user.setRoleId(rs.getInt("role_id"));
+                lst.add(user);  // 向列表添加 user 对象
+            }
+
+            // 5. 关闭连接
+            rs.close();
+            stmt.close();
+            conn.close();
+            return lst;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
-        } finally {
-            try {
-                // 5. 关闭连接
-                rs.close();
-                stmt.close();
-                conn.close();
-            } catch (SQLException throwable) {
-                throwable.printStackTrace();
-            }
         }
 
         return null;

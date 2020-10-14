@@ -1,12 +1,12 @@
 package com.ntvu.web2.servlet;
 
+import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.service.LoginService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
 
 public class RegisterServlet extends HttpServlet {
@@ -24,6 +24,12 @@ public class RegisterServlet extends HttpServlet {
         String telephone = req.getParameter("telephone");
         String email = req.getParameter("email");
 
+        SystemUsers user = new SystemUsers();
+        user.setLoginName(req.getParameter("txtLoginName"));
+        user.setLoginPassword(req.getParameter("pwd"));
+        user.setTelephone(req.getParameter("telephone"));
+        user.setEmail(req.getParameter("email"));
+
         String path = req.getContextPath();
 
         // 验证数据合法性 用户名、密码、手机号、邮箱不为空，两次密码必须一致
@@ -35,8 +41,11 @@ public class RegisterServlet extends HttpServlet {
             return;
         }
 
+
+
         // 注册成功跳转登录页面 失败继续注册
-        boolean success = new LoginService().register(loginName, pwd, "", telephone, email, true, 2);
+//        boolean success = new LoginService().register(loginName, pwd, "", telephone, email, true, 2);
+        boolean success = new LoginService().register(user);
         if (success) {
             resp.sendRedirect(path + "/index.html");
 //            resp.sendRedirect(path + String.format("/doLogin?username=%s&password=%s", loginName, pwd));
