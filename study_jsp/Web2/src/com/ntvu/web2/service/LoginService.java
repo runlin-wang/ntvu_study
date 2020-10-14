@@ -146,9 +146,11 @@ public class LoginService {
 
     /**
      * 执行 delete Sql语句
+     * 可使用新的 updateSql 来代替
      * @param sql
      * @return
      */
+    @Deprecated
     private boolean deleteSql(String sql) {
         boolean succeed = false;
         try {
@@ -178,8 +180,8 @@ public class LoginService {
 
     /**
      * 执行 INSERT UPDATE DELETE 及 CREATE DROP Sql语句, 返回受影响的行数
-     * @param sql
-     * @return row(s)
+     * @param sql 语句
+     * @return row(s) 受影响的行数
      */
     private int updateSql(String sql) {
         int rows = 0;
@@ -208,8 +210,8 @@ public class LoginService {
 
     /**
      * 执行 select 查询语句
-     * @param sql
-     * @return
+     * @param sql select 语句
+     * @return ResultSet 结果集 ，sql异常返回 null
      */
     private ResultSet querySql(String sql) {
         ResultSet rs = null;
