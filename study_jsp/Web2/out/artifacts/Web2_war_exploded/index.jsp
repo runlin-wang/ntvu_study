@@ -1,3 +1,5 @@
+<%@ page import="com.ntvu.web2.util.Tools" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -26,7 +28,7 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
 						<span class="label-input100">用户名</span>
-						<input class="input100" type="text" name="username" placeholder="请输入用户名" autocomplete="off">
+						<input class="input100" type="text" name="username" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("txtLoginName"), "")%>">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 

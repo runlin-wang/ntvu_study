@@ -23,7 +23,7 @@ public class LogoutControllerServlet extends HttpServlet {
         HttpSession session = req.getSession();
         session.removeAttribute("CurrentUserName");
         String path = req.getContextPath();
-        resp.sendRedirect(path + "/index.html");
+        resp.sendRedirect(path + "/index.jsp");
     }
 
 }

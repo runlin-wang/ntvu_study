@@ -1,3 +1,4 @@
+<%@ page import="com.ntvu.web2.util.Tools" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
@@ -27,7 +28,7 @@
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
                     <span class="label-input100">用户名</span>
-                    <input class="input100" type="text" name="txtLoginName" placeholder="请输入用户名" autocomplete="off" value="<%= request.getAttribute("txtLoginName") != null ? request.getAttribute("txtLoginName"): ""%>">
+                    <input class="input100" type="text" name="txtLoginName" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("txtLoginName"), "")/* request.getAttribute("txtLoginName") != null ? request.getAttribute("txtLoginName"): ""*/%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 
@@ -45,13 +46,13 @@
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入手机号">
                     <span class="label-input100">手机号</span>
-                    <input class="input100" type="text" name="telephone" placeholder="请输入手机号" autocomplete="off" value="<%= request.getAttribute("telephone") != null ? request.getAttribute("telephone"): ""%>">
+                    <input class="input100" type="text" name="telephone" placeholder="请输入手机号" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("telephone"), "")%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入邮箱">
                     <span class="label-input100">邮箱</span>
-                    <input class="input100" type="text" name="email" placeholder="请输入邮箱" autocomplete="off"  value="<%= request.getAttribute("email") != null ? request.getAttribute("email"): ""%>">
+                    <input class="input100" type="text" name="email" placeholder="请输入邮箱" autocomplete="off"  value="<%=Tools.isEmpty(request.getAttribute("email"), "")%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 

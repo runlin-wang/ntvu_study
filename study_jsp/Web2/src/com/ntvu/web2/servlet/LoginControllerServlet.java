@@ -32,7 +32,8 @@ public class LoginControllerServlet extends HttpServlet {
             resp.sendRedirect(path + "/admin/main.jsp");
 
         }else {
-            resp.sendRedirect(path + "/index.html");
+            req.setAttribute("txtLoginName", username);
+            resp.sendRedirect(path + "/index.jsp");
 
 //            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
 //            rd.forward(req,resp);

@@ -4,6 +4,7 @@ import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.util.Tools;
 
 import java.sql.*;
+import java.util.ArrayList;
 import java.util.List;
 
 public class LoginService {
@@ -16,11 +17,12 @@ public class LoginService {
      */
     public boolean login(String loginName, String password) {
 
-        String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
+//        String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
+        String sql = String.format("select * from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
 //        SystemUsers user = querySql(sql).get(0);
 //        return rs != null;
 
-        return querySql(sql).isEmpty();
+        return querySql(sql) != null;
 //        return rs != null && rs.next();
     }
 
@@ -279,10 +281,11 @@ public class LoginService {
 
     /**
      * 执行 select 查询语句
+     * 查询必须为 *
      * @param sql select 语句
      * @return ResultSet 结果集 ，sql异常返回 null
      */
-//    private ResultSet querySql(String sql) {
+//    private boolean isQuerySql(String sql) {
 //        ResultSet rs = null;
 //        Connection conn = null;
 //        Statement stmt = null;
@@ -298,7 +301,7 @@ public class LoginService {
 //            stmt = conn.createStatement();
 //            rs = stmt.executeQuery(sql);
 //
-//            return rs;
+//            return rs != null;
 //        } catch (ClassNotFoundException | SQLException e) {
 //            e.printStackTrace();
 //        } finally {
@@ -311,8 +314,7 @@ public class LoginService {
 //                throwable.printStackTrace();
 //            }
 //        }
-//
-//        return null;
+//        return false;
 //    }
 
     private List<SystemUsers> querySql(String sql) {
@@ -332,8 +334,12 @@ public class LoginService {
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
+            lst = new ArrayList<>();
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             while (rs.next()) {
+                /**
+                 * 未处理，没找到对应值的默认值
+                 */
                 SystemUsers user = new SystemUsers();
                 user.setId(rs.getInt("id"));
                 user.setLoginName(rs.getString("login_name"));
