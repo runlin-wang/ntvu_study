@@ -2,8 +2,11 @@
 <resources>
 
     <dimen name="login_textsize">30sp</dimen>
+    <!-- 此尺寸用于设置“登入”的字体大小-->
     <dimen name="edit_dimens">10dp</dimen>
-</resources>
+    <!-- 此尺寸用于设置文本编辑框圆角的大小-->
 
-<!--//此尺寸用于设置“登入”的字体大小-->
-<!-- //此尺寸用于设置文本编辑框圆角的大小-->
+    <!-- 底部导航 -->
+    <dimen name="Navigation_RadioButtonsize">10sp</dimen>
+    <!-- 定义底部导航单选按钮中文字的大小   -->
+</resources>

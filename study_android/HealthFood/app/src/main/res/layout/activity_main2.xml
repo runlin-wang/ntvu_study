@@ -1,9 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Main2Activity">
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/main_title"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/public_green"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="#ffffff"
+        android:textSize="25sp"
+        android:textStyle="bold"/>
+    <FrameLayout
+        android:id="@+id/main_framelayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10">
+    </FrameLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#eceae9" />
+    <RadioGroup
+        android:id="@+id/main_radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <RadioButton
+            android:id="@+id/main_radio0"
+            style="@style/main_RadioButton"
+            android:checked="true"
+            android:drawableTop="@mipmap/icon_home_true"
+            android:button="@null"
+            android:text="首页" />
+        <RadioButton
+            android:id="@+id/main_radio1"
+            style="@style/main_RadioButton"
+            android:drawableTop="@mipmap/icon_community_false"
+            android:textColor="@color/navigation_false"
+            android:button="@null"
+            android:text="吃货驾到" />
+        <RadioButton
+            android:id="@+id/main_radio2"
+            style="@style/main_RadioButton"
+            android:drawableTop="@mipmap/icon_order_false"
+            android:textColor="@color/navigation_false"
+            android:button="@null"
+            android:text="我的订单" />
+        <RadioButton
+            android:id="@+id/main_radio3"
+            style="@style/main_RadioButton"
+            android:drawableTop="@mipmap/icon_me_false"
+            android:textColor="@color/navigation_false"
+            android:button="@null"
+            android:text="个人中心" />
+    </RadioGroup>
+</LinearLayout>
