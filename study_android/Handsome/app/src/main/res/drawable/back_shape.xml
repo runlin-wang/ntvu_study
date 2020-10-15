@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 通过添加以下属性可实现两种颜色的线性渐变效果 -->
+    <gradient android:startColor="#e86e5f" android:endColor="#f6e2c7"></gradient>
+</shape>

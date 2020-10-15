@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:background="@drawable/back_shape"
+        android:src="@drawable/girl" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:id="@+id/textView1"
+            style="@style/tv_face"
+            android:background="#f9ac98"
+            android:text="25462票" />
+        <TextView
+            android:id="@+id/textView2"
+            style="@style/tv_face"
+            android:background="#ff856d"
+            android:text="54343票" />
+        <TextView
+            android:id="@+id/textView3"
+            style="@style/tv_face"
+            android:background="#f9ac98"
+            android:text="54432票" />
+        <TextView
+            android:id="@+id/textView4"
+            style="@style/tv_face"
+            android:background="#ff856d"
+            android:text="34545票" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="哪个美女城市美女多？" />
+    <RadioGroup
+        android:id="@+id/radioGroup1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/xAn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="西安" />
+        <RadioButton
+            android:id="@+id/sHai"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="上海" />
+        <RadioButton
+            android:id="@+id/gZhou"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="广州" />
+        <RadioButton
+            android:id="@+id/sZhen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="深圳" />
+    </RadioGroup>
+</LinearLayout>
