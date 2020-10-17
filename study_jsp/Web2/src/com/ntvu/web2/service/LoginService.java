@@ -22,7 +22,7 @@ public class LoginService {
 //        SystemUsers user = querySql(sql).get(0);
 //        return rs != null;
 
-        return querySql(sql) != null;
+        return querySql(sql) != null && !querySql(sql).isEmpty();
 //        return rs != null && rs.next();
     }
 
