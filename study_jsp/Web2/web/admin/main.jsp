@@ -87,7 +87,9 @@
                     <td><%=user.getLoginName()%></td>
                     <td><%=user.getTelephone()%></td>
                     <td><%=user.getEmail()%></td>
-                    <td><%=user.isStatus()%></td>
+                    <td>
+                        <img src="/images/<%=user.isStatus()%>.jpg" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>">
+                    </td>
                     <td><%=user.getRoleId()%></td>
                     <td>
                         <input type="button" value="删除">
