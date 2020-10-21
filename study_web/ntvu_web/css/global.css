@@ -1,7 +1,6 @@
 .nav,
 .dm,
-.main-content,
-.header-content{
+.main-content{
 	width: 1200px;
 	margin: 0 auto;
 }
@@ -10,21 +9,124 @@
 	min-width: 1200px;
 	width: 100%;
 	height: 114px;
-	border-top: 6px solid #1a3168;
+	border-top:solid 6px #1a3168;
 	background: url(../img/header.png) no-repeat center center;
-	/* background: url(../img/header.png) no-repeat center center; */
-    /* url(../img/headbg.png) repeat-x; */
+	background: url(../img/header.png) no-repeat center center,
+	url(../img/headbg.png) repeat-x;
 }
 
 .header-content{
+	width: 1200px;
 	height: 100%;
-	margin-top: 21px;
-	box-sizing: border-box;	
+	/*background-color: blue;*/
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 21px;
+	box-sizing: border-box;
 }
 
+/*导航区*/
 .nav{
 	height: 60px;
-	border-top: 1px solid #e5e5e5;
+	border-top:solid 1px  #e5e5e5;
+	/*background-color: red;*/
 }
+
+.nav>ul{
+	height: 40px;
+	/*background-color: RED;*/
+	line-height: 40PX;
+	margin-top: 10px;
+	float: right;
+	font-size: 18px;
+	color: #FFF;
+	text-align: center;
+	font-size: 0;
+}
+
+.nav>ul>li{
+	font-size: 18px;
+	background-color: #1a3168;
+	width: 120px;
+	margin-left: 2px;
+	border-radius: 7px 7px 0 0;
+	position: relative;
+}
+
+.nav>ul>li>a {
+	color: inherit;
+	text-decoration: none;
+	/*background-color: grey;*/
+	width: inherit;
+	border-radius: 7px 7px 0 0;
+}
+
+.nav>ul>li>a:hover{
+	background-color: orange;
+}
+
+.sub-nav{
+	width: 486px;
+	background-color: #fff;
+	position: absolute;
+	top: 40px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	display: none;
+	text-align: left;
+	line-height: 30px;
+}
+
+.sub-nav a{
+	width: 150px;
+	font-size: 12px;
+	text-align: initial;
+	color: #000;
+}
+
+.nav>ul>li>a:hover+ul,
+.sub-nav:hover{
+	display: block;
+	z-index: 1;
+}
+
+.sub-nav-right-align{
+	right: 0;
+}
+
+/*图片区*/
+.dm{
+	height: 402px;
+	position: relative;
+}
+
+.left-arrow,
+.right-arrow{
+	width: 40px;
+	height: 46px;
+	position: absolute;
+	top: 178px;
+	opacity: 0.3;
+}
+
+.left-arrow{
+	background: url(../img/left_btn.png);
+	left: 20px;
+}
+
+.right-arrow{
+	background: url(../img/right_btn.png);
+	right: 20px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover{
+	opacity: 1;
+	cursor: pointer;
+}
+
+
+
+
 
 

@@ -1,3 +1,35 @@
 body{
 	margin: 0;
 }
+ul{
+	margin-bottom: 0;
+	margin-top: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+ul li{
+	display: inline-block;
+}
+
+a{
+	text-decoration: none;
+	display: inline-block;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.min-line-height{
+	line-height: 25px;
+}
+
+.mid-line-height{
+	line-height: 30px;
+}
+
+.large-line-height{
+	line-height: 50px;
+}
+
