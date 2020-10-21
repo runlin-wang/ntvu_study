@@ -90,7 +90,7 @@
                     <td>
                         <img src="/images/<%=user.isStatus()%>.png" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>">
                     </td>
-                    <td><%=user.getRoleId()%></td>
+                    <td><%=user.getRole().getRoleName()%></td>
                     <td>
                         <input type="button" value="删除">
                         <input type="button" value="编辑">

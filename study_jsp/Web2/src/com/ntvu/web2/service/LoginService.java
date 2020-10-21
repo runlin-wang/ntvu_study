@@ -1,5 +1,6 @@
 package com.ntvu.web2.service;
 
+import com.ntvu.web2.entity.Roles;
 import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.util.Tools;
 
@@ -347,7 +348,11 @@ public class LoginService {
                 user.setTelephone(rs.getString("telephone"));
                 user.setEmail(rs.getString("email"));
                 user.setStatus(rs.getBoolean("status"));
-                user.setRoleId(rs.getInt("role_id"));
+                int roleId = rs.getInt("role_id");
+                user.setRoleId(roleId);
+                user.setRole(getRole(roleId));
+//                user.setRoleId(rs.getInt("role_id"));
+//                user.setRole(getRole(rs.getInt("role_id")));
                 lst.add(user);  // 向列表添加 user 对象
             }
 
@@ -356,6 +361,44 @@ public class LoginService {
             stmt.close();
             conn.close();
             return lst;
+        } catch (ClassNotFoundException | SQLException e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    private Roles getRole(int roleId) {
+        Roles role = null;
+        ResultSet rs = null;
+        Connection conn = null;
+        Statement stmt = null;
+        try {
+            // 1. 引入 jdbc 的 jar 包
+            // 2. 加载驱动类
+            Class.forName("com.mysql.cj.jdbc.Driver");
+
+            // 3. 创建连接
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
+
+            String sql = String.format("select * from roles where id = %d", roleId);
+            // 4. 获取返回结果，判断是否成功
+            stmt = conn.createStatement();
+            rs = stmt.executeQuery(sql);
+
+            // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
+            if (rs.next()) {
+                role = new Roles();
+                role.setId(roleId);
+                role.setRoleName(rs.getString("role_name"));
+                role.setComments(rs.getString("comments"));
+            }
+
+            // 5. 关闭连接
+            rs.close();
+            stmt.close();
+            conn.close();
+            return role;
         } catch (ClassNotFoundException | SQLException e) {
             e.printStackTrace();
         }
