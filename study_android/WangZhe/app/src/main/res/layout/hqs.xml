@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="火球术" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="安琪拉召唤 5 颗火球朝指定位置攻击，每颗火球对敌人造成 350/390/430/470/510/550 （+30%法术加成) 点法术伤害。
+        当敌人被多颗火球命中时，额外的火球只能造成 30% 伤害。火球命中英雄时会停止移动并销毁。" />
+
+</LinearLayout>

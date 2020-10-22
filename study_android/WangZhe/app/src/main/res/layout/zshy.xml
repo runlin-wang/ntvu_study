@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="咒术火焰" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="咒术火焰是安琪拉的核心技能，她能够使安琪拉的所有技能伤害都附加一个额外魔法伤害，依靠这个被动技能效果，
+        安琪拉在释放技能持续攻击敌人时，能够造成成吨的伤害。" />
+
+</LinearLayout>
