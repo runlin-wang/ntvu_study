@@ -24,11 +24,11 @@ public class RegisterServlet extends HttpServlet {
         String telephone = req.getParameter("telephone");
         String email = req.getParameter("email");
 
-        SystemUsers user = new SystemUsers();
-        user.setLoginName(req.getParameter("txtLoginName"));
-        user.setLoginPassword(req.getParameter("pwd"));
-        user.setTelephone(req.getParameter("telephone"));
-        user.setEmail(req.getParameter("email"));
+        SystemUsers user = new SystemUsers(loginName, pwd, telephone, email);
+//        user.setLoginName(req.getParameter("txtLoginName"));
+//        user.setLoginPassword(req.getParameter("pwd"));
+//        user.setTelephone(req.getParameter("telephone"));
+//        user.setEmail(req.getParameter("email"));
 
         String path = req.getContextPath();
 
@@ -44,7 +44,6 @@ public class RegisterServlet extends HttpServlet {
 
 
         // 注册成功跳转登录页面 失败继续注册
-//        boolean success = new LoginService().register(loginName, pwd, "", telephone, email, true, 2);
         boolean success = new LoginService().register(user);
         if (success) {
             resp.sendRedirect(path + "/index.jsp");

@@ -8,6 +8,14 @@ public class Roles {
     private String roleName;
     private String comments;
 
+    public Roles() {}
+
+    public Roles(int id, String roleName, String comments) {
+        this.id = id;
+        this.roleName = roleName;
+        this.comments = comments;
+    }
+
     public int getId() {
         return id;
     }

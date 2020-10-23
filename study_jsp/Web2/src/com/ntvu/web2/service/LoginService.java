@@ -8,7 +8,38 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 实现数据库后台逻辑代码
+ */
 public class LoginService {
+
+    /**
+     * 生成连接和句柄
+     */
+    private void createConnection() {
+        try {
+            // 1.注册驱动
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            // 2.创建于数据库的连接
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
+            // 3.获取执行句柄
+            stmt = conn.createStatement();
+        } catch (SQLException | ClassNotFoundException throwable) {
+            throwable.printStackTrace();
+        }
+    }
+
+    /**
+     * 数据库连接地址，用户名，密码
+     */
+//    private final String url = "jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai";
+//    private final String jdbcUserName = "root";
+//    private final String jdbcPwd = "root@123";
+
+    List<SystemUsers> lst = null;
+    ResultSet rs = null;
+    Connection conn = null;
+    Statement stmt = null;
 
     /**
      * 实现用户登录功能
@@ -17,14 +48,8 @@ public class LoginService {
      * @return
      */
     public boolean login(String loginName, String password) {
-
-//        String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
         String sql = String.format("select * from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
-//        SystemUsers user = querySql(sql).get(0);
-//        return rs != null;
-
-        return querySql(sql) != null && !querySql(sql).isEmpty();
-//        return rs != null && rs.next();
+        return getSystemUsers(sql) != null && !getSystemUsers(sql).isEmpty();
     }
 
     /**
@@ -34,9 +59,7 @@ public class LoginService {
      */
     public boolean login(SystemUsers user) {
         String sql = String.format("select id, login_name from system_users where login_name='%s' and login_password='%s'", user.getLoginName(), Tools.md5(user.getLoginPassword()));
-//        ResultSet rs = querySql(sql);
-//        return rs != null;
-        return querySql(sql).isEmpty();
+        return getSystemUsers(sql) != null && getSystemUsers(sql).isEmpty();
     }
 
     /**
@@ -53,7 +76,6 @@ public class LoginService {
     public boolean register(String loginName, String loginPassword, String loginSalt, String telephone, String email, boolean status, int role_id) {
         String sql = String.format("INSERT INTO system_users(login_name, login_password, login_salt, telephone, email, status, role_id) VALUES ('%s', '%s', '%s', '%s', '%s', %b, %d)",
                 loginName, Tools.md5(loginPassword), loginSalt, telephone, email, status, role_id);
-
         return updateSql(sql) > 0;
     }
 
@@ -138,7 +160,7 @@ public class LoginService {
      */
     public SystemUsers findByLoginName(String loginName) {
         String sql = String.format("select login_name, telephone, email, role_id from system_users where login_name = '%s'", loginName);
-        List<SystemUsers> lst = querySql(sql);
+        List<SystemUsers> lst = getSystemUsers(sql);
         return lst.isEmpty() ? null : lst.get(0);
     }
 
@@ -149,7 +171,7 @@ public class LoginService {
      */
     public SystemUsers findById(int id) {
         String sql = String.format("select login_name, telephone, email, role_id from system_users where login_name = %d", id);
-        List<SystemUsers> lst = querySql(sql);
+        List<SystemUsers> lst = getSystemUsers(sql);
         return lst.isEmpty() ? null : lst.get(0);
     }
 
@@ -160,7 +182,7 @@ public class LoginService {
     public List<SystemUsers> getList() {
 //        String sql = String.format("select login_name, telephone, email, role_id from system_users");
         String sql = String.format("select * from system_users");
-        return querySql(sql);
+        return getSystemUsers(sql);
     }
 
     /**
@@ -213,7 +235,7 @@ public class LoginService {
      */
     public boolean resetPassword(SystemUsers user, String pwd) {
         String sql = String.format("update system_users set login_password = '%s' where login_name = '%s'", user.getLoginName(), pwd);
-        return false;
+        return updateSql(sql) > 0;
     }
 
     /**
@@ -258,22 +280,14 @@ public class LoginService {
     private int updateSql(String sql) {
         int rows = 0;
         try {
-            // 1. 引入 jdbc 的 jar 包
-
-            // 2. 加载驱动类
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // 3. 创建连接
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
-
+            // 创建连接
+            createConnection();
             // 4. 执行 Sql 语句，获取影响的行数
-            Statement stmt = conn.createStatement();
             rows = stmt.executeUpdate(sql);
 
             // 5. 关闭连接
-            stmt.close();
-            conn.close();
-        } catch (ClassNotFoundException | SQLException e) {
+            closeConnection();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
@@ -281,128 +295,69 @@ public class LoginService {
     }
 
     /**
-     * 执行 select 查询语句
-     * 查询必须为 *
-     * @param sql select 语句
-     * @return ResultSet 结果集 ，sql异常返回 null
+     * 返回 SystemUsers 列表
+     * @param sql
+     * @return List<SystemUsers>
      */
-//    private boolean isQuerySql(String sql) {
-//        ResultSet rs = null;
-//        Connection conn = null;
-//        Statement stmt = null;
-//        try {
-//            // 1. 引入 jdbc 的 jar 包
-//            // 2. 加载驱动类
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//
-//            // 3. 创建连接
-//            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
-//
-//            // 4. 获取返回结果，判断是否成功
-//            stmt = conn.createStatement();
-//            rs = stmt.executeQuery(sql);
-//
-//            return rs != null;
-//        } catch (ClassNotFoundException | SQLException e) {
-//            e.printStackTrace();
-//        } finally {
-//            try {
-//                // 5. 关闭连接
-//                rs.close();
-//                stmt.close();
-//                conn.close();
-//            } catch (SQLException throwable) {
-//                throwable.printStackTrace();
-//            }
-//        }
-//        return false;
-//    }
-
-    private List<SystemUsers> querySql(String sql) {
-        List<SystemUsers> lst = null;
-        ResultSet rs = null;
-        Connection conn = null;
-        Statement stmt = null;
+    private List<SystemUsers> getSystemUsers(String sql) {
+        createConnection();
         try {
-            // 1. 引入 jdbc 的 jar 包
-            // 2. 加载驱动类
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // 3. 创建连接
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
-
-            // 4. 获取返回结果，判断是否成功
             stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
-            lst = new ArrayList<>();
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
+            lst = new ArrayList<>();
             while (rs.next()) {
-                /**
-                 * 未处理，没找到对应值的默认值
-                 */
-                SystemUsers user = new SystemUsers();
-                user.setId(rs.getInt("id"));
-                user.setLoginName(rs.getString("login_name"));
-                user.setLoginPassword(rs.getString("login_password"));
-                user.setTelephone(rs.getString("telephone"));
-                user.setEmail(rs.getString("email"));
-                user.setStatus(rs.getBoolean("status"));
-                int roleId = rs.getInt("role_id");
-                user.setRoleId(roleId);
-                user.setRole(getRole(roleId));
-//                user.setRoleId(rs.getInt("role_id"));
-//                user.setRole(getRole(rs.getInt("role_id")));
-                lst.add(user);  // 向列表添加 user 对象
+                // 每次添加一个 SystemUsers 对象
+                lst.add(new SystemUsers(rs.getString("login_name"), rs.getString("login_password"), null, rs.getString("telephone"), rs.getString("email"),
+                        rs.getBoolean("status"), rs.getInt("role_id"), getRole(rs.getInt("role_id"))));
             }
-
-            // 5. 关闭连接
-            rs.close();
-            stmt.close();
-            conn.close();
-            return lst;
-        } catch (ClassNotFoundException | SQLException e) {
-            e.printStackTrace();
+            closeConnection();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
         }
-
-        return null;
+        return lst;
     }
 
     private Roles getRole(int roleId) {
         Roles role = null;
-        ResultSet rs = null;
-        Connection conn = null;
-        Statement stmt = null;
         try {
-            // 1. 引入 jdbc 的 jar 包
-            // 2. 加载驱动类
-            Class.forName("com.mysql.cj.jdbc.Driver");
-
-            // 3. 创建连接
-            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/study_jsp?serverTimezone=Asia/Shanghai", "root", "root@123");
-
+            createConnection();
             String sql = String.format("select * from roles where id = %d", roleId);
             // 4. 获取返回结果，判断是否成功
-            stmt = conn.createStatement();
             rs = stmt.executeQuery(sql);
 
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             if (rs.next()) {
-                role = new Roles();
-                role.setId(roleId);
-                role.setRoleName(rs.getString("role_name"));
-                role.setComments(rs.getString("comments"));
+                role = new Roles(roleId, rs.getString("role_name"), rs.getString("comments"));
+//                role = new Roles();
+//                role.setId(roleId);
+//                role.setRoleName(rs.getString("role_name"));
+//                role.setComments(rs.getString("comments"));
             }
 
             // 5. 关闭连接
-            rs.close();
-            stmt.close();
-            conn.close();
-            return role;
-        } catch (ClassNotFoundException | SQLException e) {
+            closeConnection();
+        } catch (SQLException e) {
             e.printStackTrace();
         }
 
-        return null;
+        return role;
+    }
+
+    /**
+     * 释放连接和句柄
+     */
+    private void closeConnection() {
+        try {
+            if (conn != null)
+                conn.close();
+            if (stmt != null)
+                stmt.close();
+            if (rs != null)
+                rs.close();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
     }
 }
