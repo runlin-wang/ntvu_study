@@ -12,6 +12,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.example.fragment.Home_fragment;
 import com.example.fragment.PersonalCenter;
 
 public class MainActivity extends AppCompatActivity {
@@ -99,6 +100,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.main_radio0 :
                         rbutton1.setTextColor(fontColor_true);
                         rbutton1.setCompoundDrawablesWithIntrinsicBounds(null, icon_home_true, null, null);
+                        transaction.replace(R.id.main_framelayout, new Home_fragment()); // 替换碎片内容
                         Toast.makeText(MainActivity.this, "首页", Toast.LENGTH_SHORT).show();
                         break;
                     // 当“吃货驾到”选项被选中时，设置选项在被选中状态下的文字及图片

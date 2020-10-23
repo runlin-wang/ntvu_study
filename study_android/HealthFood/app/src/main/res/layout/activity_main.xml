@@ -55,12 +55,13 @@
             android:textColor="@color/navigation_false"
             android:button="@null"
             android:text="我的订单" />
+
         <RadioButton
             android:id="@+id/main_radio3"
             style="@style/main_RadioButton"
-            android:drawableTop="@mipmap/icon_me_false"
-            android:textColor="@color/navigation_false"
             android:button="@null"
-            android:text="个人中心" />
+            android:drawableTop="@mipmap/icon_me_false"
+            android:text="个人中心"
+            android:textColor="@color/navigation_false" />
     </RadioGroup>
 </LinearLayout>
