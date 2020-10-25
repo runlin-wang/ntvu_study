@@ -37,7 +37,6 @@ public class LoginService {
 //    private final String jdbcPwd = "root@123";
 
     List<SystemUsers> lst = null;
-    ResultSet rs = null;
     Connection conn = null;
     Statement stmt = null;
 
@@ -303,7 +302,7 @@ public class LoginService {
         createConnection();
         try {
             stmt = conn.createStatement();
-            rs = stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(sql);
 
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             lst = new ArrayList<>();
@@ -325,7 +324,7 @@ public class LoginService {
             createConnection();
             String sql = String.format("select * from roles where id = %d", roleId);
             // 4. 获取返回结果，判断是否成功
-            rs = stmt.executeQuery(sql);
+            ResultSet rs = stmt.executeQuery(sql);
 
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             if (rs.next()) {
@@ -354,10 +353,19 @@ public class LoginService {
                 conn.close();
             if (stmt != null)
                 stmt.close();
-            if (rs != null)
-                rs.close();
+//            if (rs != null)
+//                rs.close();
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
+    }
+
+    public static void main(String[] args) {
+        List<SystemUsers> users = new LoginService().getList();
+
+        //TODO fix error: java.sql.SQLException: Operation not allowed after ResultSet closed
+        for (SystemUsers user : users)
+            System.out.println(user);
+
     }
 }
