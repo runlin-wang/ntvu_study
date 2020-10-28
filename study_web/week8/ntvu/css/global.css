@@ -1,0 +1,282 @@
+.nav,
+.dm,
+.main-content{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*标志区*/
+.header{
+	min-width: 1200px;
+	width: 100%;
+	height: 114px;
+	border-top:solid 6px #1a3168;
+	background: url(../img/header.png) no-repeat center center;
+	background: url(../img/header.png) no-repeat center center,
+	url(../img/headbg.png) repeat-x;
+}
+
+.header-content{
+	width: 1200px;
+	height: 100%;
+	/*background-color: blue;*/
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 21px;
+	box-sizing: border-box;
+}
+
+.header-nav{
+	float: right;
+	color: #1a3168;
+	font-size: 14px;
+	letter-spacing: 1px;
+}
+
+.header-nav a{
+	color: inherit;
+	margin-left: 20px;
+}
+
+.header form{
+	float: right;
+	margin-top: 16px;
+	
+}
+
+.header input[type=text]{
+	padding: 8px;
+	border: none;
+	text-align: center;
+}
+
+.header input[type=text]:focus{
+	outline: 1px solid #1A3168;
+	padding: 7px;
+
+}
+
+.header input[type=submit]{
+	padding: 8px;
+	background-color: #1A3168;
+	color: #FFF;
+	border: none;
+}
+
+/*导航区*/
+.nav{
+	height: 60px;
+	border-top:solid 1px  #e5e5e5;
+	/*background-color: red;*/
+}
+
+.nav>ul{
+	height: 40px;
+	/*background-color: RED;*/
+	line-height: 40PX;
+	margin-top: 10px;
+	float: right;
+	font-size: 18px;
+	color: #FFF;
+	text-align: center;
+	font-size: 0;
+}
+
+.nav>ul>li{
+	font-size: 18px;
+	background-color: #1a3168;
+	width: 120px;
+	margin-left: 2px;
+	border-radius: 7px 7px 0 0;
+}
+
+.nav>ul>li>a {
+	color: inherit;
+	text-decoration: none;
+	/*background-color: grey;*/
+	width: inherit;
+	border-radius: 7px 7px 0 0;
+}
+
+.nav>ul>li>a:hover{
+	background-color: orange;
+}
+
+.nav>ul>li{
+	position: relative;
+}
+
+.sub-nav{
+	width: 486px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	position: absolute;
+	top:40px;
+	/*background-color: red;*/
+	border-radius:0 0 5px 5px;
+	font-size: 12px;
+	background-color: #FFF;
+	display: none;
+	text-align: left;
+	line-height: 30px;
+	z-index: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sub-nav-right-align{
+	right: 0;
+}
+
+.sub-nav a{
+	width: 150px;
+	color: #000;
+	text-align: left;
+}
+
+.nav>ul>li>a:hover+ul,
+.sub-nav:hover{
+	display: block;
+}
+
+/*动态图片区*/
+.dm{
+	height: 402px;
+	position: relative;
+}
+
+.left-arrow,
+.right-arrow{
+	width: 40px;
+	height: 46px;
+	position: absolute;
+	top: 178px;
+	opacity: 0.2;
+}
+
+.left-arrow{
+	background: url(../img/left_btn.png);
+	left: 20px;
+}
+
+.right-arrow{
+	background: url(../img/right_btn.png);
+	right: 20px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover{
+	opacity: 1;
+}
+
+/*main区样式*/
+.main-content{
+	margin-top: 10px;
+}
+
+.main-content-news{
+	background-color: #EEE;
+	width: 880px;
+	min-height: 320px;
+	float: left;
+	border-top: 6px solid #1A3168;
+	box-sizing: border-box;
+}
+
+.main-content-notice{
+	background-color: #EEE;
+	width: 310px;
+	min-height: 320px;
+	float: right;
+	border-top: 6px solid orange;
+	box-sizing: border-box;
+}
+
+.notice-content{
+	/*background-color: red;*/
+	width: 210px;
+	float: left;
+	position: relative;
+}
+
+.notice-content>ul{
+	font-size: 0;
+}
+
+.notice-content>ul>li{
+	/*background-color: blue;*/
+	width: 105px;
+	font-size: 16px;
+	line-height: 30px;
+	text-align: center;
+}
+
+.notice-content>ul>li:last-child{
+	color: orange;
+}
+
+.notice-content ol{
+	position: absolute;
+	top: 28px;
+	width: 210px;
+	padding: 0;
+	margin-left: 3px;
+}
+
+.notice-content ol li{
+	width: 202px;
+	margin-bottom: 3px;
+	height: 26px;
+	line-height: 26px;
+	box-sizing: border-box;
+	border-radius: 3px;
+	background-color: #e7f2f9;
+}
+
+.notice-content ol li a{
+	font-size: 14px;
+	width: 190px;
+	color: #454545;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.notice-content ol li:first-child{
+	margin-top: 10px;
+}
+
+.notice-content ol li:last-child{
+	text-align: right;
+	padding-right: 3px;
+}
+
+.notice-left{
+	/*display: none;*/
+}
+
+.notice-right{
+	left: 0;
+	display: none;
+}
+
+.notice-img{
+	float: right;
+	margin-top: 16px;
+	font-size: 14px;
+}
+
+.notice-img>p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	text-align: center;
+	
+}
+
+
+
+/*底部区*/
+/*.footer{
+	min-height: 140px;
+	background-color: #1a3168;
+}*/
