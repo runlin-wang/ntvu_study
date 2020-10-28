@@ -1,5 +1,6 @@
 package com.ntvu.web2.entity;
 
+import com.ntvu.web2.service.LoginService;
 import com.ntvu.web2.util.Tools;
 
 /**

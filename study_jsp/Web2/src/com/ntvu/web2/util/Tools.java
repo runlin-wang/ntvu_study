@@ -58,7 +58,7 @@ public class Tools {
      * 判断给定的对象是否为空，如果为空，则显示缺省值
      * @param obj 给定的对象
      * @param defaultValue 缺省值
-     * @return
+     * @return obj 为空时返回 defaultValue，否则返回obj.toString()
      */
     public static String isEmpty(Object obj, String defaultValue) {
         return obj == null ? defaultValue : obj.toString();

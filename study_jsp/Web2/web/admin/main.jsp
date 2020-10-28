@@ -55,7 +55,7 @@
     List<SystemUsers> lst = new LoginService().getList();
 %>
 <body>
-    欢迎光临 <% session.getAttribute("CurrentUserName").toString();%>, <a href="/doLogout">注销</a>
+    欢迎光临 <% session.getAttribute("CurrentUserName").toString();%>, <a href="${pageContext.request.contextPath}/doLogout">注销</a>
 
     <hr/>
     <div class="main">
@@ -93,7 +93,7 @@
                     <td><%=user.getRole().getRoleName()%></td>
                     <td>
                         <input type="button" value="删除">
-                        <input type="button" value="编辑">
+                        <input type="button" value="编辑" onclick="location.href='edit.jsp?login_name=<%=user.getLoginName()%>'">
                         <input type="button" value="禁用">
                         <input type="button" value="重置密码">
                     </td>
