@@ -8,8 +8,8 @@ public class Tools {
 
     /**
      * 判断：给定的身份证号是否合法，不合法，抛出异常
-     * @param idCard
-     * @throws Exception
+     * @param idCard 身份证号码
+     * @throws Exception 身份证长度异常或者数据异常
      */
     public static void validateIDCard(String idCard) throws Exception
     {
@@ -19,14 +19,8 @@ public class Tools {
         }
         for(int index = 0; index < idCard.length() ; index ++)
         {
-            if(idCard.charAt(index) >= '0' && idCard.charAt(index) <= '9')
-            {
-                continue;
-            }else{
-                if(index == 17 && (idCard.charAt(index) == 'x' || idCard.charAt(index) == 'X' ) )
-                {
-                    continue;
-                }else {
+            if (idCard.charAt(index) < '0' || idCard.charAt(index) > '9') {
+                if (index != 17 || (idCard.charAt(index) != 'x' && idCard.charAt(index) != 'X')) {
                     throw new Exception("身份证号长必须为18位,且是数字，最后一位可为x");
                 }
             }
@@ -37,7 +31,7 @@ public class Tools {
     /**
      * 利用md5算法，对给定的字符串进行加密处理
      * @param content 明文字符串
-     * @return
+     * @return 加密后的字符串
      */
     public static String md5(String content)
     {
