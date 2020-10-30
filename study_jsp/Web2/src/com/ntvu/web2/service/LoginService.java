@@ -1,5 +1,6 @@
 package com.ntvu.web2.service;
 
+import com.ntvu.web2.common.Pager;
 import com.ntvu.web2.entity.Roles;
 import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.util.Tools;
@@ -177,9 +178,51 @@ public class LoginService {
      * 返回当前所有用户列表
      * @return List<SystemUsers>
      */
-    public List<SystemUsers> getList() {
+    public List<SystemUsers> getUsers() {
         String sql = "select * from system_users";
         return getSystemUsers(sql);
+    }
+
+    /**
+     * 分页显示查询结果
+     * @param pageIndex 页码
+     * @param pageSize 显示条数
+     * @param key 模糊查找值
+     * @return SystemUsers 列表
+     */
+    public Pager<SystemUsers> getPagers(int pageIndex, int pageSize, String key) {
+        Pager<SystemUsers> pager;
+        // 判断 pageIndex 和 pageSize 是否为空
+        if (!Tools.isGreaterThanZero(pageIndex)) {
+            pageIndex = 1;
+        }
+        if (!Tools.isGreaterThanZero(pageSize))
+            pageSize = 10;
+
+        key = "%" + key + "%";
+        String sql = "select * from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s' limit %d, %d";
+        sql = String.format(sql, key, key, key, key, key, pageIndex, pageSize);
+
+        int totalRecord = getCount();
+        pager = new Pager<>(pageIndex, pageSize, totalRecord / pageSize + 1, totalRecord, getSystemUsers(sql));
+        return pager;
+    }
+
+    public int getCount() {
+        createConnection();
+        String sql = "select count(*) from system_users";
+        System.out.println(sql);
+        int count = 0;
+        try {
+            ResultSet rs = stmt.executeQuery(sql);
+            if (rs.next())
+                count = rs.getInt(1);
+            rs.close();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
+        closeConnection();
+        return count;
     }
 
     /**
@@ -357,7 +400,7 @@ public class LoginService {
     }
 
     public static void main(String[] args) {
-        List<SystemUsers> users = new LoginService().getList();
+        List<SystemUsers> users = new LoginService().getUsers();
 
         for (SystemUsers user : users)
             System.out.println(user);

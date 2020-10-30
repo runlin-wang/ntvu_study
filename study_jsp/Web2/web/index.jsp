@@ -28,13 +28,13 @@
 
 					<div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
 						<span class="label-input100">用户名</span>
-						<input class="input100" type="text" name="username" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("txtLoginName"), "")%>">
+						<input class="input100" type="text" name="username" placeholder="请输入用户名" autocomplete="off" value="admin">
 						<span class="focus-input100" data-symbol="&#xf206;"></span>
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate="请输入密码">
 						<span class="label-input100">密码</span>
-						<input class="input100" type="password" name="pass" placeholder="请输入密码">
+						<input class="input100" type="password" name="pass" placeholder="请输入密码" value="123">
 						<span class="focus-input100" data-symbol="&#xf190;"></span>
 					</div>
 

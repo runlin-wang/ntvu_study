@@ -49,13 +49,45 @@ public class Tools {
     }
 
     /**
+     * 判断对象是否为 null 或者 toString 方法为空
+     * @param obj 传入的对象
+     * @return obj == null || "".equals(obj.toString().trim())
+     */
+    public static boolean isNullOrEmpty(Object obj) {
+        return obj == null || "".equals(obj.toString().trim());
+    }
+
+    /**
      * 判断给定的对象是否为空，如果为空，则显示缺省值
      * @param obj 给定的对象
      * @param defaultValue 缺省值
      * @return obj 为空时返回 defaultValue，否则返回obj.toString()
      */
-    public static String isEmpty(Object obj, String defaultValue) {
-        return obj == null ? defaultValue : obj.toString();
+    public static Object getNullOrEmpty(Object obj, Object defaultValue) {
+        return isNullOrEmpty(obj) ? defaultValue : obj;
+    }
+
+    /**
+     * 判断字符串是否为 null 或者 为空
+     * @param str 传入的字符串
+     * @return str == null || "".equals(str.trim())
+     */
+    public static boolean isNullOrEmpty(String str) {
+        return str == null || "".equals(str.trim());
+    }
+
+    /**
+     * 判断字符串是否为 null 或者 为空
+     * @param str 传入的字符串
+     * @param defaultValue 默认值
+     * @return 如果字符串为 null 或为空，则返回默认值
+     */
+    public static String getNullOrEmpty(String str, String defaultValue) {
+        return isNullOrEmpty(str) ? defaultValue : str;
+    }
+
+    public static boolean isGreaterThanZero(int num) {
+        return num > 0;
     }
 
     public static void main(String[] args) {
