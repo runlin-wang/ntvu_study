@@ -23,12 +23,12 @@
 <div class="limiter">
     <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
         <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form validate-form" action="/doRegister">
+            <form class="login100-form validate-form" action="${pageContext.request.contextPath}/doRegister">
                 <span class="login100-form-title p-b-49">注册</span>
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
                     <span class="label-input100">用户名</span>
-                    <input class="input100" type="text" name="txtLoginName" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("txtLoginName"), "")/* request.getAttribute("txtLoginName") != null ? request.getAttribute("txtLoginName"): ""*/%>">
+                    <input class="input100" type="text" name="txtLoginName" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.getNullOrEmpty(request.getAttribute("txtLoginName"), "")/* request.getAttribute("txtLoginName") != null ? request.getAttribute("txtLoginName"): ""*/%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 
@@ -46,13 +46,13 @@
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入手机号">
                     <span class="label-input100">手机号</span>
-                    <input class="input100" type="text" name="telephone" placeholder="请输入手机号" autocomplete="off" value="<%=Tools.isEmpty(request.getAttribute("telephone"), "")%>">
+                    <input class="input100" type="text" name="telephone" placeholder="请输入手机号" autocomplete="off" value="<%=Tools.getNullOrEmpty(request.getAttribute("telephone"), "")%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 
                 <div class="wrap-input100 validate-input m-b-23" data-validate="请输入邮箱">
                     <span class="label-input100">邮箱</span>
-                    <input class="input100" type="text" name="email" placeholder="请输入邮箱" autocomplete="off"  value="<%=Tools.isEmpty(request.getAttribute("email"), "")%>">
+                    <input class="input100" type="text" name="email" placeholder="请输入邮箱" autocomplete="off"  value="<%=Tools.getNullOrEmpty(request.getAttribute("email"), "")%>">
                     <span class="focus-input100" data-symbol="&#xf206;"></span>
                 </div>
 

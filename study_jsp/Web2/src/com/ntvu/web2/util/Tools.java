@@ -33,8 +33,7 @@ public class Tools {
      * @param content 明文字符串
      * @return 加密后的字符串
      */
-    public static String md5(String content)
-    {
+    public static String md5(String content) {
         try {
             MessageDigest md = MessageDigest.getInstance("MD5");
             // 计算md5函数
@@ -86,8 +85,33 @@ public class Tools {
         return isNullOrEmpty(str) ? defaultValue : str;
     }
 
-    public static boolean isGreaterThanZero(int num) {
-        return num > 0;
+    /**
+     * 判断给定的数字是否大于 0，大于 0 返回 num，否则返回缺省值
+     * @param num 数字
+     * @param defaultValue 缺省值
+     * @return int
+     */
+    public static int getGreaterThanZero(int num, int defaultValue) {
+        return num > 0 ? num : defaultValue;
+    }
+
+    /**
+     * 判断给定的数字字符串是否为空且是否大于 0
+     * @param num 字符串数字
+     * @param defaultValue 缺省值
+     * @return int
+     */
+    public static int getGreaterThanZero(String num, int defaultValue) {
+        return isNumber(num) ? getGreaterThanZero(Integer.parseInt(num), defaultValue) : defaultValue;
+    }
+
+    /**
+     * 判断字符串是否为纯数字
+     * @param str 字符串
+     * @return 字符串非空且为纯数字时返回 true
+     */
+    public static boolean isNumber(String str) {
+        return !isNullOrEmpty(str) && str.matches("^[0-9]*$");
     }
 
     public static void main(String[] args) {

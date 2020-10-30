@@ -193,25 +193,23 @@ public class LoginService {
     public Pager<SystemUsers> getPagers(int pageIndex, int pageSize, String key) {
         Pager<SystemUsers> pager;
         // 判断 pageIndex 和 pageSize 是否为空
-        if (!Tools.isGreaterThanZero(pageIndex)) {
-            pageIndex = 1;
-        }
-        if (!Tools.isGreaterThanZero(pageSize))
-            pageSize = 10;
+        pageIndex = Tools.getGreaterThanZero(pageIndex, 1);
+        pageSize = Tools.getGreaterThanZero(pageSize, 10);
 
         key = "%" + key + "%";
         String sql = "select * from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s' limit %d, %d";
-        sql = String.format(sql, key, key, key, key, key, pageIndex, pageSize);
+        sql = String.format(sql, key, key, key, key, key, (pageIndex - 1) * pageSize, pageSize);
 
-        int totalRecord = getCount();
+        int totalRecord = getCount(key);
         pager = new Pager<>(pageIndex, pageSize, totalRecord / pageSize + 1, totalRecord, getSystemUsers(sql));
         return pager;
     }
 
-    public int getCount() {
+    public int getCount(String key) {
         createConnection();
-        String sql = "select count(*) from system_users";
-        System.out.println(sql);
+        String sql = "select count(*) from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s'";
+        sql = String.format(sql, key, key, key, key, key);
+//        System.out.println(sql);
         int count = 0;
         try {
             ResultSet rs = stmt.executeQuery(sql);
