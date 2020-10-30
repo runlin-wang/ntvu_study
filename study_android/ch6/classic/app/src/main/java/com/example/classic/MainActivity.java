@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         gridView = this.findViewById(R.id.gridView1);
         imageLst = new ArrayList();
-        for (int i : image) {
+        for (int i = 0; i < 9; i++) {
             HashMap hm = new HashMap();
             hm.put("name", name[i]);
             hm.put("image", image[i]);

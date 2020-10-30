@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
         fgm = this.getFragmentManager();
         initview();                                 // 调用此方法实现初始化组件的功能
         navigation();                               // 调用此方法实现设置单选按钮组选项改变监听事件的功能从而实现导航功能
-
     }
 
     private void initview() {
@@ -64,6 +63,9 @@ public class MainActivity extends AppCompatActivity {
         fontColor_false = res.getColor(R.color.navigation_false);
         // 找到颜色 public_green, 用于设置当选项被选中时的文字颜色
         fontColor_true = res.getColor(R.color.public_green);
+        FragmentTransaction transaction = fgm.beginTransaction();           // 开启 Fragment 事务
+        transaction.replace(R.id.main_framelayout, new Home_fragment());    // 替换碎片内容
+        transaction.commit();                                               // 提交事务
     }
 
     private void setAllColor() {

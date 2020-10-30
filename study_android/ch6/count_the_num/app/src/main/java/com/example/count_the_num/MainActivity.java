@@ -1,6 +1,5 @@
 package com.example.count_the_num;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -18,14 +17,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private TextView tvCount;
     MyThread thread;
     private int count = 0;
-    Handler handle = null;
+    Handler handler = null;
 
-    @SuppressLint("HandlerLeak")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        handle = new Handler() {
+        handler = new Handler() {
             @Override
             public void handleMessage(@NonNull Message msg) {
                 switch (msg.what) {
@@ -68,8 +66,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             //TODO
             while (!Thread.interrupted()) {
                 try {
-                   Thread.sleep(1000);
-                    Handler handler;
+                    Thread.sleep(1000);
                     handler.sendEmptyMessage(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
