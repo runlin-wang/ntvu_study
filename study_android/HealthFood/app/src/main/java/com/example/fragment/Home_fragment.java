@@ -1,5 +1,6 @@
 package com.example.fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.os.Handler;
@@ -7,15 +8,18 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager.widget.ViewPager.OnPageChangeListener;
 
 import com.example.healthfood.R;
 
@@ -29,7 +33,7 @@ public class Home_fragment extends Fragment {
 
     private ViewPager viewPager;    // 轮播图组件
     private GridView gridView;
-    private List lst;
+    private List<HashMap<String, Object>> lst = new ArrayList<HashMap<String, Object>>();
     private String[] nameLstView = {"新品驾到", "食趣", "食品安全", "产品溯源", "健康养生", "产品展示"};
     private int[] imageLstView = {R.mipmap.no1, R.mipmap.no2, R.mipmap.no3, R.mipmap.no4, R.mipmap.no5, R.mipmap.no6};
     private List<ImageView> lstVP = new ArrayList<ImageView>();                                 // 定义 List，用于存放 ImageView
@@ -57,7 +61,7 @@ public class Home_fragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         // 利用布局加载器加载“个人中心”布局，将其转换为 View
-        View view = inflater.inflate(R.layout.frag_home, null); // 利用布局加载器加载“个人中心”布局，将其转换为 View
+        @SuppressLint("InflateParams") View view = inflater.inflate(R.layout.frag_home, null); // 利用布局加载器加载“个人中心”布局，将其转换为 View
         initViewPager(view);
         initGridView(view);
         return view;        // 返回 View
@@ -68,9 +72,9 @@ public class Home_fragment extends Fragment {
         llViewpagerDon = view.findViewById(R.id.home_viewpager_dot);
         layoutParams = new LinearLayout.LayoutParams(20, 20);
         layoutParams.setMargins(0, 0, 10, 0);   // 设置 LayoutParams 的 Margins 值
-        for (int i = 0; i < imageVP.length; i++) {
+        for (int value : imageVP) {
             ImageView image = new ImageView(getActivity());
-            image.setImageResource(imageVP[i]);
+            image.setImageResource(value);
             image.setAdjustViewBounds(true);
             image.setScaleType(ImageView.ScaleType.FIT_XY);
             lstVP.add(image);
@@ -84,7 +88,7 @@ public class Home_fragment extends Fragment {
         viewPager.setAdapter(new HomeVpAdapter(lstVP));
         viewPager.setCurrentItem(0);
         tvLst.get(0).setSelected(true);
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+        viewPager.setOnPageChangeListener(new OnPageChangeListener() {
             @Override
             public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
 
@@ -121,7 +125,7 @@ public class Home_fragment extends Fragment {
         thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                // TODO Auto-generated method stud
+                //TODO Auto-generated method stud
                 while (!Thread.interrupted()) {
                     try {
                         Thread.sleep(5000);
@@ -137,17 +141,43 @@ public class Home_fragment extends Fragment {
     }
 
     private void initGridView(View view) {
-        gridView = view.findViewById(R.id.home_gridView1);
+        gridView = (GridView) view.findViewById(R.id.home_gridView);
 
-        lst = new ArrayList<HashMap<String, Object>>();
-        for (int i = 0; i < 6; i++) {
+        for (int i = 0; i < nameLstView.length; i++) {
             HashMap<String, Object> hmap = new HashMap<>();
             hmap.put("name", nameLstView[i]);
             hmap.put("icon", imageLstView[i]);
             lst.add(hmap);
         }
 
-        SimpleAdapter adapter = new SimpleAdapter(getActivity(), lst, R.layout.buju_home_gridview, new String[]{"name", "icon"}, new int[]{R.id.buju_home_gridview_icon});
-        //TODO
+        SimpleAdapter adapter = new SimpleAdapter(getActivity(), lst, R.layout.buju_home_gridview, new String[]{"name", "icon"}, new int[]{R.id.buju_home_gridview_name, R.id.buju_home_gridview_icon});
+        gridView.setAdapter(adapter);
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @SuppressLint({"WrongConstant", "ShowToast"})
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                switch (position) {
+                    case 0:
+                        Toast.makeText(getActivity(), "新品驾到", 5000).show();
+                        break;
+                    case 1:
+                        Toast.makeText(getActivity(), "食趣", 5000).show();
+                        break;
+                    case 2:
+                        Toast.makeText(getActivity(), "食品安全", 5000).show();
+                        break;
+                    case 3:
+                        Toast.makeText(getActivity(), "产品溯源", 5000).show();
+                        break;
+                    case 4:
+                        Toast.makeText(getActivity(), "健康养生", 5000).show();
+                        break;
+                    case 5:
+                        Toast.makeText(getActivity(), "产品展示", 5000).show();
+                        break;
+                }
+            }
+        });
     }
 }
