@@ -102,14 +102,14 @@
                                 <%
                                     for (int i = 1; i <= pager.getTotalPage(); i++) {
                                 %>
-                                <option value="<%=i%>" <%= i == pager.getIndex() ? "selected" : ""%>><%=i%></option>
+                                <option value="<%=i%>" <%= i == pager.getPageIndex() ? "selected" : ""%>><%=i%></option>
                                 <%
                                     }
                                 %>
                             </select>
                             页
                         </label>
-                        <%=pager.getIndex()%> / <%=pager.getTotalPage()%>
+                        <%=pager.getPageIndex()%> / <%=pager.getTotalPage()%>
                         共 <%=pager.getTotalRecord()%> 条
                     </td>
                 </tr>

@@ -206,13 +206,11 @@ public class LoginService {
     }
 
     public int getCount(String key) {
-        createConnection();
         String sql = "select count(*) from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s'";
         sql = String.format(sql, key, key, key, key, key);
-//        System.out.println(sql);
         int count = 0;
         try {
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = executeQuery(sql);
             if (rs.next())
                 count = rs.getInt(1);
             rs.close();
@@ -230,13 +228,12 @@ public class LoginService {
     public List<String> getRoleNameList() {
         List<String> roleNames = null;
         try {
-            createConnection();
             String sql = "select role_name from roles";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = executeQuery(sql);
             roleNames = new ArrayList<>();
-            while (rs.next()) {
+            while (rs.next())
                 roleNames.add(rs.getString("role_name"));
-            }
+            rs.close();
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
@@ -348,24 +345,34 @@ public class LoginService {
     }
 
     /**
+     * 执行查询语句并返回一个结果集
+     * 需要手动释放资源 执行 closeConnection() 方法
+     * @param sql 语句
+     * @return ResultSet
+     * @throws SQLException SQL异常
+     */
+    private ResultSet executeQuery(String sql) throws SQLException {
+        createConnection();
+        return stmt.executeQuery(sql);
+    }
+
+    /**
+     * 打印 sql 语句
      * 获取 SystemUsers 列表
      * @param sql 数据库查询语句
      * @return List<SystemUsers>
      */
     private List<SystemUsers> getSystemUsers(String sql) {
         System.out.println(sql);
-        createConnection();
         try {
-            stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-
+            ResultSet rs = executeQuery(sql);
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             users = new ArrayList<>();
-            while (rs.next()) {
-                // 每次添加一个 SystemUsers 对象
+            // 每次添加一个 SystemUsers 对象
+            while (rs.next())
                 users.add(new SystemUsers(rs.getString("login_name"), rs.getString("login_password"), null, rs.getString("telephone"), rs.getString("email"),
                         rs.getBoolean("status"), rs.getInt("role_id"), getRole(rs.getInt("role_id"))));
-            }
+            rs.close();
             closeConnection();
         } catch (SQLException throwable) {
             throwable.printStackTrace();
@@ -376,10 +383,8 @@ public class LoginService {
     private Roles getRole(int roleId) {
         Roles role = null;
         try {
-            createConnection();
-
             String sql = String.format("select * from roles where id = %d", roleId);
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = executeQuery(sql);
 
             if (rs.next()) {
                 role = new Roles();
@@ -387,13 +392,12 @@ public class LoginService {
                 role.setRoleName(rs.getString("role_name"));
                 role.setComments(rs.getString("comments"));
             }
-
+            rs.close();
             // 5. 关闭连接
             closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return role;
     }
 
@@ -402,19 +406,5 @@ public class LoginService {
 
         for (SystemUsers user : users)
             System.out.println(user);
-
-
-
-//        LoginService ls = new LoginService();
-//        String[] userName = new String[9000];
-//        for (int i = 0; i < 9000; i++) {
-//            userName[i] = "test" + (i+999);
-//        }
-//
-//        boolean delete = ls.delete(userName);
-
-//        for (int i = 100; i < 1000; i++) {
-//            ls.delete("test" + i);
-//        }
     }
 }
