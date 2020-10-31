@@ -106,10 +106,10 @@ public class LoginService {
      * @return row(s) 受影响的行数
      */
     public boolean delete(int...id) {
-        String ids = "";
-        for (int tmp : id) ids += (tmp + ",");
+        StringBuilder ids = new StringBuilder();
+        for (int tmp : id) ids.append(tmp).append(",");
         if (ids.length() > 0) {
-            ids = ids.substring(0, ids.length() - 1);// 去除末尾的逗号
+            ids = new StringBuilder(ids.substring(0, ids.length() - 1));// 去除末尾的逗号
         }
         String sql = String.format("delete from system_users where id in (%s)", ids.toString());
         return updateSql(sql) > 0;
@@ -132,11 +132,11 @@ public class LoginService {
      */
     public boolean delete(String...loginName) {
         // 此处 IDEA 智能转换为 StringBuilder 类 使用 append() 代替了 +=
-        String loginNames = "";
-        for (String name : loginName) loginNames += "'" + name + "‘,";
+        StringBuilder loginNames = new StringBuilder();
+        for (String name : loginName) loginNames.append("'").append(name).append("‘,");
         if (loginNames.length() > 0)
-            loginNames = loginNames.substring(0, loginNames.length() - 1);     // 去除末尾的逗号
-        String sql = String.format("delete from system_users where login_name in (%s)", loginNames);
+            loginNames = new StringBuilder(loginNames.substring(0, loginNames.length() - 1));     // 去除末尾的逗号
+        String sql = String.format("delete from system_users where login_name in (%s)", loginNames.toString());
         return updateSql(sql) > 0;
     }
 
@@ -407,7 +407,21 @@ public class LoginService {
     }
 
     public static void main(String[] args) {
-        List<SystemUsers> users = new LoginService().getUsers();
+        // 测试数据
+        LoginService ls = new LoginService("", "", "");
+        List<SystemUsers> users = ls.getUsers();
+        List<Boolean> success = new ArrayList<>();
+        success.add(ls.login(users.get(0)));
+        success.add(ls.register("", "", "", "", "", false, 0));
+        success.add(ls.delete(0));
+        success.add(ls.delete(0, 1));
+        success.add(ls.delete(""));
+        success.add(ls.delete("", ""));
+        success.add(ls.deleteByRoleId(0));
+        success.add(ls.valid(0));
+        success.add(ls.valid(""));
+        SystemUsers su = ls.getDetails(1);
+        success.add(ls.resetPassword(su, "123"));
 
         for (SystemUsers user : users)
             System.out.println(user);
