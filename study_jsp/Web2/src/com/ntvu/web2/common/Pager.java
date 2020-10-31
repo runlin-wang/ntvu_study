@@ -10,12 +10,12 @@ import java.util.List;
 public class Pager<T> {
 
     /**
-     * 当前页码
+     * 页面索引
      */
-    private int index;
+    private int pageIndex;
 
     /**
-     * 每页显示的条数
+     * 页面大小
      */
     private int pageSize;
 
@@ -32,27 +32,27 @@ public class Pager<T> {
     private List<T> data;
 
     public Pager() {
-        this.index = 1;
+        this.pageIndex = 1;
         this.pageSize = 10;
         this.totalPage = 0;
         this.totalRecord = 0;
         this.data = new ArrayList<T>();
     }
 
-    public Pager(int index, int pageSize, int totalPage, int totalRecord, List<T> data) {
-        this.index = index;
+    public Pager(int pageIndex, int pageSize, int totalPage, int totalRecord, List<T> data) {
+        this.pageIndex = pageIndex;
         this.pageSize = pageSize;
         this.totalPage = totalPage;
         this.totalRecord = totalRecord;
         this.data = data;
     }
 
-    public int getIndex() {
-        return index;
+    public int getPageIndex() {
+        return pageIndex;
     }
 
-    public void setIndex(int index) {
-        this.index = index;
+    public void setPageIndex(int pageIndex) {
+        this.pageIndex = pageIndex;
     }
 
     public int getPageSize() {
