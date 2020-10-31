@@ -41,78 +41,78 @@
         <div class="table">
             <table>
                 <thead>
-                <tr>
-                    <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll"></th>
-                    <th class="th2">用户名</th>
-                    <th class="th3">手机号</th>
-                    <th class="th4">邮箱</th>
-                    <th class="th5">状态</th>
-                    <th class="th6">角色</th>
-                    <th class="th7">操作栏</th>
-                </tr>
+                    <tr>
+                        <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll"></th>
+                        <th class="th2">用户名</th>
+                        <th class="th3">手机号</th>
+                        <th class="th4">邮箱</th>
+                        <th class="th5">状态</th>
+                        <th class="th6">角色</th>
+                        <th class="th7">操作栏</th>
+                    </tr>
                 </thead>
                 <tbody>
-                <%
-                    for (SystemUsers user : pager.getData()) {
-                %>
-                <tr>
-                    <td><label for="check<%=user.getId()%>"></label><input type="checkbox" name="check<%=user.getId()%>" id="check<%=user.getId()%>"></td>
-                    <td><%=user.getLoginName()%></td>
-                    <td><%=user.getTelephone()%></td>
-                    <td><%=user.getEmail()%></td>
-                    <td>
-                        <img src="/images/<%=user.isStatus()%>.png" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
-                    </td>
-                    <td><%=user.getRole().getRoleName()%></td>
-                    <td>
-                        <input type="button" value="删除">
-                        <input type="button" value="编辑" onclick="location.href='edit.jsp?login_name=<%=user.getLoginName()%>'">
-                        <input type="button" value="禁用">
-                        <input type="button" value="重置密码">
-                    </td>
-                </tr>
-                <%
-                    }
-                %>
+                    <%
+                        for (SystemUsers user : pager.getData()) {
+                    %>
+                    <tr>
+                        <td><label for="check<%=user.getId()%>"></label><input type="checkbox" name="check<%=user.getId()%>" id="check<%=user.getId()%>"></td>
+                        <td><%=user.getLoginName()%></td>
+                        <td><%=user.getTelephone()%></td>
+                        <td><%=user.getEmail()%></td>
+                        <td>
+                            <img src="/images/<%=user.isStatus()%>.png" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
+                        </td>
+                        <td><%=user.getRole().getRoleName()%></td>
+                        <td>
+                            <input type="button" value="删除">
+                            <input type="button" value="编辑" onclick="location.href='edit.jsp?login_name=<%=user.getLoginName()%>'">
+                            <input type="button" value="禁用">
+                            <input type="button" value="重置密码">
+                        </td>
+                    </tr>
+                    <%
+                        }
+                    %>
                 </tbody>
                 <tfoot>
-                <tr>
-                    <td colspan="7">
-                        <label for="page-sizes">
-                            每页
-                            <select id="page-sizes" class="pager-number">
-                                <%
-                                    for (int i : pageSizes) {
+                    <tr>
+                        <td colspan="7">
+                            <label for="page-sizes">
+                                每页
+                                <select id="page-sizes" class="pager-number">
+                                    <%
+                                        for (int i : pageSizes) {
 
-                                %>
-                                <option value="<%=i%>" <%= i == pager.getPageSize() ? "selected" : ""%>><%=i%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
-                            条
-                        </label>
-                        <a href="main.jsp?pageIndex=1">首页</a>
-                        <a href="main.jsp?pageIndex=<%=pageIndex - 1 > 0 ? pageIndex - 1 : 1 %>" >上一页</a>
-                        <a href="main.jsp?pageIndex=<%=Math.min(pageIndex + 1, pager.getTotalPage())%>" >下一页</a>
-                        <a href="main.jsp?pageIndex=<%=pager.getTotalPage()%>" >末页</a>
-                        <label for="page-jump">
-                            跳到第
-                            <select id="page-jump" class="pager-number">
-                                <%
-                                    for (int i = 1; i <= pager.getTotalPage(); i++) {
-                                %>
-                                <option value="<%=i%>" <%= i == pager.getPageIndex() ? "selected" : ""%>><%=i%></option>
-                                <%
-                                    }
-                                %>
-                            </select>
-                            页
-                        </label>
-                        <%=pager.getPageIndex()%> / <%=pager.getTotalPage()%>
-                        共 <%=pager.getTotalRecord()%> 条
-                    </td>
-                </tr>
+                                    %>
+                                    <option value="<%=i%>" <%= i == pager.getPageSize() ? "selected" : ""%>><%=i%></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>
+                                条
+                            </label>
+                            <a href="main.jsp?pageIndex=1">首页</a>
+                            <a href="main.jsp?pageIndex=<%=pageIndex - 1 > 0 ? pageIndex - 1 : 1 %>" >上一页</a>
+                            <a href="main.jsp?pageIndex=<%=Math.min(pageIndex + 1, pager.getTotalPage())%>" >下一页</a>
+                            <a href="main.jsp?pageIndex=<%=pager.getTotalPage()%>" >末页</a>
+                            <label for="page-jump">
+                                跳到第
+                                <select id="page-jump" class="pager-number">
+                                    <%
+                                        for (int i = 1; i <= pager.getTotalPage(); i++) {
+                                    %>
+                                    <option value="<%=i%>" <%= i == pager.getPageIndex() ? "selected" : ""%>><%=i%></option>
+                                    <%
+                                        }
+                                    %>
+                                </select>
+                                页
+                            </label>
+                            <%=pager.getPageIndex()%> / <%=pager.getTotalPage()%>
+                            共 <%=pager.getTotalRecord()%> 条
+                        </td>
+                    </tr>
                 </tfoot>
             </table>
         </div>

@@ -205,6 +205,11 @@ public class LoginService {
         return pager;
     }
 
+    /**
+     *通过 key 查找对应记录条数
+     * @param key 关键字
+     * @return int
+     */
     public int getCount(String key) {
         String sql = "select count(*) from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s'";
         sql = String.format(sql, key, key, key, key, key);

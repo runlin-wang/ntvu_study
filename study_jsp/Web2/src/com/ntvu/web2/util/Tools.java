@@ -11,8 +11,7 @@ public class Tools {
      * @param idCard 身份证号码
      * @throws Exception 身份证长度异常或者数据异常
      */
-    public static void validateIDCard(String idCard) throws Exception
-    {
+    public static void validateIDCard(String idCard) throws Exception {
         if(idCard.length() != 18)
         {
             throw new Exception("身份证号长必须为18位");
