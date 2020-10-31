@@ -25,6 +25,35 @@
 	box-sizing: border-box;
 }
 
+.header-nav{
+	float: right;
+	font-size: 14px;
+	color: #1a3168;
+}
+
+.header-nav form{
+	float: right;
+	margin-top: 16px;
+}
+
+.header-nav a{
+	color: inherit;
+	margin-left: 20px;
+}
+
+.header-nav input[type=text]{
+	padding: 8px;
+	border: none;
+	text-align: center;
+}
+
+.header-nav input[type=submit]{
+	padding: 8px;
+	background-color: #1a3168;
+	color: #FFF;
+	border: none;
+}
+
 /*导航区*/
 .nav{
 	height: 60px;
