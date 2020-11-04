@@ -1,0 +1,314 @@
+.nav,
+.dm,
+.main-content{
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/*标志区*/
+.header{
+	min-width: 1200px;
+	width: 100%;
+	min-height: 114px;
+	border-top:solid 6px #1a3168;
+	background: url(../img/header.png) no-repeat center center;
+	background: url(../img/header.png) no-repeat center center,
+	url(../img/headbg.png) repeat-x;
+}
+
+.header-content{
+	width: 1200px;
+	height: 100%;
+	/*background-color: blue;*/
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 21px;
+	box-sizing: border-box;
+}
+
+.header-nav{
+	float: right;
+	color: #1a3168;
+}
+
+.header-nav a{
+	color: inherit;
+	margin-left: 20px;
+}
+
+.header form{
+	float: right;
+	margin-top: 16px;
+	
+}
+
+.header input[type=text]{
+	padding: 8px;
+	border: none;
+	text-align: center;
+}
+
+.header input[type=text]:focus{
+	outline: 1px solid #1A3168;
+	padding: 7px;
+}
+
+.header input[type=submit]{
+	padding: 8px;
+	background-color: #1A3168;
+	color: #FFF;
+	border: none;
+}
+
+/*导航区*/
+.nav{
+	height: 60px;
+	border-top:solid 1px  #e5e5e5;
+	/*background-color: red;*/
+}
+
+.nav>ul{
+	height: 40px;
+	/*background-color: RED;*/
+	line-height: 40PX;
+	margin-top: 10px;
+	float: right;
+	font-size: 18px;
+	color: #FFF;
+	text-align: center;
+	font-size: 0;
+}
+
+.nav>ul>li{
+	font-size: 18px;
+	background-color: #1a3168;
+	width: 120px;
+	margin-left: 2px;
+	border-radius: 7px 7px 0 0;
+}
+
+.nav>ul>li>a {
+	color: inherit;
+	text-decoration: none;
+	/*background-color: grey;*/
+	width: inherit;
+	border-radius: 7px 7px 0 0;
+}
+
+.nav>ul>li>a:hover{
+	background-color: orange;
+}
+
+.nav>ul>li{
+	position: relative;
+}
+
+.sub-nav{
+	width: 486px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	position: absolute;
+	top:40px;
+	/*background-color: red;*/
+	border-radius:0 0 5px 5px;
+	font-size: 12px;
+	background-color: #FFF;
+	display: none;
+	text-align: left;
+	line-height: 30px;
+	z-index: 1;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.sub-nav-right-align{
+	right: 0;
+}
+
+.sub-nav a{
+	width: 150px;
+	color: #000;
+	text-align: left;
+}
+
+.nav>ul>li>a:hover+ul,
+.sub-nav:hover{
+	display: block;
+}
+
+/*动态图片区*/
+.dm{
+	height: 402px;
+	position: relative;
+}
+
+.left-arrow,
+.right-arrow{
+	width: 40px;
+	height: 46px;
+	position: absolute;
+	top: 178px;
+	opacity: 0.2;
+}
+
+.left-arrow{
+	background: url(../img/left_btn.png);
+	left: 20px;
+}
+
+.right-arrow{
+	background: url(../img/right_btn.png);
+	right: 20px;
+}
+
+.left-arrow:hover,
+.right-arrow:hover{
+	opacity: 1;
+}
+
+/*main区样式*/
+.main-content{
+	margin-top: 10px;
+}
+
+.main-content-news{
+	width: 880px;
+	min-height: 320px;
+	background-color: #EEE;
+	float: left;
+	border-top: 5px solid #1A3168;
+	box-sizing: border-box;
+}
+
+.main-content-notice{
+	width: 310px;
+	min-height: 320px;
+	/*background-color: #EEE;*/
+	float: right;
+	border-top: 5px solid orange;
+	box-sizing: border-box;
+	font-size: 15px;
+}
+
+.notice-content{
+	width: 210px;
+	float: left;
+	position: relative;
+}
+
+.notice-content>ul{
+	font-size: 0;
+}
+.notice-content>ul>li{
+	font-size: 16px;
+	line-height: 28px;
+	width: 105px;
+	text-align: center;
+}
+
+.notice-content>ul>li:last-child{
+	color: orange;
+}
+
+ol.notice-left,
+ol.notice-right{
+	position: absolute;
+	top: 28px;
+	left: 0;
+	font-size: 14px;
+	padding-left: 5px;
+}
+
+.notice-right{
+	color: initial;
+	display: none;
+}
+
+.notice-content ol li{
+	width: 202px;
+	background-color: #E7F2F9;
+	margin-bottom: 5px;
+	border-radius: 5px;
+	line-height: 26px;
+	height: 26px;
+}
+
+.notice-content ol li:first-child{
+	margin-top: 8px;
+}
+
+.notice-content ol li:last-child{
+	text-align: right;
+	padding-right: 3px;
+}
+.notice-content a{
+	width: 190px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.official-img{
+	float: right;
+	text-align: center;
+	margin-top: 14px;
+}
+
+.official-img p{
+	margin-top: 3px;
+	margin-bottom: 6px;
+}
+
+div[class|=sel]{
+	width: 130px;
+	line-height: 28px;
+	background: url(../img/sel.png) no-repeat;
+	color: #FFF;
+	text-align: center;
+	margin-top: 20px;
+	position: relative;
+	cursor: pointer;
+}
+
+.sel-resource{
+	float: left;
+	clear: both;
+	margin-left: 6px;
+}
+
+.sel-address{
+	float: right;
+}
+
+div[class|=sel]>ul{
+	text-align: left;
+	font-size: 12px;
+	padding-left: 10px;
+	position: absolute;
+	/*top: -175px;*/
+	background-color: #eee;
+	width: 130px;
+	box-sizing: border-box;
+	display: none;
+}
+
+div[class|=sel] li{
+	display: block;
+	line-height: 25px;
+}
+
+div[class|=sel] a{
+	color: initial;
+}
+
+.sel-resource ul{
+	top: -175px;
+}
+
+.sel-address ul{
+	top: -150px;
+}
+
+div[class|=sel]:hover ul{
+	display: block;
+}
