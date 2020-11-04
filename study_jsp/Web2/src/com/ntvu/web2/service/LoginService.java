@@ -1,5 +1,6 @@
 package com.ntvu.web2.service;
 
+import com.ntvu.web2.common.Pager;
 import com.ntvu.web2.entity.Roles;
 import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.util.Tools;
@@ -105,10 +106,10 @@ public class LoginService {
      * @return row(s) 受影响的行数
      */
     public boolean delete(int...id) {
-        String ids = "";
-        for (int tmp : id) ids += (tmp + ",");
+        StringBuilder ids = new StringBuilder();
+        for (int tmp : id) ids.append(tmp).append(",");
         if (ids.length() > 0) {
-            ids = ids.substring(0, ids.length() - 1);// 去除末尾的逗号
+            ids = new StringBuilder(ids.substring(0, ids.length() - 1));// 去除末尾的逗号
         }
         String sql = String.format("delete from system_users where id in (%s)", ids.toString());
         return updateSql(sql) > 0;
@@ -131,11 +132,11 @@ public class LoginService {
      */
     public boolean delete(String...loginName) {
         // 此处 IDEA 智能转换为 StringBuilder 类 使用 append() 代替了 +=
-        String loginNames = "";
-        for (String name : loginName) loginNames += "'" + name + "‘,";
+        StringBuilder loginNames = new StringBuilder();
+        for (String name : loginName) loginNames.append("'").append(name).append("‘,");
         if (loginNames.length() > 0)
-            loginNames = loginNames.substring(0, loginNames.length() - 1);     // 去除末尾的逗号
-        String sql = String.format("delete from system_users where login_name in (%s)", loginNames);
+            loginNames = new StringBuilder(loginNames.substring(0, loginNames.length() - 1));     // 去除末尾的逗号
+        String sql = String.format("delete from system_users where login_name in (%s)", loginNames.toString());
         return updateSql(sql) > 0;
     }
 
@@ -177,9 +178,52 @@ public class LoginService {
      * 返回当前所有用户列表
      * @return List<SystemUsers>
      */
-    public List<SystemUsers> getList() {
+    public List<SystemUsers> getUsers() {
         String sql = "select * from system_users";
         return getSystemUsers(sql);
+    }
+
+    /**
+     * 分页显示查询结果
+     * @param pageIndex 页码
+     * @param pageSize 显示条数
+     * @param key 模糊查找值
+     * @return SystemUsers 列表
+     */
+    public Pager<SystemUsers> getPagers(int pageIndex, int pageSize, String key) {
+        Pager<SystemUsers> pager;
+        // 判断 pageIndex 和 pageSize 是否为空
+        pageIndex = Tools.getGreaterThanZero(pageIndex, 1);
+        pageSize = Tools.getGreaterThanZero(pageSize, 10);
+
+        key = "%" + key + "%";
+        String sql = "select * from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s' limit %d, %d";
+        sql = String.format(sql, key, key, key, key, key, (pageIndex - 1) * pageSize, pageSize);
+
+        int totalRecord = getCount(key);
+        pager = new Pager<>(pageIndex, pageSize, totalRecord / pageSize + 1, totalRecord, getSystemUsers(sql));
+        return pager;
+    }
+
+    /**
+     *通过 key 查找对应记录条数
+     * @param key 关键字
+     * @return int
+     */
+    public int getCount(String key) {
+        String sql = "select count(*) from system_users where id like '%s' or login_name like '%s' or telephone like '%s' or email like '%s' or role_id like '%s'";
+        sql = String.format(sql, key, key, key, key, key);
+        int count = 0;
+        try {
+            ResultSet rs = executeQuery(sql);
+            if (rs.next())
+                count = rs.getInt(1);
+            rs.close();
+        } catch (SQLException throwable) {
+            throwable.printStackTrace();
+        }
+        closeConnection();
+        return count;
     }
 
     /**
@@ -189,13 +233,12 @@ public class LoginService {
     public List<String> getRoleNameList() {
         List<String> roleNames = null;
         try {
-            createConnection();
             String sql = "select role_name from roles";
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = executeQuery(sql);
             roleNames = new ArrayList<>();
-            while (rs.next()) {
+            while (rs.next())
                 roleNames.add(rs.getString("role_name"));
-            }
+            rs.close();
         } catch (SQLException throwable) {
             throwable.printStackTrace();
         }
@@ -307,24 +350,34 @@ public class LoginService {
     }
 
     /**
+     * 执行查询语句并返回一个结果集
+     * 需要手动释放资源 执行 closeConnection() 方法
+     * @param sql 语句
+     * @return ResultSet
+     * @throws SQLException SQL异常
+     */
+    private ResultSet executeQuery(String sql) throws SQLException {
+        createConnection();
+        return stmt.executeQuery(sql);
+    }
+
+    /**
+     * 打印 sql 语句
      * 获取 SystemUsers 列表
      * @param sql 数据库查询语句
      * @return List<SystemUsers>
      */
     private List<SystemUsers> getSystemUsers(String sql) {
         System.out.println(sql);
-        createConnection();
         try {
-            stmt = conn.createStatement();
-            ResultSet rs = stmt.executeQuery(sql);
-
+            ResultSet rs = executeQuery(sql);
             // 遍历结果集，转换为 SystemUsers 类并依次添加到列表
             users = new ArrayList<>();
-            while (rs.next()) {
-                // 每次添加一个 SystemUsers 对象
+            // 每次添加一个 SystemUsers 对象
+            while (rs.next())
                 users.add(new SystemUsers(rs.getString("login_name"), rs.getString("login_password"), null, rs.getString("telephone"), rs.getString("email"),
                         rs.getBoolean("status"), rs.getInt("role_id"), getRole(rs.getInt("role_id"))));
-            }
+            rs.close();
             closeConnection();
         } catch (SQLException throwable) {
             throwable.printStackTrace();
@@ -335,10 +388,8 @@ public class LoginService {
     private Roles getRole(int roleId) {
         Roles role = null;
         try {
-            createConnection();
-
             String sql = String.format("select * from roles where id = %d", roleId);
-            ResultSet rs = stmt.executeQuery(sql);
+            ResultSet rs = executeQuery(sql);
 
             if (rs.next()) {
                 role = new Roles();
@@ -346,34 +397,33 @@ public class LoginService {
                 role.setRoleName(rs.getString("role_name"));
                 role.setComments(rs.getString("comments"));
             }
-
+            rs.close();
             // 5. 关闭连接
             closeConnection();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
         return role;
     }
 
     public static void main(String[] args) {
-        List<SystemUsers> users = new LoginService().getList();
+        // 测试数据
+        LoginService ls = new LoginService("", "", "");
+        List<SystemUsers> users = ls.getUsers();
+        List<Boolean> success = new ArrayList<>();
+        success.add(ls.login(users.get(0)));
+        success.add(ls.register("", "", "", "", "", false, 0));
+        success.add(ls.delete(0));
+        success.add(ls.delete(0, 1));
+        success.add(ls.delete(""));
+        success.add(ls.delete("", ""));
+        success.add(ls.deleteByRoleId(0));
+        success.add(ls.valid(0));
+        success.add(ls.valid(""));
+        SystemUsers su = ls.getDetails(1);
+        success.add(ls.resetPassword(su, "123"));
 
         for (SystemUsers user : users)
             System.out.println(user);
-
-
-
-//        LoginService ls = new LoginService();
-//        String[] userName = new String[9000];
-//        for (int i = 0; i < 9000; i++) {
-//            userName[i] = "test" + (i+999);
-//        }
-//
-//        boolean delete = ls.delete(userName);
-
-//        for (int i = 100; i < 1000; i++) {
-//            ls.delete("test" + i);
-//        }
     }
 }
