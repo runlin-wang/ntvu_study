@@ -21,7 +21,7 @@ public class PersonalCenter extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         // 利用布局加载器加载“个人中心”布局，将其转换为 View
         View view = inflater.inflate(R.layout.frag_personalcenter, null);
-        doLogin(view);    // 调用 jumplogin() 方法，实现“登录”界面的跳转
+        doLogin(view);    // 调用 doLogin() 方法，实现“登录”界面的跳转
         return view;    // 返回 View
     }
 

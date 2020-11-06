@@ -2,7 +2,7 @@ package com.example.healthfood;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Fragment;
+import android.annotation.SuppressLint;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.res.Resources;
@@ -12,17 +12,18 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
-import com.example.fragment.Home_fragment;
+import com.example.fragment.GourmetFragment;
+import com.example.fragment.HomeFragment;
 import com.example.fragment.PersonalCenter;
 
 public class MainActivity extends AppCompatActivity {
 
-    private RadioGroup myradioGroup;                                        // 单选按钮组
+    private RadioGroup radioGroup;                                        // 单选按钮组
     private RadioButton rbutton1, rbutton2, rbutton3, rbutton4;                // 四个单选按钮
     private Resources res;
     private Drawable icon_home_true, icon_home_false, icon_me_true,
             icon_me_false, icon_order_true, icon_order_false,
-            iocn_community_true, icon_community_false;             // 四个单选按钮选中和未选中时的文字颜色
+            icon_community_true, icon_community_false;             // 四个单选按钮选中和未选中时的文字颜色
     private int fontColor_false, fontColor_true;                            // 四个单选按钮选中和未选中时的文字颜色
     private FragmentManager fgm;
 
@@ -31,13 +32,14 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         fgm = this.getFragmentManager();
-        initview();                                 // 调用此方法实现初始化组件的功能
+        initView();                                 // 调用此方法实现初始化组件的功能
         navigation();                               // 调用此方法实现设置单选按钮组选项改变监听事件的功能从而实现导航功能
     }
 
-    private void initview() {
+    @SuppressLint("UseCompatLoadingForDrawables")
+    private void initView() {
         // 通过 ID 找到 UI 中的单选按钮组
-        myradioGroup = this.findViewById(R.id.main_radioGroup);
+        radioGroup = this.findViewById(R.id.main_radioGroup);
         rbutton1 = this.findViewById(R.id.main_radio0);
         rbutton2 = this.findViewById(R.id.main_radio1);
         rbutton3 = this.findViewById(R.id.main_radio2);
@@ -48,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         // 找到图片 icon_home_false, 用于设置当“首页”选项未被选中时的图片
         icon_home_false = res.getDrawable(R.mipmap.icon_home_false);
         // 找到图片 iocn_community_true, 用于设置当“吃货驾到”选项被选中时的图片
-        iocn_community_true = res.getDrawable(R.mipmap.icon_community_true);
+        icon_community_true = res.getDrawable(R.mipmap.icon_community_true);
         // 找到图片 icon_community_false, 用于设置当“吃货驾到”选项未被选中时的图片
         icon_community_false = res.getDrawable(R.mipmap.icon_community_false);
         // 找到图片 icon_me_true, 用于设置当“个人中心”选项被选中时的图片
@@ -64,7 +66,7 @@ public class MainActivity extends AppCompatActivity {
         // 找到颜色 public_green, 用于设置当选项被选中时的文字颜色
         fontColor_true = res.getColor(R.color.public_green);
         FragmentTransaction transaction = fgm.beginTransaction();           // 开启 Fragment 事务
-        transaction.replace(R.id.main_framelayout, new Home_fragment());    // 替换碎片内容
+        transaction.replace(R.id.main_frameLayout, new HomeFragment());    // 替换碎片内容
         transaction.commit();                                               // 提交事务
     }
 
@@ -88,7 +90,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void navigation() {
         // TODO Auto-generated method stub
-        myradioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @SuppressLint("NonConstantResourceId")
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 FragmentTransaction transaction = fgm.beginTransaction();
@@ -102,14 +105,13 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.main_radio0 :
                         rbutton1.setTextColor(fontColor_true);
                         rbutton1.setCompoundDrawablesWithIntrinsicBounds(null, icon_home_true, null, null);
-                        transaction.replace(R.id.main_framelayout, new Home_fragment()); // 替换碎片内容
-                        Toast.makeText(MainActivity.this, "首页", Toast.LENGTH_SHORT).show();
+                        transaction.replace(R.id.main_frameLayout, new HomeFragment()); // 替换碎片内容
                         break;
                     // 当“吃货驾到”选项被选中时，设置选项在被选中状态下的文字及图片
                     case R.id.main_radio1 :
                         rbutton2.setTextColor(fontColor_true);
-                        rbutton2.setCompoundDrawablesWithIntrinsicBounds(null, iocn_community_true, null, null);
-                        Toast.makeText(MainActivity.this, "吃货驾到", Toast.LENGTH_SHORT).show();
+                        rbutton2.setCompoundDrawablesWithIntrinsicBounds(null, icon_community_true, null, null);
+//                        transaction.replace(R.id.main_frameLayout, new GourmetFragment()); // 替换碎片内容
                         break;
                     // 当“我的订单”选项被选中时，设置选项在被选中状态下的文字及图片
                     case R.id.main_radio2 :
@@ -121,8 +123,7 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.main_radio3 :
                         rbutton4.setTextColor(fontColor_true);
                         rbutton4.setCompoundDrawablesWithIntrinsicBounds(null, icon_me_true, null, null);
-                        transaction.replace(R.id.main_framelayout, new PersonalCenter());
-                        Toast.makeText(MainActivity.this, "个人中心", Toast.LENGTH_SHORT).show();
+                        transaction.replace(R.id.main_frameLayout, new PersonalCenter());
                         break;
                 }
                 transaction.commit();

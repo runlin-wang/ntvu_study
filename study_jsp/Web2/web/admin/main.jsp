@@ -30,19 +30,19 @@
 
     <hr/>
     <div class="main">
+        <form action="main.jsp" name="queryForm">
         <div class="query text-center">
-            <form action="main.jsp" name="queryForm">
                 <p>
-                    <label>查询条件<input type="text" name="key"></label>
+                    <label>查询条件<input type="text" name="key" id="key" value="<%=key%>"></label>
                     <input type="submit" value="查询">
+                    <button onclick="deleteOption()">删除选择项</button>
                 </p>
-            </form>
         </div>
         <div class="table">
             <table>
                 <thead>
                     <tr>
-                        <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll"></th>
+                        <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll" onclick="selectAll()"></th>
                         <th class="th2">用户名</th>
                         <th class="th3">手机号</th>
                         <th class="th4">邮箱</th>
@@ -65,7 +65,7 @@
                         </td>
                         <td><%=user.getRole().getRoleName()%></td>
                         <td>
-                            <input type="button" value="删除">
+                            <input type="button" value="删除" onclick="deleteByName('<%=user.getLoginName()%>')">
                             <input type="button" value="编辑" onclick="location.href='edit.jsp?login_name=<%=user.getLoginName()%>'">
                             <input type="button" value="禁用">
                             <input type="button" value="重置密码">
@@ -83,7 +83,6 @@
                                 <select id="page-sizes" class="pager-number">
                                     <%
                                         for (int i : pageSizes) {
-
                                     %>
                                     <option value="<%=i%>" <%= i == pager.getPageSize() ? "selected" : ""%>><%=i%></option>
                                     <%
@@ -92,13 +91,13 @@
                                 </select>
                                 条
                             </label>
-                            <a href="main.jsp?pageIndex=1">首页</a>
-                            <a href="main.jsp?pageIndex=<%=pageIndex - 1 > 0 ? pageIndex - 1 : 1 %>" >上一页</a>
-                            <a href="main.jsp?pageIndex=<%=Math.min(pageIndex + 1, pager.getTotalPage())%>" >下一页</a>
-                            <a href="main.jsp?pageIndex=<%=pager.getTotalPage()%>" >末页</a>
+                            <a href="#" onclick="jump(1)">首页</a>
+                            <a href="#" onclick="jump(<%=Tools.getGreaterThanZero(pageIndex - 1, 1)%>)" >上一页</a>
+                            <a href="#" onclick="jump(<%=Math.min(pageIndex + 1, pager.getTotalPage())%>)" >下一页</a>
+                            <a href="#" onclick="jump(<%=pager.getTotalPage()%>)" >末页</a>
                             <label for="page-jump">
                                 跳到第
-                                <select id="page-jump" class="pager-number">
+                                <select id="page-jump" class="pager-number" onchange="jump(document.getElementById('page-jump').value)">
                                     <%
                                         for (int i = 1; i <= pager.getTotalPage(); i++) {
                                     %>
@@ -116,6 +115,32 @@
                 </tfoot>
             </table>
         </div>
+        </form>
     </div>
+
+    <script type="text/javascript">
+        function jump(pageIndex) {
+            const pageSize = document.getElementById("page-sizes").value;
+            const key = document.getElementById("key").value;
+            window.location.href = "main.jsp?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&key=" + key;
+        }
+
+        function deleteByName(LoginName) {
+            if (typeof LoginName == "undefined" || LoginName == null || LoginName === '') {
+                alert('当前参数错误');
+                return;
+            }
+            if (confirm('当前操作不可恢复，确认删除吗？'))
+                window.location.href = "/admin/delete.jsp?loginName=" + LoginName;
+        }
+
+        function selectAll(selected) {
+            let chAll = document.getElementsByName("");
+        }
+
+        function deleteOption() {
+
+        }
+    </script>
 </body>
 </html>

@@ -29,7 +29,7 @@ import java.util.List;
 
 import Adapter.HomeVpAdapter;
 
-public class Home_fragment extends Fragment {
+public class HomeFragment extends Fragment {
 
     private ViewPager viewPager;    // 轮播图组件
     private GridView gridView;

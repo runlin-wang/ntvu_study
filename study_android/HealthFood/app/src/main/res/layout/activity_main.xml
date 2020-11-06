@@ -18,7 +18,7 @@
         android:textSize="25sp"
         android:textStyle="bold"/>
     <FrameLayout
-        android:id="@+id/main_framelayout"
+        android:id="@+id/main_frameLayout"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="10">

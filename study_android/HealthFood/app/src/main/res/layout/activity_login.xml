@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
-            android:text="@string/forgetpsw"
+            android:text="@string/forgetPwd"
             android:textColor="@color/font_color"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +72,12 @@
         android:paddingBottom="12dp">
         <TextView
             android:id="@+id/Login_textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/noUser"
+            android:textColor="#bfff" />
+        <TextView
+            android:id="@+id/Login_textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/reg"
