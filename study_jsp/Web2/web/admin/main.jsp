@@ -42,7 +42,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll" onclick="selectAll()"></th>
+                        <th class="th1"><label for="checkAll">选择</label><input type="checkbox" name="checkAll" id="checkAll" onchange="selectAll(this.checked)"></th>
                         <th class="th2">用户名</th>
                         <th class="th3">手机号</th>
                         <th class="th4">邮箱</th>
@@ -56,7 +56,7 @@
                         for (SystemUsers user : pager.getData()) {
                     %>
                     <tr>
-                        <td><label for="check<%=user.getId()%>"></label><input type="checkbox" name="check<%=user.getId()%>" id="check<%=user.getId()%>"></td>
+                        <td><label for="check<%=user.getId()%>"></label><input type="checkbox" name="checkUser" id="check<%=user.getId()%>"></td>
                         <td><%=user.getLoginName()%></td>
                         <td><%=user.getTelephone()%></td>
                         <td><%=user.getEmail()%></td>
@@ -78,9 +78,9 @@
                 <tfoot>
                     <tr>
                         <td colspan="7">
-                            <label for="page-sizes">
+                            <label for="pageSize">
                                 每页
-                                <select id="page-sizes" class="pager-number">
+                                <select id="pageSize" class="pager-number">
                                     <%
                                         for (int i : pageSizes) {
                                     %>
@@ -95,9 +95,9 @@
                             <a href="#" onclick="jump(<%=Tools.getGreaterThanZero(pageIndex - 1, 1)%>)" >上一页</a>
                             <a href="#" onclick="jump(<%=Math.min(pageIndex + 1, pager.getTotalPage())%>)" >下一页</a>
                             <a href="#" onclick="jump(<%=pager.getTotalPage()%>)" >末页</a>
-                            <label for="page-jump">
+                            <label for="pageIndex">
                                 跳到第
-                                <select id="page-jump" class="pager-number" onchange="jump(document.getElementById('page-jump').value)">
+                                <select id="pageIndex" class="pager-number" onchange="jump(document.getElementById('pageIndex').value)">
                                     <%
                                         for (int i = 1; i <= pager.getTotalPage(); i++) {
                                     %>
@@ -119,12 +119,20 @@
     </div>
 
     <script type="text/javascript">
+        /**
+         * 跳转页面
+         * @param pageIndex 当前页码
+         */
         function jump(pageIndex) {
-            const pageSize = document.getElementById("page-sizes").value;
+            const pageSize = document.getElementById("pageSize").value;
             const key = document.getElementById("key").value;
             window.location.href = "main.jsp?pageIndex=" + pageIndex + "&pageSize=" + pageSize + "&key=" + key;
         }
 
+        /**
+         * 通过用户名删除用户
+         * @param LoginName 用户名
+         */
         function deleteByName(LoginName) {
             if (typeof LoginName == "undefined" || LoginName == null || LoginName === '') {
                 alert('当前参数错误');
@@ -134,10 +142,21 @@
                 window.location.href = "/admin/delete.jsp?loginName=" + LoginName;
         }
 
-        function selectAll(selected) {
-            let chAll = document.getElementsByName("");
+        /**
+         * 全选或反选
+         * @param checked 选中状态
+         */
+        function selectAll(checked) {
+            console.log(checked);
+            const chAll = document.getElementsByName("checkUser");
+            for (let i = 0; i < chAll.length; i++) {
+                chAll[i].checked = checked;
+            }
         }
 
+        /**
+         * 删除选择项
+         */
         function deleteOption() {
 
         }
