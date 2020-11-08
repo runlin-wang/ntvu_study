@@ -7,8 +7,8 @@ class Shared {
 }
 
 class IncreaseThread extends Thread {
-    private Semaphore incSem;
-    private Semaphore decSem;
+    private final Semaphore incSem;
+    private final Semaphore decSem;
 
     public IncreaseThread(Semaphore incSem, Semaphore decSem) {
         this.incSem = incSem;
@@ -31,7 +31,7 @@ class IncreaseThread extends Thread {
 }
 
 class DecreaseThread extends Thread {
-    private Semaphore decSem;
+    private final Semaphore decSem;
 
     public DecreaseThread(Semaphore decSem) {
         this.decSem = decSem;
