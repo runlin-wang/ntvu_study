@@ -52,6 +52,10 @@ class ThreadC extends Thread {
     }
 }
 
+/**
+ * 调用三个线程 分别打印 A B C
+ * 使其按照 ABC 的顺序打印
+ */
 public class ExamABC {
     public static void main(String[] args) {
         ThreadA ta = new ThreadA();
