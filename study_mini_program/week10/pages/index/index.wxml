@@ -7,7 +7,10 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">week9 demo mini program start.</text>
+  <view class="two-numbers" bindtap="toCompare">
+    <button>{{twoNumText}}</button>
+  </view>
+  <view class="hidden" bindtap="toHidden">
+    <button>{{hidden}}</button>
   </view>
 </view>

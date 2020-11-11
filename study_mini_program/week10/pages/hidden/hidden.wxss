@@ -1,0 +1,16 @@
+/* pages/hidden.wxss */
+.show-hidden {
+  margin-top: 50xp;
+  background-color: #963;
+}
+
+.add {
+  margin: 50px;
+  background-color: #396;
+}
+
+.result {
+  margin: 50px;
+  font-size: 20px;
+  font-weight: bold;
+}

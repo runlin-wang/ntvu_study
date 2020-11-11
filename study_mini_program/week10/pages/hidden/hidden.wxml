@@ -1,0 +1,11 @@
+<!--pages/hidden.wxml-->
+<view>
+  
+  <view class="txt-center result">
+    <text class="txt-center">{{index}}</text>
+  </view>
+  
+  <button class="show-hidden" bindtap="doHidden">show | hidden</button>
+  <button class="add" bindtap="doAdd" hidden="{{hidden}}">+ 1</button>
+  
+</view>

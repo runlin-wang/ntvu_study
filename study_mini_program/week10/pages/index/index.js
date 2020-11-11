@@ -4,7 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    motto: 'Hello World',
+    motto: 'Welcome',
+    twoNumText: '两数求和',
+    hidden: 'show | hidden',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -49,6 +51,20 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  
+  /**
+   * 跳转到两数求和
+   */
+  toCompare: function() {
+    wx.navigateTo({
+      url: '../compare/compare',
+    })
+  },
+  toHidden: function() {
+    wx.navigateTo({
+      url: '../hidden/hidden',
     })
   }
 })

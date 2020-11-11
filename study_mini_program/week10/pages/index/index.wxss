@@ -19,3 +19,14 @@
 .usermotto {
   margin-top: 200px;
 }
+
+.two-numbers>button {
+  color: greenyellow;
+  margin: 50px;
+  background-color: #369;
+}
+
+.hidden>button {
+  /* margin: ; */
+  background-color: #396;
+}

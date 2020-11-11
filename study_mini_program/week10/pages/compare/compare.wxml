@@ -1,0 +1,13 @@
+<!--pages/compare/compare.wxml-->
+<view>
+  <text>请输入第 1 个数字：</text>
+  <input type="number" bindchange="num1change" />
+</view>
+<view>
+  <text>请输入第 2 个数字：</text>
+  <input type="number" bindchange="num2change" />
+</view>
+<button bindtap="doCalc">计算</button>
+<view class="txt-center">
+  <text>计算结果：{{result}}</text>
+</view>
