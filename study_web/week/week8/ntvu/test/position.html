@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			#div1{
+				width: 800px;
+				height: 800px;
+				background-color: #EEE;
+				position: relative;
+			}
+			#div2{
+				width: 400px;
+				height: 400px;
+				background-color: #DDD;
+				position: fixed;
+				left: 200px;
+				top:200px;
+				z-index: 0;
+			}
+			#div3{
+				width: 300px;
+				height: 300px;
+				background-color: #999;
+				position: relative;
+				top:50px;
+				z-index: 2;
+			}
+		</style>
+	</head>
+
+	<body>
+		<p><span>学</span>校召开经济管理学院<span>“十四五”</span>分规划工作</p>
+		<div id="div1">
+			<div id="div3">div3</div>
+			<div id="div2">div2</div>
+			
+		</div>
+	</body>
+
+</html>
