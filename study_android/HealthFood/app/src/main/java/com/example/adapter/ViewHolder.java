@@ -1,4 +1,4 @@
-package Adapter;
+package com.example.adapter;
 
 import android.widget.ImageView;
 import android.widget.TextView;

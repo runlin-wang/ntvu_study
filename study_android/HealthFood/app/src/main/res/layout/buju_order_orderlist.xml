@@ -43,5 +43,6 @@
             android:textSize="10sp"
             android:textColor="#D1D1D1"
             android:text="价格" />
+
     </LinearLayout>
 </LinearLayout>

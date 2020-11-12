@@ -27,7 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import Adapter.HomeVpAdapter;
+import com.example.adapter.HomeVpAdapter;
 
 public class HomeFragment extends Fragment {
 
