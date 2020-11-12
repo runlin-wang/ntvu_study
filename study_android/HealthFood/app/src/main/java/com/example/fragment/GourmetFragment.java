@@ -1,11 +1,19 @@
 package com.example.fragment;
 
+import android.annotation.SuppressLint;
+import android.app.AlertDialog;
 import android.app.Fragment;
+import android.content.DialogInterface;
 import android.os.Bundle;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -42,9 +50,63 @@ public class GourmetFragment extends Fragment {
         View view = inflater.inflate(R.layout.frag_gourmet, null);
         initData();
         baseAdapter = new GourmetBaseAdapter(data, this.getActivity());
-        listView = (ListView) view.findViewById(R.id.gourmet_frag_listView);
+        listView = view.findViewById(R.id.gourmet_frag_listView);
         listView.setAdapter(baseAdapter);
+        this.registerForContextMenu(view);
         return view;    // 返回 View
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        menu.add(0, 1, Menu.NONE, "微信分享");
+        menu.add(0, 2, Menu.NONE, "收藏");
+        menu.add(0, 3, Menu.NONE, "删除");
+        super.onCreateContextMenu(menu, v, menuInfo);
+    }
+
+    @SuppressLint("WrongConstant")
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        final AdapterView.AdapterContextMenuInfo info = (AdapterView.AdapterContextMenuInfo) item.getMenuInfo();
+        switch (item.getItemId()) {
+            case 1:
+                Toast.makeText(getActivity(), "晚一点帮你分享", 2000).show();
+                break;
+            case 2:
+                Toast.makeText(getActivity(), "晚一点帮你收藏", 2000).show();
+                break;
+            case 3:
+                // 实现删除功能
+                data.remove(info.position);
+                baseAdapter.notifyDataSetChanged();
+                break;
+        }
+        return super.onContextItemSelected(item);
+    }
+
+    /**
+     * “微信分享” 对话框
+     */
+    public void dialog() {
+        AlertDialog.Builder dialog = new AlertDialog.Builder(getActivity());
+        dialog.setTitle("确认");
+        dialog.setIcon(android.R.drawable.ic_dialog_alert);
+        dialog.setMessage("您确认要在微信分享");
+        dialog.setNegativeButton("取消", new DialogInterface.OnClickListener() {
+            @SuppressLint("WrongConstant")
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getActivity(), "取消微信分享", 2000).show();
+            }
+        });
+        dialog.setPositiveButton("确定", new DialogInterface.OnClickListener() {
+            @SuppressLint("WrongConstant")
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(getActivity(), "微信分享成功", 2000).show();
+            }
+        });
+        dialog.show();
     }
 
     private void initData() {
