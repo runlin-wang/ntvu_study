@@ -11,4 +11,6 @@
 <!--    底部导航-->
     <color name="public_green">#468500</color>
     <color name="navigation_false">#60000000</color>
+
+    <color name="txt_gourmet">#60000000</color>
 </resources>

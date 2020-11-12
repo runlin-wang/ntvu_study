@@ -10,10 +10,10 @@ import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import com.example.fragment.GourmetFragment;
 import com.example.fragment.HomeFragment;
+import com.example.fragment.OrderFragment;
 import com.example.fragment.PersonalCenter;
 
 public class MainActivity extends AppCompatActivity {
@@ -111,13 +111,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.main_radio1 :
                         rbutton2.setTextColor(fontColor_true);
                         rbutton2.setCompoundDrawablesWithIntrinsicBounds(null, icon_community_true, null, null);
-//                        transaction.replace(R.id.main_frameLayout, new GourmetFragment()); // 替换碎片内容
+                        //fixme 一小点bug
+                        transaction.replace(R.id.main_frameLayout, new GourmetFragment()); // 替换碎片内容
                         break;
                     // 当“我的订单”选项被选中时，设置选项在被选中状态下的文字及图片
                     case R.id.main_radio2 :
                         rbutton3.setTextColor(fontColor_true);
                         rbutton3.setCompoundDrawablesWithIntrinsicBounds(null, icon_order_true, null, null);
-                        Toast.makeText(MainActivity.this, "我的订单", Toast.LENGTH_SHORT).show();
+                        transaction.replace(R.id.main_frameLayout, new OrderFragment());
                         break;
                     // 当“个人中心”选项被选中时，设置选项在被选中状态下的文字及图片
                     case R.id.main_radio3 :
