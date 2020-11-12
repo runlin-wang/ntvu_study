@@ -39,10 +39,10 @@ public class GourmetFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // 利用布局加载器加载”吃货驾到“布局，将其转换为 View
-        View view = inflater.inflate(R.layout.frag_home, null);
+        View view = inflater.inflate(R.layout.frag_gourmet, null);
         initData();
         baseAdapter = new GourmetBaseAdapter(data, this.getActivity());
-        listView = view.findViewById(R.id.gourmet_frag_listView);
+        listView = (ListView) view.findViewById(R.id.gourmet_frag_listView);
         listView.setAdapter(baseAdapter);
         return view;    // 返回 View
     }
