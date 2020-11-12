@@ -125,13 +125,11 @@ public class HomeFragment extends Fragment {
         thread = new Thread(new Runnable() {
             @Override
             public void run() {
-                //TODO Auto-generated method stud
                 while (!Thread.interrupted()) {
                     try {
                         Thread.sleep(5000);
                         handler.sendEmptyMessage(1);
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated method stud
                         e.printStackTrace();
                     }
                 }

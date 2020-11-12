@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         icon_home_true = res.getDrawable(R.mipmap.icon_home_true);
         // 找到图片 icon_home_false, 用于设置当“首页”选项未被选中时的图片
         icon_home_false = res.getDrawable(R.mipmap.icon_home_false);
-        // 找到图片 iocn_community_true, 用于设置当“吃货驾到”选项被选中时的图片
+        // 找到图片 icon_community_true, 用于设置当“吃货驾到”选项被选中时的图片
         icon_community_true = res.getDrawable(R.mipmap.icon_community_true);
         // 找到图片 icon_community_false, 用于设置当“吃货驾到”选项未被选中时的图片
         icon_community_false = res.getDrawable(R.mipmap.icon_community_false);
@@ -89,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void navigation() {
-        // TODO Auto-generated method stub
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @SuppressLint("NonConstantResourceId")
             @Override
@@ -111,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.main_radio1 :
                         rbutton2.setTextColor(fontColor_true);
                         rbutton2.setCompoundDrawablesWithIntrinsicBounds(null, icon_community_true, null, null);
-                        //fixme 一小点bug
                         transaction.replace(R.id.main_frameLayout, new GourmetFragment()); // 替换碎片内容
                         break;
                     // 当“我的订单”选项被选中时，设置选项在被选中状态下的文字及图片

@@ -38,7 +38,6 @@ public class GourmetFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         // 利用布局加载器加载”吃货驾到“布局，将其转换为 View
         View view = inflater.inflate(R.layout.frag_home, null);
         initData();

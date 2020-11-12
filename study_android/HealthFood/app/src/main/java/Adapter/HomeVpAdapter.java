@@ -22,7 +22,6 @@ public class HomeVpAdapter extends PagerAdapter {
      */
     @Override
     public int getCount() {
-        // TODO Auto-generated method stud
         return images.size();
     }
 
@@ -34,7 +33,6 @@ public class HomeVpAdapter extends PagerAdapter {
      */
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        // TODO Auto-generated method stud
         return view == object;
     }
 
@@ -46,14 +44,12 @@ public class HomeVpAdapter extends PagerAdapter {
      */
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
-        // TODO Auto-generated method stud
         container.removeView((View) object);
     }
 
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
-        // TODO Auto-generated method stud
         container.addView(images.get(position));
         return images.get(position);
     }

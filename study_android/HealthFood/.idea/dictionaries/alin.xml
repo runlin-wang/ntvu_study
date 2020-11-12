@@ -1,7 +1,18 @@
 <component name="ProjectDictionaryState">
   <dictionary name="alin">
     <words>
+      <w>hlsearch</w>
+      <w>ignorecase</w>
+      <w>incsearch</w>
+      <w>mapleader</w>
+      <w>nnoremap</w>
+      <w>nohlsearch</w>
       <w>rbutton</w>
+      <w>relativenumber</w>
+      <w>scrolloff</w>
+      <w>showmode</w>
+      <w>smartcase</w>
+      <w>vnoremap</w>
     </words>
   </dictionary>
 </component>
