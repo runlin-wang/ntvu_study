@@ -28,7 +28,6 @@ public class OrderFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
         // 利用布局加载器加载 ”我的订单“ 布局，将其转换为 View
         View view = inflater.inflate(R.layout.frag_order, null);
         init(view);
