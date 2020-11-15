@@ -6,8 +6,8 @@ import java.util.concurrent.CyclicBarrier;
 
 class SyncThread extends Thread {
 
-    private CyclicBarrier cb;
-    private int[] data;
+    private final CyclicBarrier cb;
+    private final int[] data;
     private static int MIN = Integer.MAX_VALUE;
 
     public SyncThread(CyclicBarrier cb, int... data) {
