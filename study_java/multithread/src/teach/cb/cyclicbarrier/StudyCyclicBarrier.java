@@ -53,6 +53,7 @@ public class StudyCyclicBarrier {
 //        new SyncThread(cb, 4, 5, 6).start();
 //        new SyncThread(cb, 7, 8, 9).start();
 
+        // 调用 THREAD_COUNTS 个线程，判断 CyclicBarrier.await() 方法是否会锁定资源
         for (int i = 0; i < THREAD_COUNTS; i++) {
             int[] data = new int[3];
             int base = 10 * (i + 1);
