@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script src="js/jquery-3.5.1.js"></script>
+		<script>
+			const cl = console.log.bind(console);
+		</script>
+	</head>
+	<body>
+		<div class="tog">
+			<ul id="myul1">
+				<li>item11</li>
+				<li>item12</li>
+				<li>item13</li>
+			</ul>
+			<ul id="myul2">
+				<li>item21</li>
+				<li>item22</li>
+				<li>item23</li>
+			</ul>
+		</div>
+		<form>
+			<input type="text" id="username" /> <br>
+			<input type="password" id="pwd" /> <br>
+			<input type="file" /> <br>
+			<input type="submit" /> <br>
+		</form>
+		<p name="myp" class="tog">here is a p</p>
+		<script>
+			// fotEach 练习
+			// 理解 var forEach 中的 this 作用域
+			// var name = 'Alice';
+			// var age = 18;
+			// const someObject = {
+			// 	name: 'Bob',
+			// 	age: 20
+			// }
+			// const ul = document.getElementsByTagName("ul")[0];
+			// const arr = Array.prototype.slice.apply(ul.childNodes);
+			// arr.forEach(function(current) {
+			// 	cl(this.name + ', ' + this.age);
+			// }, someObject);
+			
+			const frm = document.forms[0];
+			cl(frm.childElementCount);
+			// $(frm.children).each(function() {
+			// 	cl(this)
+			// });
+			
+			
+			
+		</script>
+	</body>
+</html>
