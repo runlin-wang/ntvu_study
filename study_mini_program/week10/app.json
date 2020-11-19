@@ -13,6 +13,5 @@
     "navigationBarTitleText": "study mini program",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

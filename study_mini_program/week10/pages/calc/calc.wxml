@@ -1,36 +1,35 @@
 <!--pages/calc/calc.wxml-->
-<view>
-  <view class="result">
-    <text>计算结果：</text>
-  </view>  
+<view class="content">
+  <view class="result">计算结果</view>  
 
   <view class="btn-group">
-    <button>C</button>
-    <button>DEL</button>
-    <button>%</button>
-    <button>÷</button>
+    <button class="orange" hover-class="other-btn-hover">C</button>
+    <button class="orange" hover-class="other-btn-hover">DEL</button>
+    <button class="orange" hover-class="other-btn-hover">%</button>
+    <button class="orange" hover-class="other-btn-hover">÷</button>
   </view>  
   <view class="btn-group">
-    <button>7</button>
-    <button>8</button>
-    <button>9</button>
-    <button>×</button>
+    <button class="blue" hover-class="btn-hober-num">7</button>
+    <button class="blue" hover-class="btn-hober-num">8</button>
+    <button class="blue" hover-class="btn-hober-num">9</button>
+    <button class="orange" hover-class="other-btn-hover">×</button>
   </view>  
   <view class="btn-group">
-    <button>4</button>
-    <button>5</button>
-    <button>6</button>
-    <button>-</button>
+    <button class="blue" hover-class="btn-hober-num">4</button>
+    <button class="blue" hover-class="btn-hober-num">5</button>
+    <button class="blue" hover-class="btn-hober-num">6</button>
+    <button class="orange" hover-class="other-btn-hover">-</button>
   </view>  
   <view class="btn-group">
-    <button>1</button>
-    <button>2</button>
-    <button>3</button>
-    <button>+</button>
+    <button class="blue" hover-class="btn-hober-num">1</button>
+    <button class="blue" hover-class="btn-hober-num">2</button>
+    <button class="blue" hover-class="btn-hober-num">3</button>
+    <button class="orange" hover-class="other-btn-hover">+</button>
   </view>  
   <view class="btn-group">
-    <button>0</button>
-    <button>.</button>
-    <button>=</button>
+    <button class="blue" hover-class="btn-hober-num">00</button>
+    <button class="blue" hover-class="btn-hober-num">0</button>
+    <button class="blue" hover-class="btn-hober-num">.</button>
+    <button class="orange" hover-class="other-btn-hover">=</button>
   </view>  
 </view>
