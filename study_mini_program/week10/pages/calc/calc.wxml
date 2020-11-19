@@ -1,35 +1,35 @@
 <!--pages/calc/calc.wxml-->
 <view class="content">
-  <view class="result">计算结果</view>  
+  <view class="result">{{result}}</view>  
 
   <view class="btn-group">
-    <button class="orange" hover-class="other-btn-hover">C</button>
-    <button class="orange" hover-class="other-btn-hover">DEL</button>
-    <button class="orange" hover-class="other-btn-hover">%</button>
-    <button class="orange" hover-class="other-btn-hover">÷</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="history">历史</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="clear">C</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="back">⬅</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="div">÷</button>
   </view>  
   <view class="btn-group">
-    <button class="blue" hover-class="btn-hober-num">7</button>
-    <button class="blue" hover-class="btn-hober-num">8</button>
-    <button class="blue" hover-class="btn-hober-num">9</button>
-    <button class="orange" hover-class="other-btn-hover">×</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="7">7</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="8">8</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="9">9</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="mul">×</button>
   </view>  
   <view class="btn-group">
-    <button class="blue" hover-class="btn-hober-num">4</button>
-    <button class="blue" hover-class="btn-hober-num">5</button>
-    <button class="blue" hover-class="btn-hober-num">6</button>
-    <button class="orange" hover-class="other-btn-hover">-</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="4">4</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="5">5</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="6">6</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="sub">-</button>
   </view>  
   <view class="btn-group">
-    <button class="blue" hover-class="btn-hober-num">1</button>
-    <button class="blue" hover-class="btn-hober-num">2</button>
-    <button class="blue" hover-class="btn-hober-num">3</button>
-    <button class="orange" hover-class="other-btn-hover">+</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="1">1</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="2">2</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="3">3</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="add">+</button>
   </view>  
   <view class="btn-group">
-    <button class="blue" hover-class="btn-hober-num">00</button>
-    <button class="blue" hover-class="btn-hober-num">0</button>
-    <button class="blue" hover-class="btn-hober-num">.</button>
-    <button class="orange" hover-class="other-btn-hover">=</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="negative">±</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="0">0</button>
+    <button class="blue" hover-class="btn-hober-num" bindtap = "clickBtn" data-value="dot">.</button>
+    <button class="orange" hover-class="other-btn-hover" bindtap = "clickBtn" data-value="equ">=</button>
   </view>  
 </view>
