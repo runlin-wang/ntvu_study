@@ -1,8 +1,21 @@
 /* pages/datadriver/datadriver.wxss */
+.view-odd, 
+.view-even {
+  margin: 30rpx;
+  min-height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+
 .view-odd {
-  background-color: yellow;
+  background-color: orange;
 }
 
 .view-even {
   background-color: yellowgreen;
+}
+
+.btns>button {
+  margin: 30rpx;
+  background-color: #399;
 }

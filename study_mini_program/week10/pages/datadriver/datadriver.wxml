@@ -7,7 +7,7 @@
   2, 4, 6, 8
 </view>
 
-<view>
+<view class="btns">
   <button bindtap="setParam" data-param="odd">奇数</button>
   <button bindtap="setParam" data-param="even">偶数</button>
 </view>
