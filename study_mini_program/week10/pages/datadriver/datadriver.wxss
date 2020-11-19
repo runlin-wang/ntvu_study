@@ -1,0 +1,8 @@
+/* pages/datadriver/datadriver.wxss */
+.view-odd {
+  background-color: yellow;
+}
+
+.view-even {
+  background-color: yellowgreen;
+}

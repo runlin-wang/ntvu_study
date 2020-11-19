@@ -66,5 +66,12 @@ Page({
     wx.navigateTo({
       url: '../hidden/hidden',
     })
+  },
+
+  goToURL: function(e) {
+    const page = e.currentTarget.dataset.url;
+    wx.navigateTo({
+      url: '../' + page + '/' + page,
+    });
   }
 })

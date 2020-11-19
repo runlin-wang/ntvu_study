@@ -1,0 +1,33 @@
+/* pages/calc/calc.wxss */
+/* page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.result {
+  flex: 1;
+  background-color: #f3f6fe;
+}
+
+.btns {
+  flex: 1;
+  background-color: red;
+} */
+
+.btn-group {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn-group button {
+  width: 160rpx;
+  min-height: 150rpx;
+  line-height: 150rpx;
+  margin: 10rpx;
+}
+
+.btn-group:last-child>button:first-child {
+  flex-basis: 50%;
+  /* background-color: red; */
+}

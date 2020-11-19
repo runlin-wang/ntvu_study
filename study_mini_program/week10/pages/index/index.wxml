@@ -1,16 +1,17 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
+  <!-- <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
       <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
-  </view>
-  <view class="two-numbers" bindtap="toCompare">
-    <button>{{twoNumText}}</button>
-  </view>
-  <view class="hidden" bindtap="toHidden">
-    <button>{{hidden}}</button>
+  </view> -->
+
+  <view>
+    <button bindtap="goToURL" data-url="compare">{{twoNumText}}</button>
+    <button bindtap="goToURL" data-url="hidden">{{hidden}}</button>
+    <button bindtap="goToURL" data-url="datadriver">数据驱动</button>
+    <button bindtap="goToURL" data-url="calc">计算器</button>
   </view>
 </view>
