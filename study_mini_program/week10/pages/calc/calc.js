@@ -118,7 +118,6 @@ Page({
       noNumFlag = false;
     } else {
       noNumFlag = true;
-      //TODO 具体实现 加减乘除小数点和其他的 运算符
       console.log(value);
 
       switch (value) {
@@ -126,6 +125,7 @@ Page({
           // 输入的值中不包含小数点
           if (data.toString().indexOf(".") == -1)
             data += ".";
+            noNumFlag = false;
           break;
         case "clear":
           data = 0;
