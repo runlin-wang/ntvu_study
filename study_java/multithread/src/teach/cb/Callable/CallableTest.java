@@ -76,7 +76,8 @@ class Monitor extends Thread {
 
     @Override
     public void run() {
-        while (!(sumFuture.isDone() && facFuture.isDone() && hypFuture.isDone())) {
+        while (true) {
+            if (sumFuture.isDone() && facFuture.isDone() && hypFuture.isDone()) break;
         }
 
         try {
@@ -117,7 +118,8 @@ public class CallableTest {
     public static long start;
 
     public static void main(String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(3);
+//        ExecutorService es = Executors.newFixedThreadPool(3);
+        ExecutorService es = Executors.newCachedThreadPool();
 
         Future<Integer> sumFuture = es.submit(new Sum(100));
         Future<Long> facFuture = es.submit(new Factorial(10));
@@ -132,10 +134,6 @@ public class CallableTest {
 
         System.out.println("main done.");
 
-        for (char ch = 'A'; ch <= 'D'; ch++) {
-            System.out.println(Character.toString(ch));
-            System.out.println(String.valueOf(ch));
-        }
         // 打印 CPU 核心数量
 //        System.out.println(Runtime.getRuntime().availableProcessors());
     }
