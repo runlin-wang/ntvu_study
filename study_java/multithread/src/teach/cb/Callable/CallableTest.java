@@ -1,6 +1,6 @@
 package teach.cb.Callable;
 
-import java.util.concurrent.Callable;
+import java.util.concurrent.*;
 
 class Sum implements Callable<Integer> {
 
@@ -18,6 +18,7 @@ class Sum implements Callable<Integer> {
             sum += i;
         }
 
+        Thread.sleep(2000);
         return sum;
     }
 }
@@ -37,6 +38,7 @@ class Factorial implements Callable<Long> {
         while (stop > 0)
             result *= stop--;
 
+        Thread.sleep(2000);
         return result;
     }
 }
@@ -52,30 +54,27 @@ class Hypotenuse implements Callable<Double> {
 
     @Override
     public Double call() throws Exception {
+        Thread.sleep(3000);
         return Math.sqrt(side1 * side1 + side2 * side2);
     }
 }
 
 public class CallableTest {
     public static void main(String[] args) {
-        Sum sum = new Sum(100);
-        Factorial factorial = new Factorial(10);
-        Hypotenuse hypotenuse = new Hypotenuse(3.0, 4.0);
+        ExecutorService es = Executors.newFixedThreadPool(3);
 
-        int s = 0;
-        long f = 0;
-        double h = 0;
+        Future<Integer> sumFuture = es.submit(new Sum(100));
+        Future<Long> facFuture = es.submit(new Factorial(10));
+        Future<Double> hypFuture = es.submit(new Hypotenuse(3.0, 4.0));
 
         try {
-            s = sum.call();
-            f = factorial.call();
-            h = hypotenuse.call();
-        } catch (Exception e) {
+            System.out.println("sum: " + sumFuture.get());
+            System.out.println("fac: " + facFuture.get());
+            System.out.println("hyp: " + hypFuture.get());
+        } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
 
-        System.out.println("sum: " + s);
-        System.out.println("factorial: " + f);
-        System.out.println("hypotenuse: " + h);
+        es.shutdown();
     }
 }
