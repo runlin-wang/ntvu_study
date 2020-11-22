@@ -5,7 +5,9 @@
 		<title></title>
 		<script src="js/jquery-3.5.1.js"></script>
 		<script>
-			const cl = console.log.bind(console);
+			const cl = function(e) {
+				console.log(e);
+			}
 		</script>
 	</head>
 	<body>
@@ -43,13 +45,29 @@
 			// 	cl(this.name + ', ' + this.age);
 			// }, someObject);
 			
-			const frm = document.forms[0];
-			cl(frm.childElementCount);
+			// const frm = document.forms[0];
+			// cl(frm.childElementCount);
 			// $(frm.children).each(function() {
 			// 	cl(this)
 			// });
 			
 			
+			// 201122
+			// in or of
+			// keys() values() entries()
+			// const arr = ['a', 'b', 'c', 'd', 'e'];
+			
+			// for (let k in arr) {
+			// 	cl(k);
+			// }
+			
+			// for (let v of arr.values()) {
+			// 	cl(v)
+			// }
+			
+			// for (let kv of arr.entries()) {
+			// 	cl(kv)
+			// }
 			
 		</script>
 	</body>
