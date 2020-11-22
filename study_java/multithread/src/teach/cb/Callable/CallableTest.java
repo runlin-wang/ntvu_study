@@ -1,5 +1,6 @@
 package teach.cb.Callable;
 
+import java.nio.charset.Charset;
 import java.util.concurrent.*;
 
 class Sum implements Callable<Integer> {
@@ -59,14 +60,47 @@ class Hypotenuse implements Callable<Double> {
     }
 }
 
-public class CallableTest {
-    public static void main(String[] args) {
-        ExecutorService es = Executors.newFixedThreadPool(3);
+class Monitor extends Thread {
 
-        Future<Integer> sumFuture = es.submit(new Sum(100));
-        Future<Long> facFuture = es.submit(new Factorial(10));
-        Future<Double> hypFuture = es.submit(new Hypotenuse(3.0, 4.0));
+    private final CyclicBarrier cBar;
+    private final Future<Integer> sumFuture;
+    private final Future<Long> facFuture;
+    private final Future<Double> hypFuture;
 
+    public Monitor(CyclicBarrier cBar, Future<Integer> sumFuture, Future<Long> facFuture, Future<Double> hypFuture) {
+        this.cBar = cBar;
+        this.sumFuture = sumFuture;
+        this.facFuture = facFuture;
+        this.hypFuture = hypFuture;
+    }
+
+    @Override
+    public void run() {
+        while (!(sumFuture.isDone() && facFuture.isDone() && hypFuture.isDone())) {
+        }
+
+        try {
+            cBar.await();
+        } catch (InterruptedException | BrokenBarrierException e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+class CallbackThread extends Thread {
+
+    private final Future<Integer> sumFuture;
+    private final Future<Long> facFuture;
+    private final Future<Double> hypFuture;
+
+    public CallbackThread(Future<Integer> sumFuture, Future<Long> facFuture, Future<Double> hypFuture) {
+        this.sumFuture = sumFuture;
+        this.facFuture = facFuture;
+        this.hypFuture = hypFuture;
+    }
+
+    @Override
+    public void run() {
         try {
             System.out.println("sum: " + sumFuture.get());
             System.out.println("fac: " + facFuture.get());
@@ -74,7 +108,35 @@ public class CallableTest {
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         }
+        System.out.println("run time：" + (System.currentTimeMillis() - CallableTest.start) + "ms");
+    }
+}
 
+public class CallableTest {
+
+    public static long start;
+
+    public static void main(String[] args) {
+        ExecutorService es = Executors.newFixedThreadPool(3);
+
+        Future<Integer> sumFuture = es.submit(new Sum(100));
+        Future<Long> facFuture = es.submit(new Factorial(10));
+        Future<Double> hypFuture = es.submit(new Hypotenuse(3.0, 4.0));
+
+        CyclicBarrier cBar = new CyclicBarrier(1, new CallbackThread(sumFuture, facFuture, hypFuture));
+
+        start = System.currentTimeMillis();
+
+        new Monitor(cBar, sumFuture, facFuture, hypFuture).start();
         es.shutdown();
+
+        System.out.println("main done.");
+
+        for (char ch = 'A'; ch <= 'D'; ch++) {
+            System.out.println(Character.toString(ch));
+            System.out.println(String.valueOf(ch));
+        }
+        // 打印 CPU 核心数量
+//        System.out.println(Runtime.getRuntime().availableProcessors());
     }
 }
