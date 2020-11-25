@@ -89,11 +89,11 @@ Page({
       responseType: 'text',
       success: (result)=>{
         console.log(result.data);
-        const success = result.data.code == 200;
-        console.log(result.data.code);
+        const value = result.data.code == 200 ? 'success' : 'fail';
+        console.log('../../img/' + value + '.png');
         wx.showToast({
-          title: success ? 'success' : 'fail',
-          icon: 'none',
+          title: value,
+          image: '../../img/' + value + '.png',
           duration: 1500,
         });
       },
