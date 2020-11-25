@@ -78,7 +78,7 @@ Page({
   login: function () {
     const that = this;
     let request = wx.request({
-      url: 'http://localhost:8080/doLogin',
+      url: 'http://localhost:8080/doLogin2',
       data: {
         username: that.data.userName,
         pwd: that.data.pwd
@@ -89,9 +89,10 @@ Page({
       responseType: 'text',
       success: (result)=>{
         console.log(result.data);
-        const success = result.data.code == '200';
+        const success = result.data.code == 200;
+        console.log(result.data.code);
         wx.showToast({
-          title: 'success',
+          title: success ? 'success' : 'fail',
           icon: 'none',
           duration: 1500,
         });
