@@ -1,0 +1,19 @@
+<!--pages/serverLogin/serverLogin.wxml-->
+<view class="container">
+  <view class="text-center mb-4">
+    <text class="h1">欢迎回来</text>
+  </view>
+    
+  <view class="input-view">
+    <text>用户名：</text>
+    <input type="text" placeholder="请输入用户名" bindchange="textChange" data-name="userName" />
+  </view>
+  <view class="input-view">
+    <text>密码：</text>
+    <input type="password" placeholder="请输入密码" bindchange="textChange" data-name="pwd" />
+  </view>
+
+  <view>
+    <button class="btn" bindtap="login">登录</button>
+  </view>
+</view>

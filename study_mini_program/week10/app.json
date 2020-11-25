@@ -5,7 +5,8 @@
     "pages/compare/compare",
     "pages/hidden/hidden",
     "pages/datadriver/datadriver",
-    "pages/calc/calc"
+    "pages/calc/calc",
+    "pages/serverLogin/serverLogin"
   ],
   "window": {
     "backgroundTextStyle": "light",

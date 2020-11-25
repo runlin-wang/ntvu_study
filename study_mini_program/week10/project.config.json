@@ -68,6 +68,13 @@
         {
           "name": "pages/calc/calc",
           "pathName": "pages/calc/calc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/serverLogin/serverLogin",
+          "pathName": "pages/serverLogin/serverLogin",
+          "query": "",
           "scene": null
         }
       ]

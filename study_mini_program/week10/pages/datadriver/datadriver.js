@@ -19,15 +19,11 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    //TODO 定时器作业
-    setTimeout(
-      function () {
-        // var isOdd = this.data.isOdd;
-        const page = miniProgram.currentPage()
-        // const page = await miniProgram.currentPage();
-        console.log(page.data);
-        // this.setData({isOdd: });
-      }, 2000);
+    const that = this;
+    (function timerSwitch() {
+      that.setData({isOdd:!that.data.isOdd});
+      setTimeout(timerSwitch, 1000);
+    })();
   },
 
   /**
