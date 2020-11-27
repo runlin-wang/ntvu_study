@@ -57,7 +57,8 @@
 }
 
 /* 登录按钮 */
-.login {
+#login,
+#register {
     background: #d55f5b;
     border: 1px solid #d25c49;
     font-size: 16px;
@@ -71,23 +72,24 @@
 }
 
 /* 鼠标悬停事件 */
-.login:hover {
+#login:hover,
+#register:hover {
     background: #c25349;
 }
 
-#register {
+#register-btn {
     float: right;
 }
 
 #forget-pwd,
 #home,
-#register {
+#register-btn {
     cursor: pointer;
 }
 
 #forget-pwd:hover,
 #home:hover,
-#register:hover {
+#register-btn:hover {
     color: #666;
 }
 

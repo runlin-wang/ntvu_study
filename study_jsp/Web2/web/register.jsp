@@ -1,72 +1,53 @@
 <%@ page import="com.ntvu.web2.util.Tools" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
-<html lang="zh-CN">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>用户注册</title>
-    <meta name="keywords" content="" />
-    <meta name="description" content="" />
-
-    <link rel="stylesheet" type="text/css" href="plugins/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-    <link rel="stylesheet" type="text/css" href="css/util.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <title>注册</title>
 </head>
-
+<link rel="stylesheet" href="css/global.css">
 <body>
 
-<div class="limiter">
-    <div class="container-login100" style="background-image: url('images/bg-01.jpg');">
-        <div class="wrap-login100 p-l-55 p-r-55 p-t-65 p-b-54">
-            <form class="login100-form validate-form" action="${pageContext.request.contextPath}/doRegister">
-                <span class="login100-form-title p-b-49">注册</span>
-
-                <div class="wrap-input100 validate-input m-b-23" data-validate="请输入用户名">
-                    <span class="label-input100">用户名</span>
-                    <input class="input100" type="text" name="txtLoginName" placeholder="请输入用户名" autocomplete="off" value="<%=Tools.getNullOrEmpty(request.getAttribute("txtLoginName"), "")/* request.getAttribute("txtLoginName") != null ? request.getAttribute("txtLoginName"): ""*/%>">
-                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+<div id="root">
+    <div class="container">
+        <div class="nav">This is logo!</div>
+        <div class="form">
+            <form action="${pageContext.request.contextPath}/doRegister">
+                <div class="head">
+                    <h1>欢迎注册</h1>
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="请输入密码">
-                    <span class="label-input100">密码</span>
-                    <input class="input100" type="password" name="pwd" placeholder="请输入密码">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                <div class="input-div">
+                    <div class="txt"><label for="username">用户名</label></div>
+                    <input id="username" name="username" placeholder="请输入你的用户名" type="text" value="<%=Tools.getNullOrEmpty(request.getAttribute("txtLoginName"), "")%>">
                 </div>
 
-                <div class="wrap-input100 validate-input" data-validate="请再次输入密码">
-                    <span class="label-input100">确认密码</span>
-                    <input class="input100" type="password" name="pwd2" placeholder="请再次输入密码">
-                    <span class="focus-input100" data-symbol="&#xf190;"></span>
+                <div class="input-div">
+                    <div class="txt"><label for="pwd">密码</label></div>
+                    <input id="pwd" name="pwd" placeholder="请输入你的登录密码" type="password">
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="请输入手机号">
-                    <span class="label-input100">手机号</span>
-                    <input class="input100" type="text" name="telephone" placeholder="请输入手机号" autocomplete="off" value="<%=Tools.getNullOrEmpty(request.getAttribute("telephone"), "")%>">
-                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                <div class="input-div">
+                    <div class="txt"><label for="pwd2">确认密码</label></div>
+                    <input id="pwd2" name="pwd2" placeholder="请再次输入密码" type="password">
                 </div>
 
-                <div class="wrap-input100 validate-input m-b-23" data-validate="请输入邮箱">
-                    <span class="label-input100">邮箱</span>
-                    <input class="input100" type="text" name="email" placeholder="请输入邮箱" autocomplete="off"  value="<%=Tools.getNullOrEmpty(request.getAttribute("email"), "")%>">
-                    <span class="focus-input100" data-symbol="&#xf206;"></span>
+                <div class="input-div">
+                    <div class="txt"><label for="telephone">手机号</label></div>
+                    <input id="telephone" name="telephone" placeholder="请输入手机号" type="text" value="<%=Tools.getNullOrEmpty(request.getAttribute("telephone"), "")%>">
                 </div>
 
-                <div class="container-login100-form-btn">
-                    <div class="wrap-login100-form-btn">
-                        <div class="login100-form-bgbtn"></div>
-                        <button class="login100-form-btn">注 册</button>
-                    </div>
+                <div class="input-div">
+                    <div class="txt"><label for="email">邮箱</label></div>
+                    <input id="email" name="email" placeholder="请输入邮箱" type="text" value="<%=Tools.getNullOrEmpty(request.getAttribute("email"), "")%>">
                 </div>
+
+                <div id="register">同意条款并注册</div>
             </form>
         </div>
     </div>
 </div>
 
 </body>
-
 </html>
