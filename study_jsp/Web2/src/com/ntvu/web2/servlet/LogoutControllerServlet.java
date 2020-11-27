@@ -13,17 +13,17 @@ import java.io.IOException;
  */
 public class LogoutControllerServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         doGet(request,response);
     }
 
     protected void doGet(HttpServletRequest req,
                          HttpServletResponse resp)
-            throws ServletException, IOException {
+            throws IOException {
         HttpSession session = req.getSession();
         session.removeAttribute("CurrentUserName");
         String path = req.getContextPath();
-        resp.sendRedirect(path + "/index.jsp");
+        resp.sendRedirect(path + "/index.html");
     }
 
 }

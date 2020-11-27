@@ -11,17 +11,17 @@ import java.io.IOException;
 
 public class LoginControllerServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         doGet(request,response);
     }
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.setCharacterEncoding("utf-8");
         String path = req.getContextPath();
         String username = req.getParameter("username");
         String pass = req.getParameter("pass");
 
-        System.out.println(String.format("username = %s, password = %s, path = %s", username, pass, path));
+        System.out.printf("username = %s, password = %s, path = %s%n", username, pass, path);
 
         if (new LoginService().login(username, pass)) {
             // 保存用户名
@@ -33,7 +33,7 @@ public class LoginControllerServlet extends HttpServlet {
 
         }else {
             req.setAttribute("txtLoginName", username);
-            resp.sendRedirect(path + "/index.jsp");
+            resp.sendRedirect(path + "/index.html");
 
 //            RequestDispatcher rd = getServletContext().getRequestDispatcher("/login");
 //            rd.forward(req,resp);

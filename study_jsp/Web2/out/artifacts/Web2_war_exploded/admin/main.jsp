@@ -13,7 +13,7 @@
 
     String path = request.getContextPath();
     if (session.getAttribute("CurrentUserName") == null) {
-        response.sendRedirect(path + "/index.jsp");
+        response.sendRedirect(path + "/index.html");
         return;
     }
 

@@ -46,7 +46,7 @@ public class RegisterServlet extends HttpServlet {
         // 注册成功跳转登录页面 失败继续注册
         boolean success = new LoginService().register(user);
         if (success) {
-            resp.sendRedirect(path + "/index.jsp");
+            resp.sendRedirect(path + "/index.html");
 //            resp.sendRedirect(path + String.format("/doLogin?username=%s&password=%s", loginName, pwd));
         } else {
             req.setAttribute("txtLoginName", loginName);

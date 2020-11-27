@@ -1,5 +1,5 @@
 <%@ page import="com.ntvu.web2.util.Tools" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -67,8 +67,6 @@
     </div>
 </div>
 
-<script src="plugins/jquery/jquery-3.2.1.min.js"></script>
-<script src="js/main.js"></script>
 </body>
 
 </html>
