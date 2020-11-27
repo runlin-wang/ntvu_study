@@ -2,6 +2,7 @@ package com.ntvu.web2.servlet;
 
 import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.service.LoginService;
+import com.ntvu.web2.util.Tools;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -18,7 +19,7 @@ public class RegisterServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         // 从页面的输入框获取值
-        String loginName = req.getParameter("txtLoginName");
+        String loginName = req.getParameter("username");
         String pwd = req.getParameter("pwd");
         String pwd2 = req.getParameter("pwd2");
         String telephone = req.getParameter("telephone");
@@ -33,15 +34,13 @@ public class RegisterServlet extends HttpServlet {
         String path = req.getContextPath();
 
         // 验证数据合法性 用户名、密码、手机号、邮箱不为空，两次密码必须一致
-        if (loginName == null || loginName.trim().equals("") || pwd == null || pwd.equals("") || telephone == null || email.trim().equals("") || !pwd.equals(pwd2)) {
-            req.setAttribute("txtLoginName", loginName);
+        if (Tools.isNullOrEmpty(loginName) || Tools.isNullOrEmpty(pwd) || Tools.isNullOrEmpty(telephone) || Tools.isNullOrEmpty(email) || !pwd.equals(pwd2)) {
+            req.setAttribute("username", loginName);
             req.setAttribute("telephone", telephone);
             req.setAttribute("email", email);
             resp.sendRedirect(path + "/register.jsp");
             return;
         }
-
-
 
         // 注册成功跳转登录页面 失败继续注册
         boolean success = new LoginService().register(user);

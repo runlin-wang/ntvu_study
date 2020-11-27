@@ -49,5 +49,10 @@
     </div>
 </div>
 
+<script>
+    document.querySelector('#register').onclick = function () {
+        document.querySelector('form').submit();
+    }
+</script>
 </body>
 </html>

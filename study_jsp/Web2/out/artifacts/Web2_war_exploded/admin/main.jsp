@@ -61,7 +61,7 @@
                         <td><%=user.getTelephone()%></td>
                         <td><%=user.getEmail()%></td>
                         <td>
-                            <img src="/images/<%=user.isStatus()%>.png" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
+                            <img src="/images/<%=user.isStatus()%>.jpg" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
                         </td>
                         <td><%=user.getRole().getRoleName()%></td>
                         <td>

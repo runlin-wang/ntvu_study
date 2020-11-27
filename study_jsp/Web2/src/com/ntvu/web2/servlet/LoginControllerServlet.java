@@ -19,18 +19,17 @@ public class LoginControllerServlet extends HttpServlet {
         req.setCharacterEncoding("utf-8");
         String path = req.getContextPath();
         String username = req.getParameter("username");
-        String pass = req.getParameter("pass");
+        String pwd = req.getParameter("pwd");
 
-        System.out.printf("username = %s, password = %s, path = %s%n", username, pass, path);
+        System.out.printf("username = %s, password = %s, path = %s%n", username, pwd, path);
 
-        if (new LoginService().login(username, pass)) {
+        if (new LoginService().login(username, pwd)) {
             // 保存用户名
             HttpSession session = req.getSession();
             session.setAttribute("CurrentUserName",username);
             session.setMaxInactiveInterval(1800);//30minutes
             // 跳转
             resp.sendRedirect(path + "/admin/main.jsp");
-
         }else {
             req.setAttribute("txtLoginName", username);
             resp.sendRedirect(path + "/index.html");
