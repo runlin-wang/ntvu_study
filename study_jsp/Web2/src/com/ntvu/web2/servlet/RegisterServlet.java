@@ -26,11 +26,6 @@ public class RegisterServlet extends HttpServlet {
         String email = req.getParameter("email");
 
         SystemUsers user = new SystemUsers(loginName, pwd, telephone, email);
-//        user.setLoginName(req.getParameter("txtLoginName"));
-//        user.setLoginPassword(req.getParameter("pwd"));
-//        user.setTelephone(req.getParameter("telephone"));
-//        user.setEmail(req.getParameter("email"));
-
         String path = req.getContextPath();
 
         // 验证数据合法性 用户名、密码、手机号、邮箱不为空，两次密码必须一致
@@ -54,5 +49,4 @@ public class RegisterServlet extends HttpServlet {
             req.getRequestDispatcher(path + "/register.jsp").forward(req, resp);
         }
     }
-
 }
