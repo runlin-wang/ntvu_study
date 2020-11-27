@@ -66,7 +66,7 @@
                         <td><%=user.getRole().getRoleName()%></td>
                         <td>
                             <input type="button" value="删除" onclick="deleteByName('<%=user.getLoginName()%>')">
-                            <input type="button" value="编辑" onclick="location.href='edit.jsp?login_name=<%=user.getLoginName()%>'">
+                            <input type="button" value="编辑" onclick="location.href='edit.jsp?id=<%=user.getId()%>'">
                             <input type="button" value="禁用">
                             <input type="button" value="重置密码">
                         </td>

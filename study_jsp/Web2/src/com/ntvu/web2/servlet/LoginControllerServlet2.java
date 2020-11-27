@@ -27,7 +27,7 @@ public class LoginControllerServlet2 extends HttpServlet {
         String username = req.getParameter("username");
         String pwd = req.getParameter("pwd");
 
-        System.out.println(String.format("username = %s, password = %s, path = %s", username, pwd, path));
+        System.out.printf("username = %s, password = %s, path = %s%n", username, pwd, path);
 
         PrintWriter writer = resp.getWriter();
         if (new LoginService().login(username, pwd)) {

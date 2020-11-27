@@ -60,6 +60,6 @@
     cursor: pointer;
 }
 /* 鼠标悬停事件 */
-.login:focus {
-    background: #fff;
+.login:hover {
+    background: #c25349;
 }

@@ -264,7 +264,7 @@ public class LoginService {
         if(user == null || user.getLoginName() == null || user.getTelephone() == null || user.getEmail() == null)
             return false;
 
-        String sql  = "update system_users set login_name=%s,telephone=%s,email=%s,status=%b,role_id=%d where id=%d";
+        String sql  = "update system_users set login_name='%s',telephone='%s',email='%s',status=%b,role_id=%d where id=%d";
         sql = String.format(sql,user.getLoginName(),user.getTelephone(),user.getEmail(),user.isStatus(),user.getRoleId(),user.getId());
         return updateSql(sql) > 0;
     }
@@ -375,7 +375,7 @@ public class LoginService {
             users = new ArrayList<>();
             // 每次添加一个 SystemUsers 对象
             while (rs.next())
-                users.add(new SystemUsers(rs.getString("login_name"), rs.getString("login_password"), null, rs.getString("telephone"), rs.getString("email"),
+                users.add(new SystemUsers(rs.getInt("id"), rs.getString("login_name"), rs.getString("login_password"), null, rs.getString("telephone"), rs.getString("email"),
                         rs.getBoolean("status"), rs.getInt("role_id"), getRole(rs.getInt("role_id"))));
             rs.close();
             closeConnection();

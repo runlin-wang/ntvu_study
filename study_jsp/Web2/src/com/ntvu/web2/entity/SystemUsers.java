@@ -23,7 +23,8 @@ public class SystemUsers {
 
     public SystemUsers() {}
 
-    public SystemUsers(String loginName, String loginPassword, String loginSalt, String telephone, String email, boolean status, int roleId, Roles role) {
+    public SystemUsers(int id, String loginName, String loginPassword, String loginSalt, String telephone, String email, boolean status, int roleId, Roles role) {
+        this.id = id;
         this.loginName = Tools.getNullOrEmpty(loginName, "default");
         this.loginPassword = Tools.getNullOrEmpty(loginPassword, "123456");
         this.loginSalt = Tools.getNullOrEmpty(loginSalt, "salt");
@@ -35,7 +36,16 @@ public class SystemUsers {
     }
 
     public SystemUsers(String loginName, String pwd, String telephone, String email) {
-        this(loginName, pwd, null, telephone, email, true, 2, null);
+        this(0, loginName, pwd, null, telephone, email, true, 2, null);
+    }
+
+    public SystemUsers(int id, String loginName, String telephone, String email, boolean status, int roleId) {
+        this.id = id;
+        this.loginName = loginName;
+        this.telephone = telephone;
+        this.email = email;
+        this.status = status;
+        this.roleId = roleId;
     }
 
     public int getId() {
