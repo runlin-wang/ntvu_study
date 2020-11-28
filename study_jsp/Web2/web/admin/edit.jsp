@@ -1,7 +1,7 @@
 <%@ page import="com.ntvu.web2.entity.SystemUsers" %>
 <%@ page import="com.ntvu.web2.service.LoginService" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,7 +52,7 @@
                 <td>角色：</td>
                 <td>
                     <%--                    <input type="checkbox" name="roleId"  />--%>
-                    <select name="roleNames">
+                    <select name="roleName">
                         <option value="<%=userRoleName%>"><%=userRoleName%>
                         </option>
                         <%
@@ -60,8 +60,7 @@
                                 roleName = name;
                                 if (roleName.equals(userRoleName)) continue;
                         %>
-                        <option value="<%=roleName%>"><%=roleName%>
-                        </option>
+                        <option value="<%=roleName%>"><%=roleName%></option>
                         <%
                             }
                         %>

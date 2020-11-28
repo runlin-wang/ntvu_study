@@ -13,11 +13,11 @@ import java.io.IOException;
 @WebServlet(name="userServlet", value="/doEditUser")
 public class UserServlet extends HttpServlet {
 
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         doGet(request,response);
     }
 
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
 
         // 从页面的输入框获取值
         int id = Integer.parseInt(req.getParameter("id"));
@@ -25,8 +25,9 @@ public class UserServlet extends HttpServlet {
         String telephone = req.getParameter("telephone");
         String email = req.getParameter("email");
         boolean status = req.getParameter("status") != null;
+        int roleId = new LoginService().getRoleIdByRoleName(req.getParameter("roleName"));
 
-        SystemUsers user = new SystemUsers(id, loginName, telephone, email, status, 2);
+        SystemUsers user = new SystemUsers(id, loginName, telephone, email, status, roleId);
 
         String path = req.getContextPath();
 

@@ -298,6 +298,22 @@ public class LoginService {
         return updateSql(sql) > 0;
     }
 
+    public int getRoleIdByRoleName(String roleName) {
+        String sql = String.format("select id from roles where role_name = '%s'", roleName);
+        System.out.println(sql);
+        int id = 0;
+        try {
+            ResultSet rs = executeQuery(sql);
+            if (rs.next())
+                id = rs.getInt("id");
+            rs.close();
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        closeConnection();
+        return id;
+    }
+
     /**
      * 生成连接和句柄
      */
