@@ -1,4 +1,4 @@
-package teach.cb.CountDownLatch;
+package teach.cb.countDownLatch;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.Semaphore;

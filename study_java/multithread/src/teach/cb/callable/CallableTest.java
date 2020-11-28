@@ -1,6 +1,5 @@
-package teach.cb.Callable;
+package teach.cb.callable;
 
-import java.nio.charset.Charset;
 import java.util.concurrent.*;
 
 class Sum implements Callable<Integer> {
