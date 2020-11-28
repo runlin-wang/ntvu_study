@@ -10,11 +10,12 @@ class MyThread extends Thread {
     public MyThread(Phaser phaser, String name) {
         this.phaser = phaser;
         this.name = name;
+        phaser.register();
     }
 
     @Override
     public void run() {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < 2; i++) {
             System.out.println(name + " starting phase " + (i+1));
             phaser.arriveAndAwaitAdvance();
             try {
@@ -22,6 +23,13 @@ class MyThread extends Thread {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
+        }
+        System.out.println(name + " starting phase 3");
+        phaser.arriveAndDeregister();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
     }
 }
@@ -34,7 +42,7 @@ class MyThread extends Thread {
  */
 public class PhaserTest {
     public static void main(String[] args) {
-        Phaser phaser = new Phaser(4);
+        Phaser phaser = new Phaser(1);
         int curPhase;
 
         for (char ch = 'A'; ch < 'D'; ch++) {
@@ -46,5 +54,10 @@ public class PhaserTest {
             phaser.arriveAndAwaitAdvance();
             System.out.println("Phaser" + (curPhase + 1) + "complete");
         }
+        phaser.arriveAndDeregister();
+
+        System.out.println(phaser.isTerminated());
+        System.out.println(phaser.getRegisteredParties());
+        System.out.println(phaser.getUnarrivedParties());
     }
 }
