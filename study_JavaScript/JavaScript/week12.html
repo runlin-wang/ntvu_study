@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="https://www.wolai.com/runlin-study/az42tiiAyNMd5ZWyfF4ozN#3qXcxTM3fEQHYB7QGsZq7P" target="_blank">wolai 笔记</a>
+		
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			/**
+			 * date: 20201128 20:58 周日
+			 * subject: 回调函数
+			 * wolai: https://www.wolai.com/runlin-study/az42tiiAyNMd5ZWyfF4ozN#3qXcxTM3fEQHYB7QGsZq7P
+			 */
+			var callback = function(err, result) {
+				console.log(err ? err.message : "result: " + result);
+			}
+			
+			function divide(arg1, arg2, callback) {
+				sleep(3000);
+				if (callback == undefined || typeof callback != 'function')
+					throw new Error('no callback function');
+				if (typeof arg1 == 'number' && typeof arg2 == 'number')
+					callback(null, arg1 / arg2);
+			}
+			
+			const str = 'hello';
+			divide(5, 1, function(err, result) {
+				console.log(err ? err.message : "result: " + result);
+			});
+		</script>
+	</body>
+</html>
