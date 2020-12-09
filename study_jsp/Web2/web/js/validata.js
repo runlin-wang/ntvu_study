@@ -60,3 +60,12 @@ function validEmail(email) {
     return reg.test(email);
 }
 
+/**
+ * 判断 str 是否为空或者 null
+ * @param str 字符串
+ * @returns {boolean} str 为 undefined || null || '' 时返回 true
+ */
+function isEmptyOrNull(str) {
+    return typeof str == "undefined" || str == null || str.trim() === '';
+}
+
