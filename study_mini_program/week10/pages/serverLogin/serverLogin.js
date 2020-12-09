@@ -1,4 +1,7 @@
 // pages/serverLogin/serverLogin.js
+
+const app = getApp();
+
 Page({
 
   /**
@@ -89,16 +92,22 @@ Page({
       responseType: 'text',
       success: (result)=>{
         console.log(result.data);
-        const value = result.data.code == 200 ? 'success' : 'fail';
-        console.log('../../img/' + value + '.png');
-        wx.showToast({
-          title: value,
-          image: '../../img/' + value + '.png',
-          duration: 1500,
-        });
+        // const value = result.data.code == 200 ? 'success' : 'fail';
+        // console.log('../../img/' + value + '.png');
+        if (result.data.code == '200') {
+          // 保存当前用户登录信息
+          app.globalData.memberInfo = result.data.result;
+
+          wx.switchTab({
+            url: '/pages/index/index',
+          })
+        }
       },
       fail: ()=>{
-        console.log('fail');
+        wx.showToast({
+          title: 'fail',
+          image: '../../images/' + value + '.png'
+        })
       },
       complete: ()=>{
         console.log('complete');

@@ -1,23 +1,18 @@
-// pages/my/index/index.js
-
-const app = getApp();
-
+// pages/weather/weather.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    memberInfo:null,
-    username: null,
-    telephone: null
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+
   },
 
   /**
@@ -31,19 +26,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    // console.log(typeof app.globalData.userInfo);
-    // 判断是否登录
-    // console.log(typeof app.globalData.memberInfo);
-    if (app.globalData.memberInfo == null || typeof app.globalData.memberInfo == 'undefined') {
-      wx.navigateTo({
-        url: '/pages/serverLogin/serverLogin',
-      })
-    } else {
-      console.log(app.globalData.memberInfo);
-      this.setData({
-        memberInfo: app.globalData.memberInfo
-      });
-    }
+
   },
 
   /**

@@ -9,7 +9,8 @@
     "pages/serverLogin/serverLogin",
     "pages/video/index/index",
     "pages/audio/index/index",
-    "pages/my/index/index"
+    "pages/my/index/index",
+    "pages/weather/weather"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -29,6 +30,12 @@
         "iconPath": "images/reality.png",
         "selectedIconPath": "images/reality-hl.png",
         "text": "首页"
+      },
+      {
+        "pagePath": "pages/weather/weather",
+        "iconPath": "images/enterprise.png",
+        "selectedIconPath": "images/enterprise-hl.png",
+        "text": "天气"
       },
       {
         "pagePath": "pages/video/index/index",

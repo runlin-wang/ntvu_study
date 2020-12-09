@@ -119,4 +119,26 @@ public class SystemUsers {
     public void setRole(Roles role) {
         this.role = role;
     }
+
+//    @Override
+//    public String toString() {
+//        return "SystemUsers{" +
+//                "id=" + id +
+//                ", loginName='" + loginName + '\'' +
+//                ", loginPassword='" + loginPassword + '\'' +
+//                ", loginSalt='" + loginSalt + '\'' +
+//                ", telephone='" + telephone + '\'' +
+//                ", email='" + email + '\'' +
+//                ", status=" + status +
+//                ", roleId=" + roleId +
+//                ", role=" + role +
+//                '}';
+//    }
+
+
+    @Override
+    public String toString() {
+        return String.format("{\"id\" : %d, \"loginName\" : \"%s\", \"telephone\" : \"%s\", \"email\" : \"%s\", \"status\" : %b, \"roleId\" : %d}",
+                id, loginName, telephone, email, status, roleId);
+    }
 }

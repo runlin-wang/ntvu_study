@@ -61,6 +61,11 @@ public class LoginService {
         return users != null && !users.isEmpty();
     }
 
+    public SystemUsers login2(String loginName, String password) {
+        String sql = String.format("select * from system_users where login_name='%s' and login_password='%s'", loginName, Tools.md5(password));
+        return getSystemUsers(sql).get(0);
+    }
+
     /**
      * 实现用户注册功能
      * @param loginName 用户名

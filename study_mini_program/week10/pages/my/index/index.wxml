@@ -1,2 +1,6 @@
 <!--pages/my/index/index.wxml-->
-<text>pages/my/index/index.wxml</text>
+<view>
+  <view>用户名：{{memberInfo.loginName}}</view>
+  <view>手机号：{{memberInfo.telephone}}</view>
+  <view>邮箱：{{memberInfo.email}}</view>
+</view>

@@ -1,6 +1,9 @@
 package com.ntvu.web2.servlet;
 
+import com.ntvu.web2.entity.Questionnaire;
+import com.ntvu.web2.entity.SystemUsers;
 import com.ntvu.web2.service.LoginService;
+import com.ntvu.web2.service.QuestionService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -30,8 +33,10 @@ public class LoginControllerServlet2 extends HttpServlet {
         System.out.printf("username = %s, password = %s, path = %s%n", username, pwd, path);
 
         PrintWriter writer = resp.getWriter();
+        SystemUsers obj = new LoginService().login2(username, pwd);
         if (new LoginService().login(username, pwd)) {
-            writer.print("{\"code\" : \"200\", \"msg\" : \"success\"}");
+//            writer.print("{\"code\" : \"200\", \"msg\" : \"success\"}");
+            writer.write("{\"code\" : \"200\", \"msg\" : \"success\", \"result\" : " + obj.toString() + "}");
         }else {
             writer.print("{\"code\" : \"500\", \"msg\" : \"fail\"}");
         }
