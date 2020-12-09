@@ -6,13 +6,49 @@
     "pages/hidden/hidden",
     "pages/datadriver/datadriver",
     "pages/calc/calc",
-    "pages/serverLogin/serverLogin"
+    "pages/serverLogin/serverLogin",
+    "pages/video/index/index",
+    "pages/audio/index/index",
+    "pages/my/index/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "study mini program",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "custom": false,
+    "color": "#7A7E83",
+    "selectedColor": "#00FF00",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/reality.png",
+        "selectedIconPath": "images/reality-hl.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/video/index/index",
+        "iconPath": "images/reality.png",
+        "selectedIconPath": "images/reality-hl.png",
+        "text": "视频"
+      },
+      {
+        "pagePath": "pages/audio/index/index",
+        "iconPath": "images/reality.png",
+        "selectedIconPath": "images/reality-hl.png",
+        "text": "音乐"
+      },
+      {
+        "pagePath": "pages/my/index/index",
+        "iconPath": "images/user.png",
+        "selectedIconPath": "images/user-hl.png",
+        "text": "我的"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }

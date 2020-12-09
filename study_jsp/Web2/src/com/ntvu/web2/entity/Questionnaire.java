@@ -87,7 +87,7 @@ public class Questionnaire {
 
     @Override
     public String toString() {
-        return String.format("{\"id\" : %d, \"realName\" : %s, \"telephone\" : %s, \"age\" : %d, \"sex\" : %b, \"hobby\" : %s, \"other\" : %s}",
+        return String.format("{\"id\" : %d, \"realName\" : \"%s\", \"telephone\" : \"%s\", \"age\" : %d, \"sex\" : %b, \"hobby\" : \"%s\", \"other\" : \"%s\"}",
                 id, realName, telephone, age, sex, hobby, other);
     }
 }

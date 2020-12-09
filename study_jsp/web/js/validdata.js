@@ -45,7 +45,7 @@ function rangeLength(str, minLen, maxLen) {
  * @param telephone 手机号
  * @returns {boolean} 是有效手机号返回 true
  */
-function validTelephone(telephone) {
+function validTelephoneNum(telephone) {
     const reg = /^1[3-9][0-9]{9}/;
     return reg.test(telephone);
 }
@@ -60,23 +60,3 @@ function validEmail(email) {
     return reg.test(email);
 }
 
-/**
- * 判断 str 是否为空或者 null
- * @param str 字符串
- * @returns {boolean} str 为 undefined || null || '' 时返回 true
- */
-function isEmptyOrNull(str) {
-    return typeof str == "undefined" || str == null || str.trim() === '';
-}
-
-// 添加：
-//   	isDate();
-// isTime();
-// isDateTime();
-//
-// //是否为合法的身份证号
-// isIdentify();
-
-function isDate() {
-    return null;
-}

@@ -6,14 +6,14 @@
 <html>
 <head>
     <title>后台管理界面</title>
-<%--    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">--%>
+    <link rel="stylesheet" href="../plugins/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/admin.css" />
 </head>
 <%
 
     String path = request.getContextPath();
     if (session.getAttribute("CurrentUserName") == null) {
-        response.sendRedirect(path + "/index.html");
+        response.sendRedirect(path + "/index.jsp");
         return;
     }
 
@@ -61,7 +61,7 @@
                         <td><%=user.getTelephone()%></td>
                         <td><%=user.getEmail()%></td>
                         <td>
-                            <img src="/images/<%=user.isStatus()%>.jpg" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
+                            <img src="/images/<%=user.isStatus()%>.png" width="20px" title="<%=user.isStatus() ? "可用" : "不可用"%>" alt="">
                         </td>
                         <td><%=user.getRole().getRoleName()%></td>
                         <td>

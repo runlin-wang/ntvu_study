@@ -13,5 +13,6 @@
     <button bindtap="goToURL" data-url="hidden">{{hidden}}</button>
     <button bindtap="goToURL" data-url="datadriver">数据驱动</button>
     <button bindtap="goToURL" data-url="calc">计算器</button>
+    <button bindtap="goToURL" data-url="serverLogin">登录</button>
   </view>
 </view>
