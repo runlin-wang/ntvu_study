@@ -1,4 +1,7 @@
 // pages/weather/weather.js
+
+const util  = require("../../utils/util");
+
 Page({
 
   /**
@@ -6,57 +9,57 @@ Page({
    */
   data: {
     weather: {
-      wendu: 18,
-      // ganmao: '昼夜温差较大，较易发生感冒，请适当增减衣服。体质较弱的朋友请注意防护。',
-      yesterday: {
-        date: '17 日 星期四',
-        type: '阴',
-        fx: '南风',
-        fl: '微风级',
-        low: '低温 8℃',
-        high: '高温 16℃'
-      },
-      forecast: [
-        {
-          date: '18 日 星期五',
-          type: '阴',
-          high: '高温 16℃',
-          low: '低温 8℃',
-          fengxiang: '南风',
-          fengli: '微风级'
-        }, {
-          date: '18 日 星期五',
-          type: '阴',
-          high: '高温 16℃',
-          low: '低温 8℃',
-          fengxiang: '南风',
-          fengli: '微风级'
-        }, {
-          date: '18 日 星期五',
-          type: '阴',
-          high: '高温 16℃',
-          low: '低温 8℃',
-          fengxiang: '南风',
-          fengli: '微风级'
-        }, {
-          date: '18 日 星期五',
-          type: '阴',
-          high: '高温 16℃',
-          low: '低温 8℃',
-          fengxiang: '南风',
-          fengli: '微风级'
-        }, {
-          date: '18 日 星期五',
-          type: '阴',
-          high: '高温 16℃',
-          low: '低温 8℃',
-          fengxiang: '南风',
-          fengli: '微风级'
-        }
-      ]
+      // wendu: 18,
+      // // ganmao: '昼夜温差较大，较易发生感冒，请适当增减衣服。体质较弱的朋友请注意防护。',
+      // yesterday: {
+      //   date: '17 日 星期四',
+      //   type: '阴',
+      //   fx: '南风',
+      //   fl: '微风级',
+      //   low: '低温 8℃',
+      //   high: '高温 16℃'
+      // },
+      // forecast: [
+      //   {
+      //     date: '18 日 星期五',
+      //     type: '阴',
+      //     high: '高温 16℃',
+      //     low: '低温 8℃',
+      //     fengxiang: '南风',
+      //     fengli: '微风级'
+      //   }, {
+      //     date: '18 日 星期五',
+      //     type: '阴',
+      //     high: '高温 16℃',
+      //     low: '低温 8℃',
+      //     fengxiang: '南风',
+      //     fengli: '微风级'
+      //   }, {
+      //     date: '18 日 星期五',
+      //     type: '阴',
+      //     high: '高温 16℃',
+      //     low: '低温 8℃',
+      //     fengxiang: '南风',
+      //     fengli: '微风级'
+      //   }, {
+      //     date: '18 日 星期五',
+      //     type: '阴',
+      //     high: '高温 16℃',
+      //     low: '低温 8℃',
+      //     fengxiang: '南风',
+      //     fengli: '微风级'
+      //   }, {
+      //     date: '18 日 星期五',
+      //     type: '阴',
+      //     high: '高温 16℃',
+      //     low: '低温 8℃',
+      //     fengxiang: '南风',
+      //     fengli: '微风级'
+      //   }
+      // ]
     },
-    today: '2020-12-09',
-    city: '南通',           // 城市名称
+    today: '2000-01-01',
+    city: '',           // 城市名称
     inputCity: '',         // 输入查询的城市名称
   }, 
 
@@ -72,17 +75,21 @@ Page({
       type: 'wgs84',
       altitude: false,
       success: (result) => {
-        request({
+        console.log(result);
+        wx.request({
           url: 'https://api.map.baidu.com/geocoder/v2/' +
-            '?ak=token&location=' +
+            '?ak=WQpBGrUcRiuiioZnXIuWpLggZW8oCSgL&location=' +
             result.latitude + ',' + result.longitude + '&output=json&pois=0',
           data: {},
           header: {
             'Content-Type': 'application/json'
           },
           success: function (res) {
-            const city = res.addressComponent.city.replace('市', '');   // 城市名称
-            self.searchWeather(city);                                   // 查询指定城市的天气信息
+            
+            if (typeof res.data != "undefined" && res.data.status != 240) {
+              const city = res.addressComponent.city.replace('市', '');   // 城市名称
+              self.searchWeather(city);                                   // 查询指定城市的天气信息
+            }
           }
         })
       },
@@ -101,6 +108,7 @@ Page({
       dataType: 'json',
       responseType: 'text',
       success: (result) => {
+        console.log(result);
         if (result.data.status == 1002) {   // 无此城市
           wx.showModal({
             title: '提示',
@@ -113,12 +121,15 @@ Page({
             complete: () => { }
           });
         } else {
-          const weather = result.data.weather;        // 获取天气数据
+          const weather = result.data.data;        // 获取天气数据
 
           for (let i = 0; i < weather.forecast.length; i++) {
-            const element = weather.forecast[i];
-            weather.forecast[i] = '  ' + element.replace('星期', '  星期');
+            let element = weather.forecast[i];
+            console.log(element);
+            element.date = '  ' + element.date.replace('星期', '  星期');
+            element.fengli = element.fengli.match(/[0-9]./);
           }
+          weather.yesterday.fl = weather.yesterday.fl.match(/[0-9]./);
           self.setData({
             city: cityName,     // 更新显示天气城市名称
             weather: weather,   // 更新天气信息
