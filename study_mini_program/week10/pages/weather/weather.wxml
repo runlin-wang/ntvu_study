@@ -1,11 +1,11 @@
-<!--pages/weather/weather.wxml-->
+<!-- pages/weather/weather.wxml -->
 <view class="content">
     <!-- 显示当天的天气信息 -->
     <view class="info">
         <!-- 城市名称 当前日期 -->
         <view class="city">{{city}} ({{today}})</view>
         <!-- 当天温度 -->
-        <view class="temp">{{weather.wendu}}</view>
+        <view class="temp">{{weather.wendu}} ℃</view>
         <!-- 感冒描述 -->
         <view class="weather">{{weather.ganmao}}</view>
     </view>
@@ -14,10 +14,19 @@
     <view class="yesterday">
         <view class="detail">
             <text class="yesterday-title">昨天</text>
-            {{weather.yesterday.fx}}        <!-- 风向 -->
-            {{weather.yesterday.fl}}        <!-- 风力 -->
-            {{weather.yesterday.low}}       <!-- 最低温度 -->
-            {{weather.yesterday.high}}      <!-- 最高温度 -->
+            {{weather.yesterday.date}}
+        </view>
+        <view class="detail">
+            {{weather.yesterday.type}}
+            <!-- 天气类型，如阴，晴 -->
+            {{weather.yesterday.fx}}
+            <!-- 风向 -->
+            {{weather.yesterday.fl}}
+            <!-- 风力 -->
+            {{weather.yesterday.low}}
+            <!-- 最低温度 -->
+            {{weather.yesterday.high}}
+            <!-- 最高温度 -->
         </view>
     </view>
 

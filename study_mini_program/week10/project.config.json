@@ -76,6 +76,11 @@
           "pathName": "pages/serverLogin/serverLogin",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "微天气",
+          "pathName": "pages/weather/weather",
+          "scene": null
         }
       ]
     }

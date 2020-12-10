@@ -37,6 +37,75 @@
 /* 感冒描述 */
 .weather {
     line-height: 22px;
-    /* TODO continu */
+    margin: 10px 0;
+    padding: 0 10px;
 }
+
+/* 昨天天气信息 */
+.yesterday {
+    width: 93%;
+    padding: 20rpx;
+    margin-top: 50rpx;
+    border-radius: 10rpx;
+    border: 1px solid #043567;
+}
+
+/* 昨天的 */
+.yesterday-title {
+    color: red;
+}
+
+/* 最近五天天气信息 */
+.forecast {
+    width: 100%;
+    display: flex;
+    margin-top: 50rpx;
+    align-self: flex-end;
+}
+
+/* 每一天的天气信息 */
+.next-day {
+    width: 20%;
+    height: 450rpx;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    margin: 0 3rpx;
+    border: 1px solid #043567;
+    border-radius: 10rpx;
+}
+
+/* 日期 */
+.date {
+    margin-bottom: 20rpx;
+    border-bottom: 1px solid #043567;
+    color: #F29F39;
+    font-size: 20rpx;
+}
+
+/* 搜索区域 */
+.search-area {
+    display: flex;
+    background: #f4f4f4;
+    padding: 1rem 0.5rem;
+}
+
+.search-area input {
+    width: 70%;
+    height: 38px;
+    list-style: height 38px;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 0 10px #ccc;
+    color: #000000;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+.search-area button {
+    width: 30%;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 5px;
+}
+
 
