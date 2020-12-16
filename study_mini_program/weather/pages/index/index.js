@@ -6,7 +6,7 @@ Page({
   data: {
     // 音乐分类
     ranks: [
-      {type:26, text: "热歌"},
+      {type:2, text: "热歌"},
       {type:23, text: "销量"},
       {type:18, text: "民谣"},
       {type:19, text: "摇滚"},

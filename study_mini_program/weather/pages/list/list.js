@@ -1,65 +1,86 @@
 // pages/list/list.js
 
-const config  = require("../../config");    // 导入配置文件
+const config  = require("../../config");
 
-Page({
+function formatSeconds(value) {
+  const time = parseFloat(value);
+  const m = Math.floor(time/60);
+  const s = time - m * 60;
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-    song: {},     // 传入的歌曲信息
-    isPlaying: false, // 播放状态
-  },
+  return [m, s].map(formatNumber).join(':');
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-    const self = this;
-    const songid = options.songid;    // 获取页面跳转传过来的参数（歌曲对象）
-
-    if (songid === undefined) {       // 未传入歌曲 ID
-      const curSong = wx.getStorageSync('curSong') || {};  // 从缓存中获取歌曲
-
-      if (curSong === undefined) {    // 缓存中无歌曲
-        const song = {songname: '未选择歌曲'};  // 显示未选择歌曲
-        this.setData({song:song});
-      } else {
-        this.setData({song:curSong});
-      }
-    } else {
-      const songlist = wx.getStorageSync('songlist') || []; // 从缓存中取出歌曲列表
-      // 在歌曲列表中查找 songid 指定的歌曲
-      for (let i = 0; i < songlist.length; i++) {
-        if (songlist[i].songid == songid) {
-          this.setData({song:songlist[i]});
-          break;
-        }
-      }
-      // 缓存正在播放的歌曲
-      wx.setStorageSync('curSong', this.data.song);
-    }
-  },
-
-  playToggle: function () {
-    const self = this;
-    // 没有歌曲要播放，直接退出
-    if (this.data.song.songname == '未选择歌曲') return;
-
-    if (this.data.isPlaying) {  // 正在播放
-      wx.stopBackgroundAudio(); // 停止播放歌曲
-    } else {                    // 未播放，则开始播放
-      // 播放歌曲
-      wx.playBackgroundAudio({
-        dataUrl: this.data.song.url || this.data.song.m4a,
-        success: (result) => {
-          // 更新播放状态
-          this.setData({isPlaying:!this.data.isPlaying});
-        },
-      });
-        
-
-    }
+  function formatNumber(n) {
+    n = n.toString();
+    return n[1] ? n : '0' + n;
   }
-})
+}
+
+//Page Object
+Page({
+  data: {
+    board:'',       // 顶部图片
+    songlist:[],    // 音乐列表
+    loading:false,  //加载标志 
+  },
+  // 页面加载事件
+  onLoad: function(options){
+    const self = this;
+    const topid = this;
+
+    this.setData({loading:true});   // 获取页面跳转传过来的参数
+
+    let request = wx.request({
+      url: config.config.hotUrl,
+      data: {topid:topid},
+
+      success: (e)=>{
+        if (e.statusCode == 200) {
+          // TODO delete
+          const songlist = e.data.show;
+          // 将时长转换为分秒的表示形式
+          for (let i = 0; i < songlist.length; i++) {
+            songlist[i].seconds = formatSeconds(songlist[i].seconds);
+          }
+          self.setData({
+            // TODO delete
+            // 获取第一首歌曲的图片作为该页顶部图片
+            board: e.data.t,
+            songlist: songlist,
+            loading:false       // 隐藏加载提示信息
+          });
+
+          // 将歌曲列表保存到本地缓存中
+          wx.setStorageSync('songlist', songlist);
+        }
+      },
+    });
+  },
+  onReady: function(){
+    
+  },
+  onShow: function(){
+    
+  },
+  onHide: function(){
+
+  },
+  onUnload: function(){
+
+  },
+  onPullDownRefresh: function(){
+
+  },
+  onReachBottom: function(){
+
+  },
+  onShareAppMessage: function(){
+
+  },
+  onPageScroll: function(){
+
+  },
+  //item(index,pagePath,text)
+  onTabItemTap:function(item){
+
+  }
+});
