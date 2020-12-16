@@ -5,7 +5,7 @@
   },
   "setting": {
     "urlCheck": false,
-    "es6": true,
+    "es6": false,
     "enhance": false,
     "postcss": true,
     "preloadBackgroundData": false,
@@ -29,19 +29,19 @@
       "outputPath": ""
     },
     "enableEngineNative": false,
+    "bundle": false,
     "useIsolateContext": true,
     "useCompilerModule": true,
     "userConfirmedUseCompilerModuleSwitch": false,
     "userConfirmedBundleSwitch": false,
     "packNpmManually": false,
     "packNpmRelationList": [],
-    "minifyWXSS": true,
-    "bundle": false
+    "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.14.0",
+  "libVersion": "2.14.1",
   "appid": "wx6370a01c70652d53",
-  "projectname": "week10",
+  "projectname": "%E5%BE%AE%E5%A4%A9%E6%B0%94",
   "debugOptions": {
     "hidedInDevtools": []
   },
@@ -50,41 +50,23 @@
   "simulatorType": "wechat",
   "simulatorPluginLibVersion": {},
   "condition": {
-    "plugin": {
+    "search": {
+      "list": []
+    },
+    "conversation": {
       "list": []
     },
     "game": {
+      "list": []
+    },
+    "plugin": {
       "list": []
     },
     "gamePlugin": {
       "list": []
     },
     "miniprogram": {
-      "list": [
-        {
-          "name": "pages/datadriver/datadriver",
-          "pathName": "pages/datadriver/datadriver",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/calc/calc",
-          "pathName": "pages/calc/calc",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "pages/serverLogin/serverLogin",
-          "pathName": "pages/serverLogin/serverLogin",
-          "query": "",
-          "scene": null
-        },
-        {
-          "name": "微天气",
-          "pathName": "pages/weather/weather",
-          "scene": null
-        }
-      ]
+      "list": []
     }
   }
 }
