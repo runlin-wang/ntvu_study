@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/css/global.css">
+<!--    <style>-->
+<!--        * {-->
+<!--            font-size: 12px;-->
+<!--        }-->
+
+<!--        form {-->
+<!--            width: 400px;-->
+<!--            margin: auto;-->
+<!--        }-->
+
+<!--        form label {-->
+<!--            display: inline-block;-->
+<!--            width: 80px;-->
+<!--            text-align: right;-->
+<!--        }-->
+
+<!--        #user-msg {-->
+<!--            padding-left: 10px;-->
+<!--            color: red;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<form method="post">
+    <p>
+        <label for="username">username:</label>
+        <input type="text" name="username" id="username"><span id="user-msg"></span>
+    </p>
+    <p>
+        <label for="pwd">password:</label>
+        <input type="password" name="pwd" id="pwd">
+    </p>
+    <p>
+        <label for="pwd2">resume pwd:</label>
+        <input type="password" name="pwd2" id="pwd2">
+    </p>
+</form>
+
+<script>
+    let xhr = new XMLHttpRequest();
+
+    document.querySelector("input[name=username]").addEventListener("blur", function (event) {
+        xhr =new XMLHttpRequest();
+        xhr.addEventListener("readystatechange", userTextBlurHandler);
+        xhr.addEventListener("error", xhrErrorHandler);
+        xhr.open("get", "validateUser.jsp?username="+this.value);
+        xhr.send(null);
+    });
+
+    function userTextBlurHandler(event) {
+        if (xhr.readyState === 2)
+            document.title = '2';
+        else if (xhr.readyState === 4 && xhr.status === 200) {
+            // alert(xhr.responseText);
+            console.log("xhr.responseText: " + xhr.responseText.trim());
+            console.log("typeof xhr.responseText: " + typeof xhr.responseText);
+            document.querySelector('#user-msg').innerHTML = xhr.responseText.trim() === '1' ? "OK" : "unavailable";
+        }
+    }
+
+    function xhrErrorHandler(event) {
+        alert('error code: ' + xhr.statusText);
+    }
+
+</script>
+</body>
+</html>
