@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" href="/css/global.css">
+<!--    <link rel="stylesheet" href="./css/global.css">-->
 <!--    <style>-->
 <!--        * {-->
 <!--            font-size: 12px;-->
@@ -47,20 +47,25 @@
 
     document.querySelector("input[name=username]").addEventListener("blur", function (event) {
         xhr =new XMLHttpRequest();
+
+        let fd = new FormData();
+        let data = {user: this.value, id: "id of user"}
+        fd.append("data", JSON.stringify(data));
+
         xhr.addEventListener("readystatechange", userTextBlurHandler);
         xhr.addEventListener("error", xhrErrorHandler);
-        xhr.open("get", "validateUser.jsp?username="+this.value);
-        xhr.send(null);
+        xhr.open("post", "validateUser.jsp?username="+this.value);
+        xhr.send(fd);
     });
 
     function userTextBlurHandler(event) {
         if (xhr.readyState === 2)
             document.title = '2';
         else if (xhr.readyState === 4 && xhr.status === 200) {
-            // alert(xhr.responseText);
+            alert(xhr.responseText);
             console.log("xhr.responseText: " + xhr.responseText.trim());
             console.log("typeof xhr.responseText: " + typeof xhr.responseText);
-            document.querySelector('#user-msg').innerHTML = xhr.responseText.trim() === '1' ? "OK" : "unavailable";
+            document.querySelector('#user-msg').innerHTML = xhr.responseText.trim() === '0' ? "OK" : "unavailable";
         }
     }
 

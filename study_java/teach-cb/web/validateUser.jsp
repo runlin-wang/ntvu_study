@@ -1,4 +1,5 @@
 <%@ page import="java.sql.*" %>
+<%@ page import="java.io.BufferedReader" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String driver = "com.mysql.cj.jdbc.Driver";
@@ -11,6 +12,12 @@
         Statement st = conn.createStatement();
         CallableStatement cs = conn.prepareCall("{call validateUser(?,?)}");
         String username = request.getParameter("username");
+        BufferedReader reader = request.getReader();
+        String line;
+        while ((line = reader.readLine()) != null) {
+            out.println(line);
+            out.println("<br />");
+        }
 
         cs.setString(1, username);
         cs.registerOutParameter(2, Types.INTEGER);
