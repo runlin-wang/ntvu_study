@@ -1,5 +1,8 @@
 package study.ssm.springdemo.tools;
 
+import org.springframework.stereotype.Component;
+
+//@Component("teacher")
 public class Login {
     private String name ;
 
