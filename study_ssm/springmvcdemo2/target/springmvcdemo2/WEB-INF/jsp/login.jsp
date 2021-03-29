@@ -62,7 +62,7 @@
                 <div class="login" onclick="document.getElementsByTagName('form').item(0).submit()">进入</div>
             </form>
             <div>
-                <a href="doRegister">注册</a>
+                <a href="register">注册</a>
             </div>
             <div>
                 <a href="index">回到首页</a>

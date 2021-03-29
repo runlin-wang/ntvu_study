@@ -10,43 +10,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c30da94d-6bd2-4fea-b6bb-4cb4e18763e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_7_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jstl_jstl_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/admin/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/css/global.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/view/login2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/gson-2.2.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/jackson-annotations-2.7.0.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/jackson-core-2.7.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/jackson-databind-2.7.4.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/joda-time-2.3.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/lib/jstl-1.2.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_13.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_6_4_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_0_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_1_9_RELEASE.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/IUserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/entity/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/jdbc.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/test/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/springmvcdemo2_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/springmvcdemo2_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/springmvcdemo2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/springmvcdemo2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/controller/IndexController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/css/global.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/classes/spring-web.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2.war" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/admin/index.jsp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/classes/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/login.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/admin/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/login.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/static/css/global.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +59,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -87,13 +89,14 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -102,13 +105,14 @@
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.web.browsers" />
+    <property name="project.structure.side.proportion" value="0.33619344" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\webapp\WEB-INF" />
+      <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\java\edu\ntvu\springmvcdemo2" />
       <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\resources" />
+      <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\webapp\WEB-INF" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\webapp" />
@@ -118,14 +122,33 @@
       <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="class" />
+  <component name="RunManager" selected="Tomcat Server.springmvcdemo2">
+    <configuration name="TestMain.newIUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvcdemo2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMain" />
+      <option name="METHOD_NAME" value="newIUserDAO" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMain.newUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvcdemo2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMain" />
+      <option name="METHOD_NAME" value="newUser" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestMain.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvcdemo2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestMain" />
+      <option name="METHOD_NAME" value="testAddUser" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -208,6 +231,9 @@
       </method>
     </configuration>
     <configuration name="springmvcdemo2" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.58" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="COMMON_VM_ARGUMENTS" value="-Dfile.encoding=UTF-8" />
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="HOT_SWAP_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATING_POLICY" value="hot-swap-classes" />
       <deployment>
         <artifact name="springmvcdemo2:war">
@@ -294,6 +320,19 @@
         </option>
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.TestMain.newIUserDAO" />
+      <item itemvalue="JUnit.TestMain.newUser" />
+      <item itemvalue="JUnit.TestMain.testAddUser" />
+      <item itemvalue="Tomcat Server.springmvcdemo2" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.TestMain.testAddUser" />
+        <item itemvalue="JUnit.TestMain.newIUserDAO" />
+        <item itemvalue="JUnit.TestMain.newUser" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -306,6 +345,11 @@
       <workItem from="1616413962584" duration="1762000" />
       <workItem from="1616416667079" duration="1837000" />
       <workItem from="1616490831302" duration="5304000" />
+      <workItem from="1616543527346" duration="5685000" />
+      <workItem from="1616549303704" duration="2439000" />
+      <workItem from="1616553605916" duration="3360000" />
+      <workItem from="1616568703827" duration="84000" />
+      <workItem from="1617014084172" duration="2051000" />
     </task>
     <servers />
   </component>
@@ -323,5 +367,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
