@@ -2,6 +2,7 @@ package edu.ntvu.springmvcdemo2.controller;
 
 import edu.ntvu.springmvcdemo2.dao.IUserDAO;
 import edu.ntvu.springmvcdemo2.entity.User;
+import edu.ntvu.springmvcdemo2.util.EncryptTools;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Controller;
@@ -58,9 +59,9 @@ public class IndexController {
         ApplicationContext ac = new ClassPathXmlApplicationContext("spring-web.xml");
         IUserDAO dao = (IUserDAO) ac.getBean("userDAO");
 
-        System.out.println(user);
+        user.setSalt(EncryptTools.getRandomStr());
 
-        
+        System.out.println(user);
 
         if (dao.add(user)) {
             mv.addObject("user", user);

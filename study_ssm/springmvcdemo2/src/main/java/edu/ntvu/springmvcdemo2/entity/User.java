@@ -105,6 +105,7 @@ public class User {
                 "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", pwd='" + pwd + '\'' +
+                ", salt='" + salt + '\'' +
                 ", realName='" + realName + '\'' +
                 ", telephone='" + telephone + '\'' +
                 ", email='" + email + '\'' +

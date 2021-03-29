@@ -1,8 +1,11 @@
+import edu.ntvu.springmvcdemo2.controller.IndexController;
 import edu.ntvu.springmvcdemo2.dao.IUserDAO;
 import edu.ntvu.springmvcdemo2.entity.User;
+import edu.ntvu.springmvcdemo2.util.EncryptTools;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.web.servlet.ModelAndView;
 
 /**
  * @author alin
@@ -11,6 +14,15 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @description todo
  */
 public class TestMain {
+
+    @Test
+    public void testRegister() {
+        User user = new User("testRegister2", "testRegister2", "testRegister2", "testRegister2", "testRegister2", true, 21);
+        user.setSalt(EncryptTools.getRandomStr());
+
+        ModelAndView mv = new IndexController().doRegister(user);
+        System.out.println(mv);
+    }
 
     @Test
     public void testAddUser() {

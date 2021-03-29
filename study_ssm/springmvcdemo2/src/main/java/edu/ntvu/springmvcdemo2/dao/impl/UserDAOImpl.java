@@ -28,8 +28,8 @@ public class UserDAOImpl implements IUserDAO {
 
     @Override
     public boolean add(User user) {
-        String sql = "insert into user (name, pwd, real_name, telephone, email, gender, age) VALUES (?, ?, ?, ?, ?, ?, ?)";
-        Object[] params = {user.getUserName(), user.getPwd(), user.getRealName(), user.getTelephone(),
+        String sql = "insert into user (name, pwd, salt, real_name, telephone, email, gender, age) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+        Object[] params = {user.getUserName(), user.getPwd(), user.getSalt(), user.getRealName(), user.getTelephone(),
                             user.getEmail(), user.isGender(), user.getAge()};
         return jdbcTemplate.update(sql, params) > 0;
     }

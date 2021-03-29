@@ -10,45 +10,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c30da94d-6bd2-4fea-b6bb-4cb4e18763e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_alibaba_druid_1_0_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_protobuf_protobuf_java_3_11_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__mysql_mysql_connector_java_8_0_21.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_7_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_spring_1_3_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_jcl_over_slf4j_1_7_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_redis_1_6_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_4_2_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_oxm_4_1_9_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/IUserDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/impl/UserDAOImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/jdbc.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/test/TestMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_directory_studio_org_apache_commons_codec_1_8.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_4_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_5_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_engine_5_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_params_5_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_junit_platform_junit_platform_engine_1_8_0_M1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_opentest4j_opentest4j_1_2_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/util/EncryptTools.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/test/TestTools.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/springmvcdemo2_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/springmvcdemo2_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/springmvcdemo2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/springmvcdemo2.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/resources/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/webapp/static/css/global.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/classes/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2.war" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/classes/spring-web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/classes/spring-web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/admin/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/admin/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/login.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/login.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/jsp/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/static/css/global.css" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/target/springmvcdemo2/static/css/global.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/impl/UserDAOImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/dao/impl/UserDAOImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/java/edu/ntvu/springmvcdemo2/entity/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/springmvcdemo2/src/main/test/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/springmvcdemo2/src/main/test/TestMain.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +90,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.33619344" />
     <property name="settings.editor.selected.configurable" value="preferences.keymap" />
@@ -122,32 +109,69 @@
       <recent name="W:\003_code\002_ntvu_study\study_ssm\springmvcdemo2\src\main\resources" />
     </key>
   </component>
-  <component name="RunManager" selected="Tomcat Server.springmvcdemo2">
-    <configuration name="TestMain.newIUserDAO" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.TestMain.testRegister">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EncryptTools.testMd5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springmvcdemo2" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestMain" />
-      <option name="METHOD_NAME" value="newIUserDAO" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ntvu.springmvcdemo2.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="edu.ntvu.springmvcdemo2.util" />
+      <option name="MAIN_CLASS_NAME" value="edu.ntvu.springmvcdemo2.util.EncryptTools" />
+      <option name="METHOD_NAME" value="testMd5" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMain.newUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestMain.testRegister" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springmvcdemo2" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TestMain" />
-      <option name="METHOD_NAME" value="newUser" />
+      <option name="METHOD_NAME" value="testRegister" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestMain.testAddUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TestTools.testGetRandomStr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="springmvcdemo2" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TestMain" />
-      <option name="METHOD_NAME" value="testAddUser" />
+      <option name="MAIN_CLASS_NAME" value="TestTools" />
+      <option name="METHOD_NAME" value="testGetRandomStr" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTools.testMd5" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvcdemo2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTools" />
+      <option name="METHOD_NAME" value="testMd5" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestTools.testMd52" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="springmvcdemo2" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TestTools" />
+      <option name="METHOD_NAME" value="testMd52" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -321,16 +345,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.TestMain.newIUserDAO" />
-      <item itemvalue="JUnit.TestMain.newUser" />
-      <item itemvalue="JUnit.TestMain.testAddUser" />
       <item itemvalue="Tomcat Server.springmvcdemo2" />
+      <item itemvalue="JUnit.EncryptTools.testMd5" />
+      <item itemvalue="JUnit.TestTools.testMd5" />
+      <item itemvalue="JUnit.TestTools.testGetRandomStr" />
+      <item itemvalue="JUnit.TestTools.testMd52" />
+      <item itemvalue="JUnit.TestMain.testRegister" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TestMain.testAddUser" />
-        <item itemvalue="JUnit.TestMain.newIUserDAO" />
-        <item itemvalue="JUnit.TestMain.newUser" />
+        <item itemvalue="JUnit.TestMain.testRegister" />
+        <item itemvalue="JUnit.TestTools.testMd52" />
+        <item itemvalue="JUnit.TestTools.testGetRandomStr" />
+        <item itemvalue="JUnit.TestTools.testMd5" />
+        <item itemvalue="JUnit.EncryptTools.testMd5" />
       </list>
     </recent_temporary>
   </component>
@@ -349,7 +377,7 @@
       <workItem from="1616549303704" duration="2439000" />
       <workItem from="1616553605916" duration="3360000" />
       <workItem from="1616568703827" duration="84000" />
-      <workItem from="1617014084172" duration="2051000" />
+      <workItem from="1617014084172" duration="7024000" />
     </task>
     <servers />
   </component>

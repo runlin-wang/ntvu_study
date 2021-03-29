@@ -195,6 +195,14 @@
               <version>1.6.4.RELEASE</version>
             </dependency>
         <!--mybatis 数据访问层 end -->
+
+        <!-- https://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.codec -->
+        <dependency>
+            <groupId>org.apache.directory.studio</groupId>
+            <artifactId>org.apache.commons.codec</artifactId>
+            <version>1.8</version>
+        </dependency>
+
     </dependencies>
 
     <build>
